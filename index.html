@@ -20,10 +20,10 @@
     }
 
     header img {
-  max-width: 200px; /* increase width to make logo bigger */
-  height: auto;      /* maintain aspect ratio */
-  display: block;    
-  margin: 0 auto 15px auto; /* centers the logo */
+      max-width: 200px; /* increase width to make logo bigger */
+      height: auto;      /* maintain aspect ratio */
+      display: block;    
+      margin: 0 auto 15px auto; /* centers the logo */
     }
 
     h1 {
@@ -77,6 +77,22 @@
       background: #333;
     }
 
+    .collab-button {
+      display: inline-block;
+      background: black;
+      color: white;
+      padding: 12px 25px;
+      text-decoration: none;
+      border-radius: 5px;
+      font-weight: bold;
+      margin-top: 10px;
+      cursor: pointer;
+    }
+
+    .collab-button:hover {
+      background: #333;
+    }
+
     footer {
       padding: 20px;
       font-size: 0.9em;
@@ -86,35 +102,44 @@
 </head>
 <body>
   <header>
-    <!-- Replace logo.png with your actual logo file -->
     <img src="onceupon.png" alt="Ace Pen Studio Logo">
-    <h1>Ace Pen Studios</h1>
-    <p> We are a dedicated literary hub that aims to nurture writers and foster a thriving, literary community in Tanzania. .</p>
+    <h1>Ace Pen Studio</h1>
+    <p>We are a dedicated literary hub that aims to nurture writers and foster a thriving, literary community in Tanzania.</p>
   </header>
 
-<section>
- <h2>Announcements!</h2>
-  <img src="writerscycle.png" alt="Announcements!" class="announcement-header">
-  <p>We host Workshops, bootcamps, and community events designed for writers across Africa. 
+  <section>
+    <h2>Announcements!</h2>
+    <img src="header.png" alt="Announcements!" style="max-width:100%; height:auto; margin-top:20px;">
+    <p>We host Workshops, bootcamps, and community events designed for writers across Africa. Stay tuned for our first workshop announcement!</p>
+    <img src="writerscycle.jpg" alt="Workshop Announcement" style="max-width:100%; height:auto; margin-top:20px;">
+  </section>
 
-</section>
-  Stay tuned for our first workshop announcement!</p>
-  <img src="writerscycle.png" alt="Workshop Announcement" style="max-width:100%; height:auto; margin-top:20px;">
-</section>
+  <section>
+    <h2>Connect With Us</h2>
+    <div class="socials">
+      <a href="https://instagram.com/acepenstories" target="_blank">Instagram</a>
+      <a href="https://facebook.com/acepenstudio" target="_blank">Facebook</a>
+      <a href="https://www.threads.net/acepenstudio" target="_blank">Threads</a>
+    </div>
 
-<section>
-  <h2>Connect With Us</h2>
-  <div class="socials">
-    <a href="https://instagram.com/acepenstories" target="_blank">Instagram</a>
-    <a href="https://facebook.com/acepenstudio" target="_blank">Facebook</a>
-    <a href="https://www.threads.net/acepenstudio" target="_blank">Threads</a>
-  </div>
+    <div class="newsletter">
+      <p>Join our newsletter for updates:</p>
+      <form>
+        <input type="email" placeholder="acepenstudio@proton.me" required>
+        <button type="submit">Subscribe</button>
+      </form>
+    </div>
+  </section>
 
-  <div class="newsletter">
-    <p>Join our newsletter for updates:</p>
-    <form>
-      <input type="email" placeholder="acepenstudio@proton.me" required>
-      <button type="submit">Subscribe</button>
-    </form>
-  </div>
-</section>
+  <section>
+    <h2>Collaborate With Us</h2>
+    <p>We welcome organizations, institutions, and individuals to partner with Ace Pen Studio in hosting workshops, bootcamps, and literary events across Africa.</p>
+    <p>If your organization is interested in sponsoring an event or collaborating with us, write, write, write — and get in touch:</p>
+    <a href="mailto:acepenstudio@proton.me" class="collab-button">Write to Us</a>
+  </section>
+
+  <footer>
+    © 2025 Ace Pen Studio. All Rights Reserved.
+  </footer>
+</body>
+</html>
