@@ -3,145 +3,483 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Ace Pen Studio</title>
+
+  <title>Ace Pen Studio | Literary Representation</title>
+
+  <meta
+    name="description"
+    content="Ace Pen Studio is a literary agency representing writers and helping authors develop, position and bring their books to readers."
+  >
+
   <style>
-    body {
-      font-family: Futura, Arial, sans-serif;
+    * {
+      box-sizing: border-box;
       margin: 0;
       padding: 0;
-      background: #ffffff; /* pure white background */
-      color: #000000; /* black text */
-      text-align: center;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: #f7f7f5;
+      color: #111;
       line-height: 1.6;
     }
 
-    header {
-      padding: 50px 20px 20px 20px;
+    a {
+      color: inherit;
+      text-decoration: none;
     }
 
-    header img {
-      max-width: 200px; /* increase width to make logo bigger */
-      height: auto;      /* maintain aspect ratio */
-      display: block;    
-      margin: 0 auto 15px auto; /* centers the logo */
+    .container {
+      width: min(1100px, 90%);
+      margin: auto;
+    }
+
+    /* NAVIGATION */
+
+    nav {
+      padding: 28px 0;
+      border-bottom: 1px solid #ddd;
+    }
+
+    nav .container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      font-size: 20px;
+      font-weight: 700;
+      letter-spacing: -0.5px;
+    }
+
+    .nav-link {
+      font-size: 14px;
+      text-decoration: underline;
+      text-underline-offset: 4px;
+    }
+
+    /* HERO */
+
+    .hero {
+      padding: 110px 0 100px;
+      max-width: 900px;
+    }
+
+    .eyebrow {
+      font-size: 13px;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      margin-bottom: 25px;
+      color: #555;
     }
 
     h1 {
-      font-size: 2em;
-      margin: 10px 0;
-      font-weight: 700;
+      font-size: clamp(48px, 8vw, 88px);
+      line-height: 0.95;
+      letter-spacing: -4px;
+      margin-bottom: 35px;
+      max-width: 850px;
     }
 
+    .hero p {
+      font-size: 21px;
+      max-width: 700px;
+      color: #444;
+      margin-bottom: 35px;
+    }
+
+    .button {
+      display: inline-block;
+      background: #111;
+      color: white;
+      padding: 15px 24px;
+      font-size: 15px;
+      font-weight: 600;
+      transition: 0.2s ease;
+    }
+
+    .button:hover {
+      background: #333;
+      transform: translateY(-2px);
+    }
+
+    /* ABOUT */
+
     section {
-      padding: 50px 20px;
-      border-top: 1px solid #eee;
+      padding: 90px 0;
+      border-top: 1px solid #ddd;
+    }
+
+    .section-label {
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      color: #666;
+      margin-bottom: 20px;
     }
 
     h2 {
-      font-size: 1.5em;
-      margin-bottom: 10px;
+      font-size: clamp(34px, 5vw, 55px);
+      line-height: 1;
+      letter-spacing: -2px;
+      margin-bottom: 30px;
+      max-width: 750px;
     }
 
-    p {
-      max-width: 600px;
-      margin: 0 auto 20px auto;
-      font-size: 1em;
+    .large-text {
+      font-size: 20px;
+      max-width: 750px;
+      color: #444;
     }
 
-    .socials a {
-      margin: 0 10px;
-      text-decoration: none;
-      color: black;
-      font-weight: bold;
-    }
+    /* SERVICES */
 
-    .newsletter input[type="email"] {
-      padding: 10px;
-      width: 250px;
+    .services {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1px;
+      background: #ccc;
       border: 1px solid #ccc;
-      border-radius: 3px;
-      font-size: 1em;
+      margin-top: 45px;
     }
 
-    .newsletter button {
-      padding: 10px 20px;
-      border: none;
-      background: black;
+    .service {
+      background: #f7f7f5;
+      padding: 35px;
+      min-height: 210px;
+    }
+
+    .service h3 {
+      font-size: 22px;
+      margin-bottom: 15px;
+    }
+
+    .service p {
+      color: #555;
+      font-size: 16px;
+    }
+
+    /* AUTHOR SECTION */
+
+    .author {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 80px;
+      align-items: center;
+    }
+
+    .author-note {
+      font-size: 18px;
+      color: #444;
+    }
+
+    .author-name {
+      font-size: 40px;
+      font-weight: 700;
+      margin-bottom: 10px;
+      letter-spacing: -1px;
+    }
+
+    .author-role {
+      color: #666;
+      margin-bottom: 25px;
+    }
+
+    /* CTA */
+
+    .cta {
+      background: #111;
       color: white;
-      font-size: 1em;
-      border-radius: 3px;
-      cursor: pointer;
+      padding: 80px 60px;
     }
 
-    .newsletter button:hover {
-      background: #333;
-    }
-
-    .collab-button {
-      display: inline-block;
-      background: black;
+    .cta h2 {
       color: white;
-      padding: 12px 25px;
-      text-decoration: none;
-      border-radius: 5px;
-      font-weight: bold;
-      margin-top: 10px;
-      cursor: pointer;
     }
 
-    .collab-button:hover {
-      background: #333;
+    .cta p {
+      max-width: 650px;
+      color: #ccc;
+      font-size: 19px;
+      margin-bottom: 30px;
     }
+
+    .cta .button {
+      background: white;
+      color: #111;
+    }
+
+    /* FOOTER */
 
     footer {
-      padding: 20px;
-      font-size: 0.9em;
-      color: #555;
+      padding: 35px 0;
+      color: #666;
+      font-size: 14px;
+    }
+
+    footer .container {
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+    }
+
+    /* MOBILE */
+
+    @media (max-width: 700px) {
+
+      .hero {
+        padding: 75px 0;
+      }
+
+      h1 {
+        letter-spacing: -2px;
+      }
+
+      .services {
+        grid-template-columns: 1fr;
+      }
+
+      .author {
+        grid-template-columns: 1fr;
+        gap: 35px;
+      }
+
+      .cta {
+        padding: 60px 30px;
+      }
+
+      footer .container {
+        flex-direction: column;
+      }
     }
   </style>
 </head>
+
 <body>
-  <header>
-    <img src="onceupon.png" alt="Ace Pen Studio Logo">
-    <h1>Ace Pen Studio</h1>
-    <p>We are a dedicated literary hub that aims to nurture writers and foster a thriving, literary community in Tanzania.</p>
-  </header>
 
-  <section>
-    <h2>Announcements!</h2>
-    <img src="header.png" alt="Announcements!" style="max-width:100%; height:auto; margin-top:20px;">
-    <p>We host Workshops, bootcamps, and community events designed for writers across Africa. Stay tuned for our first workshop announcement!</p>
-    <img src="writerscycle.jpg" alt="Workshop Announcement" style="max-width:100%; height:auto; margin-top:20px;">
-  </section>
+  <nav>
+    <div class="container">
+      <div class="logo">ACE PEN STUDIO</div>
 
-  <section>
-    <h2>Connect With Us</h2>
-    <div class="socials">
-      <a href="https://instagram.com/acepenstories" target="_blank">Instagram</a>
-      <a href="https://facebook.com/acepenstudio" target="_blank">Facebook</a>
-      <a href="https://www.threads.net/acepenstudio" target="_blank">Threads</a>
+      <a
+        class="nav-link"
+        href="mailto:hello@acepenstudio.com"
+      >
+        Get in touch
+      </a>
+    </div>
+  </nav>
+
+
+  <main>
+
+    <!-- HERO -->
+
+    <div class="container">
+      <div class="hero">
+
+        <div class="eyebrow">
+          Literary Agency · Tanzania
+        </div>
+
+        <h1>
+          Your story deserves somewhere to go.
+        </h1>
+
+        <p>
+          Ace Pen Studio is a literary agency helping writers develop,
+          position and bring their books to readers.
+        </p>
+
+        <a
+          href="#contact"
+          class="button"
+        >
+          Talk to us
+        </a>
+
+      </div>
     </div>
 
-    <div class="newsletter">
-      <p>Join our newsletter for updates:</p>
-      <form>
-        <input type="email" placeholder="acepenstudio@proton.me" required>
-        <button type="submit">Subscribe</button>
-      </form>
-    </div>
-  </section>
 
-  <section>
-    <h2>Collaborate With Us</h2>
-    <p>We welcome organizations, institutions, and individuals to partner with Ace Pen Studio in hosting workshops, bootcamps, and literary events across Africa.</p>
-    <p>If your organization is interested in sponsoring an event or collaborating with us, then do write to us:</p>
-    <a href="mailto:acepenstudio@proton.me" class="collab-button">Write to Us</a>
-  </section>
+    <!-- ABOUT -->
+
+    <section>
+      <div class="container">
+
+        <div class="section-label">
+          What we do
+        </div>
+
+        <h2>
+          We help writers turn good manuscripts into books with a future.
+        </h2>
+
+        <p class="large-text">
+          Writing the book is only part of the journey. We work with authors
+          on the editorial, strategic and commercial side of publishing —
+          helping strong stories find the right opportunities and audiences.
+        </p>
+
+      </div>
+    </section>
+
+
+    <!-- SERVICES -->
+
+    <section>
+      <div class="container">
+
+        <div class="section-label">
+          For writers
+        </div>
+
+        <h2>
+          From manuscript to market.
+        </h2>
+
+        <div class="services">
+
+          <div class="service">
+            <h3>Literary Representation</h3>
+
+            <p>
+              We represent selected authors and help identify publishing,
+              media and commercial opportunities for their work.
+            </p>
+          </div>
+
+          <div class="service">
+            <h3>Editorial Development</h3>
+
+            <p>
+              We help writers strengthen manuscripts, clarify their ideas
+              and develop books that are compelling and commercially viable.
+            </p>
+          </div>
+
+          <div class="service">
+            <h3>Author Positioning</h3>
+
+            <p>
+              We help authors understand what makes their work distinctive
+              and build a stronger identity around their writing.
+            </p>
+          </div>
+
+          <div class="service">
+            <h3>Publishing Strategy</h3>
+
+            <p>
+              We help writers think beyond the manuscript — including
+              publishing routes, audiences, partnerships and opportunities.
+            </p>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- ABOUT GREY -->
+
+    <section>
+      <div class="container">
+
+        <div class="author">
+
+          <div>
+
+            <div class="section-label">
+              Your literary contact
+            </div>
+
+            <div class="author-name">
+              Grey
+            </div>
+
+            <div class="author-role">
+              Editor · Literary Agent · Ghostwriter
+            </div>
+
+            <p class="author-note">
+              Grey works across publishing, editorial development and
+              storytelling, with a particular interest in writers with
+              something meaningful to say and a clear voice of their own.
+            </p>
+
+          </div>
+
+          <div>
+
+            <p class="author-note">
+              If you're working on a book — even if you're not sure what
+              happens next — come say hello.
+            </p>
+
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- CONTACT -->
+
+    <section id="contact">
+
+      <div class="container">
+
+        <div class="cta">
+
+          <div class="section-label">
+            Let's talk about your book
+          </div>
+
+          <h2>
+            Have a manuscript, an idea, or a story you can't stop thinking about?
+          </h2>
+
+          <p>
+            Tell us what you're working on. If it's a good fit for Ace Pen
+            Studio, we'd love to hear more.
+          </p>
+
+          <a
+            href="mailto:hello@acepenstudio.com?subject=My%20Book%20%7C%20Ace%20Pen%20Studio"
+            class="button"
+          >
+            Email Ace Pen Studio
+          </a>
+
+        </div>
+
+      </div>
+
+    </section>
+
+  </main>
+
 
   <footer>
-    © 2025 Ace Pen Studio. All Rights Reserved.
+
+    <div class="container">
+
+      <div>
+        © 2026 Ace Pen Studio Literary Agency
+      </div>
+
+      <div>
+        Tanzania · East Africa
+      </div>
+
+    </div>
+
   </footer>
+
 </body>
 </html>
-
-
