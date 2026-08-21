@@ -4,18 +4,27 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Ace Pen Studio | Literary Representation</title>
+  <title>Ace Pen Studio | Literary Agency</title>
 
   <meta
     name="description"
-    content="Ace Pen Studio is a literary agency representing writers and helping authors develop, position and bring their books to readers."
+    content="Ace Pen Studio is a literary agency helping writers develop compelling books, build their author identities and find opportunities to bring their stories to readers."
   >
 
   <style>
+
+    /* =========================
+       BASE
+    ========================= */
+
     * {
       box-sizing: border-box;
       margin: 0;
       padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
     }
 
     body {
@@ -35,7 +44,10 @@
       margin: auto;
     }
 
-    /* NAVIGATION */
+
+    /* =========================
+       NAVIGATION
+    ========================= */
 
     nav {
       padding: 28px 0;
@@ -54,17 +66,46 @@
       letter-spacing: -0.5px;
     }
 
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 28px;
+    }
+
     .nav-link {
       font-size: 14px;
       text-decoration: underline;
       text-underline-offset: 4px;
     }
 
-    /* HERO */
+
+    /* =========================
+       MASHARIKI FESTIVAL BANNER
+    ========================= */
+
+    .festival-banner {
+      background: #111;
+      color: white;
+      padding: 12px 0;
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    .festival-banner .container {
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+    }
+
+
+    /* =========================
+       HERO
+    ========================= */
 
     .hero {
       padding: 110px 0 100px;
-      max-width: 900px;
+      max-width: 950px;
     }
 
     .eyebrow {
@@ -80,12 +121,12 @@
       line-height: 0.95;
       letter-spacing: -4px;
       margin-bottom: 35px;
-      max-width: 850px;
+      max-width: 900px;
     }
 
     .hero p {
       font-size: 21px;
-      max-width: 700px;
+      max-width: 720px;
       color: #444;
       margin-bottom: 35px;
     }
@@ -105,7 +146,10 @@
       transform: translateY(-2px);
     }
 
-    /* ABOUT */
+
+    /* =========================
+       GENERAL SECTIONS
+    ========================= */
 
     section {
       padding: 90px 0;
@@ -125,16 +169,19 @@
       line-height: 1;
       letter-spacing: -2px;
       margin-bottom: 30px;
-      max-width: 750px;
+      max-width: 800px;
     }
 
     .large-text {
       font-size: 20px;
-      max-width: 750px;
+      max-width: 780px;
       color: #444;
     }
 
-    /* SERVICES */
+
+    /* =========================
+       SERVICES
+    ========================= */
 
     .services {
       display: grid;
@@ -148,7 +195,7 @@
     .service {
       background: #f7f7f5;
       padding: 35px;
-      min-height: 210px;
+      min-height: 220px;
     }
 
     .service h3 {
@@ -161,7 +208,37 @@
       font-size: 16px;
     }
 
-    /* AUTHOR SECTION */
+
+    /* =========================
+       WHY ACE PEN
+    ========================= */
+
+    .why {
+      margin-top: 45px;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 40px;
+    }
+
+    .why-item {
+      border-top: 2px solid #111;
+      padding-top: 20px;
+    }
+
+    .why-item h3 {
+      font-size: 20px;
+      margin-bottom: 12px;
+    }
+
+    .why-item p {
+      color: #555;
+      font-size: 16px;
+    }
+
+
+    /* =========================
+       ABOUT MARIAM
+    ========================= */
 
     .author {
       display: grid;
@@ -187,7 +264,10 @@
       margin-bottom: 25px;
     }
 
-    /* CTA */
+
+    /* =========================
+       CONTACT / CTA
+    ========================= */
 
     .cta {
       background: #111;
@@ -197,6 +277,10 @@
 
     .cta h2 {
       color: white;
+    }
+
+    .cta .section-label {
+      color: #aaa;
     }
 
     .cta p {
@@ -211,7 +295,20 @@
       color: #111;
     }
 
-    /* FOOTER */
+    .cta .button:hover {
+      background: #ddd;
+    }
+
+    .contact-email {
+      margin-top: 20px;
+      color: #aaa;
+      font-size: 15px;
+    }
+
+
+    /* =========================
+       FOOTER
+    ========================= */
 
     footer {
       padding: 35px 0;
@@ -225,7 +322,20 @@
       gap: 20px;
     }
 
-    /* MOBILE */
+    .footer-links {
+      display: flex;
+      gap: 25px;
+    }
+
+    .footer-links a {
+      text-decoration: underline;
+      text-underline-offset: 4px;
+    }
+
+
+    /* =========================
+       MOBILE
+    ========================= */
 
     @media (max-width: 700px) {
 
@@ -246,6 +356,11 @@
         gap: 35px;
       }
 
+      .why {
+        grid-template-columns: 1fr;
+        gap: 35px;
+      }
+
       .cta {
         padding: 60px 30px;
       }
@@ -253,35 +368,104 @@
       footer .container {
         flex-direction: column;
       }
+
+      .festival-banner .container {
+        flex-direction: column;
+        gap: 3px;
+      }
+
+      .nav-links {
+        gap: 15px;
+      }
+
+      .nav-link {
+        font-size: 13px;
+      }
+
+      .footer-links {
+        flex-direction: column;
+        gap: 5px;
+      }
     }
+
   </style>
 </head>
 
+
 <body>
 
-  <nav>
-    <div class="container">
-      <div class="logo">ACE PEN STUDIO</div>
 
-      <a
-        class="nav-link"
-        href="mailto:hello@acepenstudio.com"
-      >
-        Get in touch
-      </a>
+  <!-- =========================
+       NAVIGATION
+  ========================= -->
+
+  <nav>
+
+    <div class="container">
+
+      <div class="logo">
+        ACE PEN STUDIO
+      </div>
+
+      <div class="nav-links">
+
+        <a
+          class="nav-link"
+          href="https://www.instagram.com/acepenstories/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Instagram
+        </a>
+
+        <a
+          class="nav-link"
+          href="#contact"
+        >
+          Get in touch
+        </a>
+
+      </div>
+
     </div>
+
   </nav>
+
+
+  <!-- =========================
+       MASHARIKI FESTIVAL
+  ========================= -->
+
+  <div class="festival-banner">
+
+    <div class="container">
+
+      <span>
+        MASHARIKI FESTIVAL 2026
+      </span>
+
+      <span>
+        Meeting writers · Dar es Salaam · August 21
+      </span>
+
+    </div>
+
+  </div>
 
 
   <main>
 
-    <!-- HERO -->
+
+    <!-- =========================
+         HERO
+    ========================= -->
 
     <div class="container">
+
       <div class="hero">
 
         <div class="eyebrow">
-          Literary Agency · Tanzania
+          Literary Agency · Tanzania · East Africa
         </div>
 
         <h1>
@@ -289,24 +473,29 @@
         </h1>
 
         <p>
-          Ace Pen Studio is a literary agency helping writers develop,
-          position and bring their books to readers.
+          Ace Pen Studio is a literary agency helping writers develop
+          compelling books, build their author identities and find the
+          right opportunities to bring their stories to readers.
         </p>
 
         <a
           href="#contact"
           class="button"
         >
-          Talk to us
+          Are you working on a book?
         </a>
 
       </div>
+
     </div>
 
 
-    <!-- ABOUT -->
+    <!-- =========================
+         WHAT WE DO
+    ========================= -->
 
     <section>
+
       <div class="container">
 
         <div class="section-label">
@@ -314,22 +503,27 @@
         </div>
 
         <h2>
-          We help writers turn good manuscripts into books with a future.
+          We help writers turn ideas and manuscripts into books with a future.
         </h2>
 
         <p class="large-text">
-          Writing the book is only part of the journey. We work with authors
-          on the editorial, strategic and commercial side of publishing —
-          helping strong stories find the right opportunities and audiences.
+          Writing the book is only part of the journey. We work with writers
+          at different stages of the process — from developing an early idea
+          to shaping a manuscript, defining an author's position and pursuing
+          publishing and commercial opportunities.
         </p>
 
       </div>
+
     </section>
 
 
-    <!-- SERVICES -->
+    <!-- =========================
+         SERVICES
+    ========================= -->
 
     <section>
+
       <div class="container">
 
         <div class="section-label">
@@ -337,59 +531,186 @@
         </div>
 
         <h2>
-          From manuscript to market.
+          From first idea to the wider world.
         </h2>
 
         <div class="services">
 
+
           <div class="service">
-            <h3>Literary Representation</h3>
+
+            <h3>
+              Literary Representation
+            </h3>
 
             <p>
               We represent selected authors and help identify publishing,
-              media and commercial opportunities for their work.
+              media, partnership and commercial opportunities for their work.
             </p>
+
           </div>
 
+
           <div class="service">
-            <h3>Editorial Development</h3>
+
+            <h3>
+              Editorial Development
+            </h3>
 
             <p>
-              We help writers strengthen manuscripts, clarify their ideas
-              and develop books that are compelling and commercially viable.
+              We work with writers to strengthen manuscripts, sharpen their
+              ideas and shape stories that are compelling, coherent and ready
+              for their intended audience.
             </p>
+
           </div>
 
+
           <div class="service">
-            <h3>Author Positioning</h3>
+
+            <h3>
+              Ghostwriting
+            </h3>
+
+            <p>
+              Through our ghostwriting imprint, MS – Your Writing Consultant,
+              we help individuals turn their ideas, experiences and expertise
+              into fully developed books.
+            </p>
+
+          </div>
+
+
+          <div class="service">
+
+            <h3>
+              Author Positioning
+            </h3>
 
             <p>
               We help authors understand what makes their work distinctive
-              and build a stronger identity around their writing.
+              and develop a stronger identity around their writing, expertise
+              and story.
             </p>
+
           </div>
+
 
           <div class="service">
-            <h3>Publishing Strategy</h3>
+
+            <h3>
+              Publishing Strategy
+            </h3>
 
             <p>
-              We help writers think beyond the manuscript — including
-              publishing routes, audiences, partnerships and opportunities.
+              We help writers think beyond the manuscript — considering
+              publishing routes, audiences, partnerships, rights and the
+              opportunities that can grow around a book.
             </p>
+
           </div>
+
+
+          <div class="service">
+
+            <h3>
+              Workshops & Development
+            </h3>
+
+            <p>
+              We create spaces for writers to develop their craft, understand
+              the publishing landscape and connect with other people working
+              in the literary world.
+            </p>
+
+          </div>
+
 
         </div>
 
       </div>
+
     </section>
 
 
-    <!-- ABOUT GREY -->
+    <!-- =========================
+         WHY ACE PEN STUDIO
+    ========================= -->
 
     <section>
+
+      <div class="container">
+
+        <div class="section-label">
+          Why Ace Pen Studio
+        </div>
+
+        <h2>
+          Because a good book needs more than good writing.
+        </h2>
+
+        <div class="why">
+
+
+          <div class="why-item">
+
+            <h3>
+              Editorial thinking
+            </h3>
+
+            <p>
+              We look closely at the story itself — its voice, structure,
+              argument, characters and potential.
+            </p>
+
+          </div>
+
+
+          <div class="why-item">
+
+            <h3>
+              Strategic thinking
+            </h3>
+
+            <p>
+              We think about where a book belongs, who it is for and what
+              opportunities can be built around it.
+            </p>
+
+          </div>
+
+
+          <div class="why-item">
+
+            <h3>
+              Author-first relationships
+            </h3>
+
+            <p>
+              We believe the relationship between an author and their
+              representative should be thoughtful, transparent and long-term.
+            </p>
+
+          </div>
+
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         ABOUT MARIAM
+    ========================= -->
+
+    <section>
+
       <div class="container">
 
         <div class="author">
+
 
           <div>
 
@@ -398,7 +719,7 @@
             </div>
 
             <div class="author-name">
-              Grey
+              Mariam Simbeye (Mari)
             </div>
 
             <div class="author-role">
@@ -406,29 +727,36 @@
             </div>
 
             <p class="author-note">
-              Grey works across publishing, editorial development and
-              storytelling, with a particular interest in writers with
-              something meaningful to say and a clear voice of their own.
+              Mari works across literary representation, manuscript
+              development, ghostwriting and storytelling. She works with
+              writers to uncover what is strongest in their stories and
+              develop it into work that can find its audience.
             </p>
 
           </div>
+
 
           <div>
 
             <p class="author-note">
-              If you're working on a book — even if you're not sure what
-              happens next — come say hello.
+              You don't need to have everything figured out before you reach
+              out. If you have a manuscript, a book idea or simply a story
+              you know needs to become a book, start the conversation.
             </p>
 
           </div>
 
+
         </div>
 
       </div>
+
     </section>
 
 
-    <!-- CONTACT -->
+    <!-- =========================
+         CONTACT
+    ========================= -->
 
     <section id="contact">
 
@@ -450,11 +778,15 @@
           </p>
 
           <a
-            href="mailto:hello@acepenstudio.com?subject=My%20Book%20%7C%20Ace%20Pen%20Studio"
+            href="mailto:acepenstudio@proton.me?subject=My%20Book%20%7C%20Ace%20Pen%20Studio"
             class="button"
           >
             Email Ace Pen Studio
           </a>
+
+          <div class="contact-email">
+            acepenstudio@proton.me
+          </div>
 
         </div>
 
@@ -462,8 +794,13 @@
 
     </section>
 
+
   </main>
 
+
+  <!-- =========================
+       FOOTER
+  ========================= -->
 
   <footer>
 
@@ -473,13 +810,26 @@
         © 2026 Ace Pen Studio Literary Agency
       </div>
 
-      <div>
-        Tanzania · East Africa
+      <div class="footer-links">
+
+        <span>
+          Tanzania · East Africa
+        </span>
+
+        <a
+          href="https://www.instagram.com/acepenstories/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          @acepenstories
+        </a>
+
       </div>
 
     </div>
 
   </footer>
+
 
 </body>
 </html>
