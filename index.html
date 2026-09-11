@@ -4,1043 +4,945 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Ace Pen Studio | Literary Agency</title>
-
-  <meta
-    name="description"
-    content="Ace Pen Studio is a literary agency in Tanzania. We help writers tell their stories, develop compelling books, build their author identities and find the right opportunities to bring their stories to readers."
-  >
+  <title>First-Time Inquiry | Ace Pen Studio</title>
 
   <style>
-
-    /* =========================
-       BASE
-    ========================= */
-
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
-
-    html {
-      scroll-behavior: smooth;
-    }
-
     body {
-      font-family: Arial, Helvetica, sans-serif;
+      margin: 0;
       background: #f7f7f5;
-      color: #111;
+      color: #171717;
+      font-family: Arial, Helvetica, sans-serif;
       line-height: 1.6;
     }
 
-    a {
-      color: inherit;
-      text-decoration: none;
-    }
-
     .container {
-      width: min(1100px, 90%);
-      margin: auto;
+      width: min(900px, 90%);
+      margin: 0 auto;
     }
-
-
-    /* =========================
-       NAVIGATION
-    ========================= */
 
     nav {
       padding: 28px 0;
       border-bottom: 1px solid #ddd;
     }
 
-    nav .container {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
+    nav a {
+      color: #171717;
+      text-decoration: none;
+      font-weight: bold;
+      letter-spacing: 1px;
     }
 
-    .logo {
-      font-size: 20px;
-      font-weight: 700;
-      letter-spacing: -0.5px;
-    }
-
-    .nav-links {
-      display: flex;
-      align-items: center;
-      gap: 28px;
-    }
-
-    .nav-link {
-      font-size: 14px;
-      text-decoration: underline;
-      text-underline-offset: 4px;
-    }
-
-
-    /* =========================
-       HERO
-    ========================= */
-
-    .hero {
-      padding: 110px 0 100px;
-      max-width: 950px;
+    .intro {
+      padding: 70px 0 50px;
     }
 
     .eyebrow {
-      font-size: 13px;
       text-transform: uppercase;
       letter-spacing: 2px;
-      margin-bottom: 25px;
-      color: #555;
+      font-size: 12px;
+      margin-bottom: 18px;
     }
 
     h1 {
-      font-size: clamp(48px, 8vw, 88px);
-      line-height: 0.95;
-      letter-spacing: -4px;
-      margin-bottom: 35px;
-      max-width: 900px;
+      font-size: clamp(38px, 6vw, 64px);
+      line-height: 1.05;
+      margin: 0 0 25px;
+      font-weight: 500;
     }
 
-    .hero p {
-      font-size: 21px;
-      max-width: 720px;
-      color: #444;
-      margin-bottom: 35px;
-    }
-
-    .button {
-      display: inline-block;
-      background: #111;
-      color: white;
-      padding: 15px 24px;
-      font-size: 15px;
-      font-weight: 600;
-      transition: 0.2s ease;
-    }
-
-    .button:hover {
-      background: #333;
-      transform: translateY(-2px);
-    }
-
-
-    /* =========================
-       GENERAL SECTIONS
-    ========================= */
-
-    section {
-      padding: 90px 0;
-      border-top: 1px solid #ddd;
-    }
-
-    .section-label {
-      font-size: 12px;
-      text-transform: uppercase;
-      letter-spacing: 2px;
-      color: #666;
-      margin-bottom: 20px;
-    }
-
-    h2 {
-      font-size: clamp(34px, 5vw, 55px);
-      line-height: 1;
-      letter-spacing: -2px;
-      margin-bottom: 30px;
-      max-width: 800px;
-    }
-
-    .large-text {
-      font-size: 20px;
-      max-width: 780px;
-      color: #444;
-    }
-
-
-    /* =========================
-       SERVICES
-    ========================= */
-
-    .services {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 1px;
-      background: #ccc;
-      border: 1px solid #ccc;
-      margin-top: 45px;
-    }
-
-    .service {
-      background: #f7f7f5;
-      padding: 35px;
-      min-height: 220px;
-    }
-
-    .service h3 {
-      font-size: 22px;
-      margin-bottom: 15px;
-    }
-
-    .service p {
-      color: #555;
-      font-size: 16px;
-    }
-
-
-    /* =========================
-       WHY ACE PEN
-    ========================= */
-
-    .why {
-      margin-top: 45px;
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 40px;
-    }
-
-    .why-item {
-      border-top: 2px solid #111;
-      padding-top: 20px;
-    }
-
-    .why-item h3 {
-      font-size: 20px;
-      margin-bottom: 12px;
-    }
-
-    .why-item p {
-      color: #555;
-      font-size: 16px;
-    }
-
-
-    /* =========================
-       ABOUT MARIAM
-    ========================= */
-
-    .author {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 80px;
-      align-items: center;
-    }
-
-    .author-note {
+    .intro p {
+      max-width: 700px;
       font-size: 18px;
-      color: #444;
     }
 
-    .author-name {
-      font-size: 40px;
-      font-weight: 700;
-      margin-bottom: 10px;
-      letter-spacing: -1px;
-    }
-
-    .author-role {
-      color: #666;
-      margin-bottom: 25px;
-    }
-
-
-    /* =========================
-       WHEN I'M NOT WORKING
-    ========================= */
-
-    .creative-section {
-      background: #171717;
-      color: #f5f5f2;
-      border-top: none;
-    }
-
-    .creative-section .section-label {
-      color: #999;
-    }
-
-    .creative-section h2 {
-      color: #f5f5f2;
-      max-width: 850px;
-    }
-
-    .creative-intro {
-      font-size: 24px;
-      max-width: 720px;
-      margin-bottom: 30px;
-      color: #e8e8e4;
-    }
-
-    .creative-text {
-      font-size: 18px;
-      max-width: 720px;
-      color: #c8c8c4;
-      margin-bottom: 25px;
-    }
-
-    .creative-text em {
-      color: #f5f5f2;
-    }
-
-    .creative-button {
-      background: #f5f5f2;
-      color: #171717;
-      margin-top: 10px;
-    }
-
-    .creative-button:hover {
-      background: #ddd;
-    }
-
-    .creative-invitation {
-      margin-top: 28px;
-      font-size: 16px;
-      color: #999;
-      font-style: italic;
-    }
-
-
-    /* =========================
-       WORK WITH ACE PEN STUDIO
-    ========================= */
-
-    .work-with-us {
-      background: #ecece8;
-    }
-
-    .work-with-us h2 {
-      max-width: 850px;
-    }
-
-    .work-intro {
-      font-size: 20px;
-      max-width: 760px;
-      color: #444;
-      margin-bottom: 45px;
-    }
-
-    .opportunities {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 1px;
-      background: #bbb;
-      border: 1px solid #bbb;
-      margin-bottom: 40px;
-    }
-
-    .opportunity {
-      background: #ecece8;
-      padding: 35px;
-      min-height: 230px;
-    }
-
-    .opportunity h3 {
-      font-size: 22px;
-      margin-bottom: 15px;
-    }
-
-    .opportunity p {
-      color: #555;
-      font-size: 16px;
-    }
-
-    .work-cta {
-      font-size: 18px;
-      color: #444;
-      max-width: 650px;
-    }
-
-
-    /* =========================
-       CONTACT / CTA
-    ========================= */
-
-    .cta {
-      background: #111;
-      color: white;
-      padding: 80px 60px;
-    }
-
-    .cta h2 {
-      color: white;
-    }
-
-    .cta .section-label {
-      color: #aaa;
-    }
-
-    .cta p {
-      max-width: 650px;
-      color: #ccc;
-      font-size: 19px;
-      margin-bottom: 30px;
-    }
-
-    .cta .button {
+    .form-section {
       background: white;
-      color: #111;
+      padding: 45px;
+      margin-bottom: 30px;
     }
 
-    .cta .button:hover {
-      background: #ddd;
+    .form-section h2 {
+      font-size: 28px;
+      margin-top: 0;
+      margin-bottom: 10px;
     }
 
-    .contact-email {
-      margin-top: 20px;
-      color: #aaa;
-      font-size: 15px;
+    .section-intro {
+      color: #555;
+      margin-bottom: 30px;
     }
 
+    .field {
+      margin-bottom: 28px;
+    }
 
-    /* =========================
-       FOOTER
-    ========================= */
+    label {
+      display: block;
+      font-weight: bold;
+      margin-bottom: 8px;
+    }
 
-    footer {
-      padding: 35px 0;
+    .hint {
+      display: block;
       color: #666;
       font-size: 14px;
+      margin-bottom: 8px;
     }
 
-    footer .container {
+    input[type="text"],
+    input[type="email"],
+    input[type="tel"],
+    textarea,
+    select {
+      width: 100%;
+      box-sizing: border-box;
+      padding: 13px;
+      border: 1px solid #bbb;
+      background: #fff;
+      font-family: inherit;
+      font-size: 16px;
+    }
+
+    textarea {
+      min-height: 140px;
+      resize: vertical;
+    }
+
+    .checkbox-group {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px 25px;
+    }
+
+    .checkbox-item {
       display: flex;
-      justify-content: space-between;
-      gap: 20px;
+      align-items: flex-start;
+      gap: 9px;
+      font-weight: normal;
     }
 
-    .footer-links {
-      display: flex;
-      gap: 25px;
+    .checkbox-item input {
+      margin-top: 5px;
     }
 
-    .footer-links a {
-      text-decoration: underline;
-      text-underline-offset: 4px;
+    .note {
+      background: #f1f1ef;
+      padding: 25px;
+      margin-top: 25px;
+      margin-bottom: 30px;
     }
 
+    .note h3 {
+      margin-top: 0;
+    }
 
-    /* =========================
-       MOBILE
-    ========================= */
+    .submit-area {
+      padding: 40px 0 70px;
+      text-align: center;
+    }
+
+    button {
+      background: #171717;
+      color: white;
+      border: none;
+      padding: 16px 32px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      opacity: 0.85;
+    }
+
+    footer {
+      border-top: 1px solid #ddd;
+      padding: 30px 0;
+      font-size: 14px;
+      color: #666;
+    }
 
     @media (max-width: 700px) {
-
-      .hero {
-        padding: 75px 0;
+      .form-section {
+        padding: 28px 22px;
       }
 
-      h1 {
-        letter-spacing: -2px;
-      }
-
-      .services {
+      .checkbox-group {
         grid-template-columns: 1fr;
-      }
-
-      .author {
-        grid-template-columns: 1fr;
-        gap: 35px;
-      }
-
-      .why {
-        grid-template-columns: 1fr;
-        gap: 35px;
-      }
-
-      .opportunities {
-        grid-template-columns: 1fr;
-      }
-
-      .creative-intro {
-        font-size: 21px;
-      }
-
-      .cta {
-        padding: 60px 30px;
-      }
-
-      footer .container {
-        flex-direction: column;
-      }
-
-      .nav-links {
-        gap: 15px;
-      }
-
-      .nav-link {
-        font-size: 13px;
-      }
-
-      .footer-links {
-        flex-direction: column;
-        gap: 5px;
       }
     }
-
   </style>
 </head>
 
-
 <body>
 
-
-  <!-- =========================
-       NAVIGATION
-  ========================= -->
-
   <nav>
-
     <div class="container">
-
-      <div class="logo">
-        ACE PEN STUDIO
-      </div>
-
-      <div class="nav-links">
-
-        <a
-          class="nav-link"
-          href="https://www.instagram.com/acepenstories/"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Instagram
-        </a>
-
-        <a
-          class="nav-link"
-          href="#contact"
-        >
-          Get in touch
-        </a>
-
-      </div>
-
+      <a href="index.html">ACE PEN STUDIO</a>
     </div>
-
   </nav>
-
 
   <main>
 
+    <section class="intro">
+      <div class="container">
 
-    <!-- =========================
-         HERO
-    ========================= -->
+        <div class="eyebrow">First-Time Inquiry</div>
 
-    <div class="container">
-
-      <div class="hero">
-
-        <div class="eyebrow">
-          Your Literary Agency · Tanzania · East Africa
-        </div>
-
-        <h1>
-          Your story deserves to be told.
-        </h1>
+        <h1>Tell us about yourself and what you're working on.</h1>
 
         <p>
-          Ace Pen Studio is a literary agency in Tanzania. We help writers
-          tell their stories and develop them into compelling books, build
-          their author identities and find the right opportunities to bring
-          their stories to readers.
+          Whether you have a book idea, a finished manuscript, are trying to
+          understand how publishing works, or simply know that you want to
+          write but don't know where to begin, this is a good place to start.
         </p>
 
-        <a
-          href="#contact"
-          class="button"
-        >
-          Are you working on a book?
-        </a>
+        <p>
+          This form helps us understand who you are, what you're working on,
+          and how we may be able to support you.
+        </p>
 
-      </div>
-
-    </div>
-
-
-    <!-- =========================
-         WHAT WE DO
-    ========================= -->
-
-    <section>
-
-      <div class="container">
-
-        <div class="section-label">
-          What we do
-        </div>
-
-        <h2>
-          We help YOU turn your ideas into publishable manuscripts and books that deserve a literary home.
-        </h2>
-
-        <p class="large-text">
-          Writing the book is only part of the journey. We work with writers
-          at different stages of the process — from developing an early idea
-          as your ghostwriter to shaping a manuscript as your editor, we help
-          turn your author dreams into a reality. Beyond bringing your stories
-          to life, we help you define your authorial position and pursue
-          publishing and commercial opportunities.
+        <p>
+          You do not need to know which Ace Pen service you need before
+          filling this in. We'll use what you tell us to help determine
+          the most useful next step.
         </p>
 
       </div>
-
     </section>
 
 
-    <!-- =========================
-         SERVICES
-    ========================= -->
+    <form>
 
-    <section>
+      <!-- SECTION 1 -->
 
-      <div class="container">
+      <section class="form-section">
+        <div class="container">
 
-        <div class="section-label">
-          For writers
-        </div>
+          <h2>Section 1 — About You</h2>
 
-        <h2>
-          From first idea to the wider world.
-        </h2>
-
-        <div class="services">
-
-
-          <div class="service">
-
-            <h3>
-              Literary Representation
-            </h3>
-
-            <p>
-              We offer literary representation services to selected authors
-              and help identify publishing, media, partnership and commercial
-              opportunities for their work.
-            </p>
-
+          <div class="field">
+            <label for="location">Location</label>
+            <span class="hint">Where are you based?</span>
+            <input type="text" id="location" name="location">
           </div>
 
-
-          <div class="service">
-
-            <h3>
-              Editorial Development
-            </h3>
-
-            <p>
-              We work with writers to strengthen manuscripts, sharpen their
-              ideas and shape stories that are compelling, coherent and ready
-              for their intended audience.
-            </p>
-
+          <div class="field">
+            <label for="full-name">Full name</label>
+            <input type="text" id="full-name" name="full_name" required>
           </div>
 
-
-          <div class="service">
-
-            <h3>
-              Ghostwriting
-            </h3>
-
-            <p>
-              Through our ghostwriting imprint, MS – Your Writing Consultant,
-              we help individuals turn their ideas, experiences and expertise
-              into fully developed books.
-            </p>
-
+          <div class="field">
+            <label for="preferred-name">
+              Name you would like us to use when communicating with you
+            </label>
+            <span class="hint">Optional</span>
+            <input type="text" id="preferred-name" name="preferred_name">
           </div>
 
-
-          <div class="service">
-
-            <h3>
-              Author Positioning
-            </h3>
-
-            <p>
-              We help authors understand what makes their work distinctive
-              and develop a stronger identity around their writing, expertise
-              and story.
-            </p>
-
+          <div class="field">
+            <label for="pen-name">Pen name / pseudonym</label>
+            <span class="hint">If applicable</span>
+            <input type="text" id="pen-name" name="pen_name">
           </div>
 
-
-          <div class="service">
-
-            <h3>
-              Publishing Strategy
-            </h3>
-
-            <p>
-              We help writers think beyond the manuscript — considering
-              publishing routes, audiences, translation, partnerships, rights,
-              and the opportunities that can grow around a book.
-            </p>
-
+          <div class="field">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required>
           </div>
 
-
-          <div class="service">
-
-            <h3>
-              Workshops & Development
-            </h3>
-
-            <p>
-              We create spaces for writers to develop their craft, understand
-              the publishing landscape and connect with other people working
-              in the literary world.
-            </p>
-
+          <div class="field">
+            <label for="phone">Phone / WhatsApp number</label>
+            <input type="tel" id="phone" name="phone">
           </div>
-
 
         </div>
-
-      </div>
-
-    </section>
+      </section>
 
 
-    <!-- =========================
-         WHY ACE PEN STUDIO
-    ========================= -->
+      <!-- SECTION 2 -->
 
-    <section>
+      <section class="form-section">
+        <div class="container">
 
-      <div class="container">
+          <h2>Section 2 — Tell Us About Your Writing</h2>
 
-        <div class="section-label">
-          Why Ace Pen Studio
-        </div>
+          <div class="field">
+            <label>Which of these best describes where you are with your writing?</label>
+            <span class="hint">Select all that apply.</span>
 
-        <h2>
-          Because a good book needs more than good writing.
-        </h2>
+            <div class="checkbox-group">
 
-        <div class="why">
+              <label class="checkbox-item">
+                <input type="checkbox" name="writing_stage[]" value="Previously published">
+                I have previously published a book
+              </label>
 
+              <label class="checkbox-item">
+                <input type="checkbox" name="writing_stage[]" value="Started writing">
+                I have started writing
+              </label>
 
-          <div class="why-item">
+              <label class="checkbox-item">
+                <input type="checkbox" name="writing_stage[]" value="Interested in ghostwriting">
+                I am interested in ghostwriting
+              </label>
 
-            <h3>
-              Editorial thinking
-            </h3>
+              <label class="checkbox-item">
+                <input type="checkbox" name="writing_stage[]" value="Completed manuscript">
+                I have a completed manuscript
+              </label>
 
-            <p>
-              We look closely at the story itself — its voice, structure,
-              argument, characters and potential.
-            </p>
+              <label class="checkbox-item">
+                <input type="checkbox" name="writing_stage[]" value="Published through publisher">
+                I have published through a publisher
+              </label>
 
-          </div>
+              <label class="checkbox-item">
+                <input type="checkbox" name="writing_stage[]" value="Idea">
+                I have an idea but haven't started writing
+              </label>
 
+              <label class="checkbox-item">
+                <input type="checkbox" name="writing_stage[]" value="Partial draft">
+                I have a partial draft
+              </label>
 
-          <div class="why-item">
+              <label class="checkbox-item">
+                <input type="checkbox" name="writing_stage[]" value="Self-published">
+                I am currently self-published
+              </label>
 
-            <h3>
-              Strategic thinking
-            </h3>
+              <label class="checkbox-item">
+                <input type="checkbox" name="writing_stage[]" value="Not sure">
+                I'm not sure yet — I just know I want to write
+              </label>
 
-            <p>
-              We think about where a book belongs, who it is for and what
-              opportunities can be built around it.
-            </p>
+              <label class="checkbox-item">
+                <input type="checkbox" name="writing_stage[]" value="Revising">
+                I am revising my manuscript
+              </label>
 
-          </div>
+              <label class="checkbox-item">
+                <input type="checkbox" name="writing_stage[]" value="Professional writer">
+                I write professionally for other people
+              </label>
 
-
-          <div class="why-item">
-
-            <h3>
-              Author-first relationships
-            </h3>
-
-            <p>
-              We believe the relationship between an author and their
-              representative should be thoughtful, transparent and long-term.
-            </p>
-
-          </div>
-
-
-        </div>
-
-      </div>
-
-    </section>
-
-
-    <!-- =========================
-         ABOUT MARIAM
-    ========================= -->
-
-    <section>
-
-      <div class="container">
-
-        <div class="author">
-
-
-          <div>
-
-            <div class="section-label">
-              Your literary agent
             </div>
+          </div>
 
-            <div class="author-name">
-              Mariam Simbeye (Mari)
+
+          <div class="field">
+            <label>What kind of writing do you do or want to do?</label>
+            <span class="hint">Select all that apply.</span>
+
+            <div class="checkbox-group">
+
+              <label class="checkbox-item">
+                <input type="checkbox" name="genre[]" value="Fiction">
+                Fiction
+              </label>
+
+              <label class="checkbox-item">
+                <input type="checkbox" name="genre[]" value="Literary fiction">
+                Literary fiction
+              </label>
+
+              <label class="checkbox-item">
+                <input type="checkbox" name="genre[]" value="Romance">
+                Romance
+              </label>
+
+              <label class="checkbox-item">
+                <input type="checkbox" name="genre[]" value="Fantasy or science fiction">
+                Fantasy / science fiction
+              </label>
+
+              <label class="checkbox-item">
+                <input type="checkbox" name="genre[]" value="Crime or thriller">
+                Crime / thriller
+              </label>
+
+              <label class="checkbox-item">
+                <input type="checkbox" name="genre[]" value="Young adult">
+                Young adult
+              </label>
+
+              <label class="checkbox-item">
+                <input type="checkbox" name="genre[]" value="Children's literature">
+                Children's literature
+              </label>
+
+              <label class="checkbox-item">
+                <input type="checkbox" name="genre[]" value="Poetry">
+                Poetry
+              </label>
+
+              <label class="checkbox-item">
+                <input type="checkbox" name="genre[]" value="Essays">
+                Essays
+              </label>
+
+              <label class="checkbox-item">
+                <input type="checkbox" name="genre[]" value="Memoir">
+                Memoir / autobiography
+              </label>
+
+              <label class="checkbox-item">
+                <input type="checkbox" name="genre[]" value="Non-fiction">
+                Non-fiction
+              </label>
+
+              <label class="checkbox-item">
+                <input type="checkbox" name="genre[]" value="Self-help">
+                Self-help / personal development
+              </label>
+
+              <label class="checkbox-item">
+                <input type="checkbox" name="genre[]" value="Business">
+                Business / leadership
+              </label>
+
+              <label class="checkbox-item">
+                <input type="checkbox" name="genre[]" value="Academic">
+                Academic / professional writing
+              </label>
+
+              <label class="checkbox-item">
+                <input type="checkbox" name="genre[]" value="Religious">
+                Religious / spiritual writing
+              </label>
+
             </div>
+          </div>
 
-            <div class="author-role">
-              Editor · Literary Agent · Ghostwriter
+
+          <div class="field">
+            <label for="project-description">
+              Tell us briefly about what you're working on.
+            </label>
+            <span class="hint">
+              You can tell us about your idea, manuscript, book, writing career,
+              or whatever you're hoping to develop.
+            </span>
+
+            <textarea id="project-description" name="project_description"></textarea>
+          </div>
+
+        </div>
+      </section>
+
+
+      <!-- SECTION 3 -->
+
+      <section class="form-section">
+        <div class="container">
+
+          <h2>Section 3 — Where Are You With the Project?</h2>
+
+          <div class="field">
+            <label>What stage is your project currently at?</label>
+            <span class="hint">Select all that apply.</span>
+
+            <div class="checkbox-group">
+
+              <label class="checkbox-item">
+                <input type="checkbox" name="project_stage[]" value="Idea">
+                I only have an idea
+              </label>
+
+              <label class="checkbox-item">
+                <input type="checkbox" name="project_stage[]" value="Notes or outline">
+                I have notes or an outline
+              </label>
+
+              <label class="checkbox-item">
+                <input type="checkbox" name="project_stage[]" value="Some chapters">
+                I have written some chapters
+              </label>
+
+              <label class="checkbox-item">
+                <input type="checkbox" name="project_stage[]" value="First draft">
+                I have a first draft
+              </label>
+
+              <label class="checkbox-item">
+                <input type="checkbox" name="project_stage[]" value="Completed manuscript">
+                I have a completed manuscript
+              </label>
+
+              <label class="checkbox-item">
+                <input type="checkbox" name="project_stage[]" value="Edited manuscript">
+                I have a completed manuscript that has already been edited
+              </label>
+
+              <label class="checkbox-item">
+                <input type="checkbox" name="project_stage[]" value="Submitted to publishers">
+                I have already submitted it to publishers
+              </label>
+
+              <label class="checkbox-item">
+                <input type="checkbox" name="project_stage[]" value="Published">
+                I have already published it
+              </label>
+
+              <label class="checkbox-item">
+                <input type="checkbox" name="project_stage[]" value="Feedback or rejection">
+                I have received feedback or rejection from publishers
+              </label>
+
+              <label class="checkbox-item">
+                <input type="checkbox" name="project_stage[]" value="Not sure">
+                I'm not sure
+              </label>
+
             </div>
-
-            <p class="author-note">
-              Mari works across literary representation, manuscript
-              development, ghostwriting and storytelling. She works with
-              writers to uncover what is strongest in their stories and
-              develop it into work that can find its audience.
-            </p>
-
           </div>
 
 
-          <div>
+          <div class="field">
+            <label for="amount-written">Approximately how much have you written?</label>
+            <span class="hint">
+              For example: 5,000 words, three chapters, an 80-page manuscript,
+              a complete 60,000-word draft, etc.
+            </span>
 
-            <p class="author-note">
-              You don't need to have everything figured out before you reach
-              out. If you have a manuscript, a book idea or simply a story
-              you know needs to become a book, start the conversation.
-            </p>
-
+            <input type="text" id="amount-written" name="amount_written">
           </div>
 
 
+          <div class="field">
+            <label>Have you previously worked with an editor, writing consultant,
+              publisher, literary agent or other publishing professional?</label>
+
+            <label class="checkbox-item">
+              <input type="radio" name="worked_with_professional" value="Yes">
+              Yes
+            </label>
+
+            <label class="checkbox-item">
+              <input type="radio" name="worked_with_professional" value="No">
+              No
+            </label>
+          </div>
+
+
+          <div class="field">
+            <label for="professional-experience">
+              If yes, tell us briefly about your experience.
+            </label>
+
+            <textarea id="professional-experience" name="professional_experience"></textarea>
+          </div>
+
         </div>
-
-      </div>
-
-    </section>
+      </section>
 
 
-    <!-- =========================
-         WHEN I'M NOT WORKING
-    ========================= -->
+      <!-- SECTION 4 -->
 
-    <section class="creative-section">
+      <section class="form-section">
+        <div class="container">
 
-      <div class="container">
+          <h2>Section 4 — What Are You Hoping to Do?</h2>
 
-        <div class="section-label">
-          What I Do For Fun
+          <div class="field">
+            <label>What would you most like help with right now?</label>
+            <span class="hint">Select all that apply.</span>
+
+            <div class="checkbox-group">
+
+              <label class="checkbox-item">
+                <input type="checkbox" name="help_needed[]" value="Developing idea">
+                Developing an idea into a book
+              </label>
+
+              <label class="checkbox-item">
+                <input type="checkbox" name="help_needed[]" value="Writing">
+                Writing the book
+              </label>
+
+              <label class="checkbox-item">
+                <input type="checkbox" name="help_needed[]" value="Ghostwriting">
+                Ghostwriting
+              </label>
+
+              <label class="checkbox-item">
+                <input type="checkbox" name="help_needed[]" value="Manuscript development">
+                Manuscript development
+              </label>
+
+              <label class="checkbox-item">
+                <input type="checkbox" name="help_needed[]" value="Editing">
+                Editing
+              </label>
+
+              <label class="checkbox-item">
+                <input type="checkbox" name="help_needed[]" value="Publishing process">
+                Understanding the publishing process
+              </label>
+
+              <label class="checkbox-item">
+                <input type="checkbox" name="help_needed[]" value="Literary representation">
+                Literary representation
+              </label>
+
+              <label class="checkbox-item">
+                <input type="checkbox" name="help_needed[]" value="Submission preparation">
+                Preparing my manuscript for submission
+              </label>
+
+              <label class="checkbox-item">
+                <input type="checkbox" name="help_needed[]" value="Finding publishers">
+                Finding suitable publishers
+              </label>
+
+              <label class="checkbox-item">
+                <input type="checkbox" name="help_needed[]" value="Publishing opportunity">
+                Understanding or negotiating a publishing opportunity
+              </label>
+
+              <label class="checkbox-item">
+                <input type="checkbox" name="help_needed[]" value="Author profile">
+                Building my profile as an author
+              </label>
+
+              <label class="checkbox-item">
+                <input type="checkbox" name="help_needed[]" value="Author brand">
+                Developing my author brand
+              </label>
+
+              <label class="checkbox-item">
+                <input type="checkbox" name="help_needed[]" value="Not sure">
+                I am not sure yet
+              </label>
+
+            </div>
+          </div>
+
+
+          <div class="field">
+            <label for="success">
+              What would success look like for you?
+            </label>
+
+            <span class="hint">
+              Tell us what you would ideally like to achieve with this project.
+            </span>
+
+            <textarea id="success" name="success"></textarea>
+          </div>
+
         </div>
-
-        <h2>
-          I go by Ace as a pseudonym.
-        </h2>
-
-        <p class="creative-intro">
-          When I'm not working, I write as Ace — just for the fun of it.
-        </p>
-
-        <p class="creative-text">
-          Not everything has to become a client project.
-        </p>
-
-        <p class="creative-text">
-          I use my Substack as a space for thoughts, ideas, and random musings that I want to put somewhere. Right now, I'm writing
-          <em>Scottfree</em>, a novella, and sharing pieces of the process
-          there.
-        </p>
-
-        <p class="creative-text">
-          If you enjoy the story and think we might make interesting writing
-          partners, I'd love to hear from you.
-        </p>
-
-        <a
-          href="https://acepenstudio.substack.com/s/scott-free-a-novella-by-ace"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="button creative-button"
-        >
-          Read Scottfree→
-        </a>
-
-        <p class="creative-invitation">
-          Interested in co-writing it with me? Let's talk.
-        </p>
-
-      </div>
-
-    </section>
+      </section>
 
 
-    <!-- =========================
-         WORK WITH ACE PEN STUDIO
-    ========================= -->
+      <!-- SECTION 5 -->
 
-    <section class="work-with-us">
+      <section class="form-section">
+        <div class="container">
 
-      <div class="container">
+          <h2>Section 5 — Your Publishing Goals</h2>
 
-        <div class="section-label">
-          Work with Ace Pen Studio
+          <div class="field">
+            <label>What are you hoping to do with the finished work?</label>
+            <span class="hint">Select all that apply.</span>
+
+            <div class="checkbox-group">
+
+              <label class="checkbox-item">
+                <input type="checkbox" name="publishing_goal[]" value="Tanzania">
+                Publish with a Tanzanian publisher
+              </label>
+
+              <label class="checkbox-item">
+                <input type="checkbox" name="publishing_goal[]" value="East Africa">
+                Publish elsewhere in East Africa
+              </label>
+
+              <label class="checkbox-item">
+                <input type="checkbox" name="publishing_goal[]" value="International">
+                Seek international publishing opportunities
+              </label>
+
+              <label class="checkbox-item">
+                <input type="checkbox" name="publishing_goal[]" value="Self-publish">
+                Self-publish
+              </label>
+
+              <label class="checkbox-item">
+                <input type="checkbox" name="publishing_goal[]" value="Both">
+                Explore both traditional and independent publishing
+              </label>
+
+              <label class="checkbox-item">
+                <input type="checkbox" name="publishing_goal[]" value="Not sure">
+                I'm not sure yet
+              </label>
+
+            </div>
+          </div>
+
+
+          <div class="field">
+            <label>
+              Have you already approached any publishers or publishing
+              professionals about this project?
+            </label>
+
+            <label class="checkbox-item">
+              <input type="radio" name="approached_publishers" value="Yes">
+              Yes
+            </label>
+
+            <label class="checkbox-item">
+              <input type="radio" name="approached_publishers" value="No">
+              No
+            </label>
+          </div>
+
+
+          <div class="field">
+            <label for="publisher-experience">
+              If yes, what happened?
+            </label>
+
+            <textarea id="publisher-experience" name="publisher_experience"></textarea>
+          </div>
+
+
+          <div class="field">
+            <label>
+              Do you currently have an audience or platform connected to your work?
+            </label>
+
+            <label class="checkbox-item">
+              <input type="radio" name="audience" value="Yes">
+              Yes
+            </label>
+
+            <label class="checkbox-item">
+              <input type="radio" name="audience" value="No">
+              No
+            </label>
+
+            <label class="checkbox-item">
+              <input type="radio" name="audience" value="Small or new audience">
+              I have a small or new audience
+            </label>
+
+            <label class="checkbox-item">
+              <input type="radio" name="audience" value="Not sure">
+              I'm not sure
+            </label>
+          </div>
+
+
+          <div class="field">
+            <label for="audience-details">
+              If yes, tell us about it.
+            </label>
+
+            <span class="hint">
+              For example: social media following, newsletter, professional
+              network, existing readers, community, public profile, etc.
+            </span>
+
+            <textarea id="audience-details" name="audience_details"></textarea>
+          </div>
+
         </div>
-
-        <h2>
-          We're building a literary home for African writers.
-        </h2>
-
-        <p class="work-intro">
-          Ace Pen Studio is growing, and we're interested in hearing from
-          people who want to contribute to the work of discovering, developing
-          and representing writers.
-        </p>
-
-        <div class="opportunities">
+      </section>
 
 
-          <div class="opportunity">
+      <!-- SECTION 6 -->
 
-            <h3>
-              Editors
-            </h3>
+      <section class="form-section">
+        <div class="container">
+
+          <h2>Section 6 — How Ace Pen Might Support You</h2>
+
+          <div class="field">
+
+            <label>Which of these would you be open to discussing?</label>
+
+            <span class="hint">
+              You don't need to choose a service now. This simply helps us
+              understand what you're considering.
+            </span>
+
+            <div class="checkbox-group">
+
+              <label class="checkbox-item">
+                <input type="checkbox" name="ace_support[]" value="Literary representation">
+                Literary representation
+              </label>
+
+              <label class="checkbox-item">
+                <input type="checkbox" name="ace_support[]" value="Editing">
+                Editing
+              </label>
+
+              <label class="checkbox-item">
+                <input type="checkbox" name="ace_support[]" value="Writing support">
+                Writing support
+              </label>
+
+              <label class="checkbox-item">
+                <input type="checkbox" name="ace_support[]" value="Manuscript development">
+                Manuscript development
+              </label>
+
+              <label class="checkbox-item">
+                <input type="checkbox" name="ace_support[]" value="Ghostwriting">
+                Ghostwriting
+              </label>
+
+              <label class="checkbox-item">
+                <input type="checkbox" name="ace_support[]" value="Research support">
+                Research support
+              </label>
+
+              <label class="checkbox-item">
+                <input type="checkbox" name="ace_support[]" value="Publishing consultancy">
+                Publishing consultancy
+              </label>
+
+              <label class="checkbox-item">
+                <input type="checkbox" name="ace_support[]" value="Author positioning">
+                Author positioning / branding
+              </label>
+
+              <label class="checkbox-item">
+                <input type="checkbox" name="ace_support[]" value="Other">
+                Other creative or professional services
+              </label>
+
+              <label class="checkbox-item">
+                <input type="checkbox" name="ace_support[]" value="Recommend">
+                I would like Ace Pen Studio to recommend what would be most appropriate
+              </label>
+
+            </div>
+          </div>
+
+
+          <div class="note">
+
+            <h3>A note about publishing</h3>
 
             <p>
-              If you have a sharp editorial eye and love working with writers
-              to make their books better, we'd like to hear from you.
+              Publishing works differently in different parts of the world.
+              Since Ace Pen Studio works primarily with writers and publishers
+              in Tanzania, East Africa and the wider African publishing market,
+              some of the things you may have heard about publishing elsewhere
+              may not apply here.
             </p>
-
-          </div>
-
-
-          <div class="opportunity">
-
-            <h3>
-              Literary Agents
-            </h3>
 
             <p>
-              If you're interested in discovering writers in Africa, developing author
-              relationships and helping books find opportunities beyond the
-              manuscript, let's talk.
+              In some markets, authors may receive an advance from a publisher
+              when their book is accepted. This is not always the case in
+              Tanzania. A publisher may instead agree to publish a manuscript
+              without paying an advance, with the author earning royalties from
+              sales later.
             </p>
-
-          </div>
-
-
-          <div class="opportunity">
-
-            <h3>
-              Publishing & Rights
-            </h3>
 
             <p>
-              If you work across publishing, translation, rights, distribution
-              or related areas, we're interested in building relationships.
+              Having a literary agent also does not automatically mean that you
+              will receive an advance, a publishing deal, or immediate income.
+            </p>
+
+            <p>
+              This is why we look at each writer and project individually.
+              Sometimes the best way for us to support you may be through
+              literary representation. In other cases, your project may first
+              need writing, editing, manuscript development, publishing advice
+              or other support before it is ready to be presented to publishers.
+            </p>
+
+            <p>
+              If we think you would benefit from one of these services, we will
+              explain why, what we recommend, and what it will cost before any
+              work begins.
+            </p>
+
+            <p>
+              Don't worry, you are not expected to know which service you need
+              when you first contact us. That's part of what we help you figure out.
             </p>
 
           </div>
-
 
         </div>
-
-        <p class="work-cta">
-          Think you'd be a good fit for what we're building?
-        </p>
-
-        <a
-          href="mailto:acepenstudio@proton.me?subject=Working%20with%20Ace%20Pen%20Studio"
-          class="button"
-        >
-          Tell us about yourself →
-        </a>
-
-      </div>
-
-    </section>
+      </section>
 
 
-    <!-- =========================
-         CONTACT
-    ========================= -->
+      <!-- CONSENT -->
 
-    <section id="contact">
+      <section class="form-section">
+        <div class="container">
 
-      <div class="container">
+          <h2>Before You Submit</h2>
 
-        <div class="cta">
+          <div class="field">
 
-          <div class="section-label">
-            Let's talk about your book
+            <label class="checkbox-item">
+              <input type="checkbox" name="consent_response" required>
+              I understand that the information I provide may be used by
+              Ace Pen Studio to respond to my inquiry and determine how the
+              studio may be able to support me.
+            </label>
+
           </div>
 
-          <h2>
-            Have a manuscript, an idea, or a story you can't stop thinking about?
-          </h2>
+          <div class="field">
+
+            <label class="checkbox-item">
+              <input type="checkbox" name="consent_representation" required>
+              I understand that submitting this form does not mean that
+              Ace Pen Studio has agreed to represent me or provide any service.
+              Any service, fee or representation arrangement will be discussed
+              and agreed separately before work begins.
+            </label>
+
+          </div>
+
+        </div>
+      </section>
+
+
+      <!-- SUBMIT -->
+
+      <div class="submit-area">
+
+        <div class="container">
 
           <p>
-            Tell us what you're working on. If it's a good fit for Ace Pen
-            Studio, we'd love to hear more.
+            Thank you for taking the time to tell us about yourself and your work.
           </p>
 
-          <a
-            href="mailto:acepenstudio@proton.me?subject=My%20Book%20%7C%20Ace%20Pen%20Studio"
-            class="button"
-          >
-            Email Ace Pen Studio
-          </a>
+          <p>
+            We'll review your inquiry and determine what kind of conversation
+            or service may be most appropriate.
+          </p>
 
-          <div class="contact-email">
-            acepenstudio@proton.me
-          </div>
+          <button type="submit">
+            Submit Inquiry
+          </button>
 
         </div>
 
       </div>
 
-    </section>
-
+    </form>
 
   </main>
 
 
-  <!-- =========================
-       FOOTER
-  ========================= -->
-
   <footer>
-
     <div class="container">
-
-      <div>
-        © 2026 Ace Pen Studio Literary Agency
-      </div>
-
-      <div class="footer-links">
-
-        <span>
-          Tanzania · East Africa
-        </span>
-
-        <a
-          href="https://www.instagram.com/acepenstories/"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          @acepenstories
-        </a>
-
-      </div>
-
+      © 2026 Ace Pen Studio Literary Agency · Tanzania · East Africa
     </div>
-
   </footer>
-
 
 </body>
 </html>
