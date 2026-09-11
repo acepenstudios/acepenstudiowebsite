@@ -8,7 +8,7 @@
 
   <meta
     name="description"
-    content="Ace Pen Studio is a literary agency and creative studio that supports African writers through literary representation, editorial development, ghostwriting, author development and publishing consultation."
+    content="Ace Pen Studio is a literary agency and creative writing studio working with writers, authors and ideas across Tanzania, East Africa and beyond."
   />
 
   <style>
@@ -37,23 +37,6 @@
       line-height: 1.65;
     }
 
-    h1,
-    h2,
-    h3,
-    .eyebrow,
-    nav,
-    .button,
-    .section-number {
-      font-family: Futura, "Century Gothic", Arial, Helvetica, sans-serif;
-    }
-
-    h1,
-    h2,
-    h3,
-    p {
-      margin-top: 0;
-    }
-
     a {
       color: inherit;
     }
@@ -65,114 +48,109 @@
 
     /* NAVIGATION */
 
-    header.site-header {
+    header {
       border-bottom: 1px solid var(--line);
       background: var(--white);
     }
 
-    .nav-container {
-      min-height: 76px;
+    .nav {
+      min-height: 78px;
       display: flex;
       align-items: center;
       justify-content: space-between;
       gap: 30px;
     }
 
-    .brand {
+    .logo {
       text-decoration: none;
       font-family: Futura, "Century Gothic", Arial, Helvetica, sans-serif;
-      font-size: 17px;
-      font-weight: 700;
-      letter-spacing: 0.08em;
-      white-space: nowrap;
-    }
-
-    nav {
-      display: flex;
-      align-items: center;
-      gap: 28px;
-      font-size: 11px;
+      font-size: 16px;
       font-weight: 700;
       letter-spacing: 0.08em;
       text-transform: uppercase;
     }
 
-    nav a {
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 30px;
+      font-family: Futura, "Century Gothic", Arial, Helvetica, sans-serif;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+    }
+
+    .nav-links a {
       text-decoration: none;
     }
 
-    nav a:hover {
+    .nav-links a:hover {
       text-decoration: underline;
       text-underline-offset: 5px;
     }
 
     .nav-button {
-      padding: 10px 15px;
       border: 1px solid var(--black);
+      padding: 10px 15px;
     }
 
     .nav-button:hover {
       background: var(--black);
       color: var(--white);
-      text-decoration: none;
+      text-decoration: none !important;
     }
 
     /* HERO */
 
     .hero {
-      padding: 120px 0 115px;
       border-bottom: 1px solid var(--line);
+      padding: 105px 0 100px;
     }
 
     .eyebrow {
-      margin-bottom: 22px;
-      font-size: 12px;
+      margin-bottom: 20px;
+      font-family: Futura, "Century Gothic", Arial, Helvetica, sans-serif;
+      font-size: 11px;
       font-weight: 700;
-      letter-spacing: 0.18em;
+      letter-spacing: 0.16em;
       text-transform: uppercase;
     }
 
     .hero h1 {
-      max-width: 980px;
-      margin-bottom: 32px;
-      font-size: clamp(52px, 8vw, 96px);
-      line-height: 0.97;
-      letter-spacing: -0.045em;
+      max-width: 1000px;
+      margin: 0 0 28px;
+      font-family: Futura, "Century Gothic", Arial, Helvetica, sans-serif;
+      font-size: clamp(52px, 8vw, 92px);
+      line-height: 0.98;
       font-weight: 500;
+      letter-spacing: -0.035em;
     }
 
     .hero-lead {
-      max-width: 790px;
-      margin-bottom: 28px;
-      font-size: 25px;
-      line-height: 1.45;
-    }
-
-    .hero-copy {
-      max-width: 760px;
+      max-width: 720px;
+      margin: 0;
+      font-size: 22px;
+      line-height: 1.55;
       color: var(--muted);
-      font-size: 17px;
-    }
-
-    .hero-copy p:last-child {
-      margin-bottom: 0;
     }
 
     .hero-actions {
       display: flex;
-      flex-wrap: wrap;
       gap: 14px;
+      flex-wrap: wrap;
       margin-top: 38px;
     }
 
     .button {
       display: inline-block;
-      padding: 14px 22px;
+      padding: 13px 21px;
       border: 1px solid var(--black);
       text-decoration: none;
-      font-size: 12px;
+      font-family: Futura, "Century Gothic", Arial, Helvetica, sans-serif;
+      font-size: 11px;
       font-weight: 700;
-      letter-spacing: 0.08em;
+      letter-spacing: 0.1em;
       text-transform: uppercase;
       transition: background 0.2s ease, color 0.2s ease;
     }
@@ -187,176 +165,275 @@
       color: var(--black);
     }
 
-    .button.secondary {
-      background: var(--white);
-      color: var(--black);
-    }
-
     .button.secondary:hover {
       background: var(--black);
       color: var(--white);
     }
 
+    /* BLACK BANNERS */
+
+    .black-banner {
+      border-bottom: 1px solid var(--line);
+      background: var(--black);
+      color: var(--white);
+    }
+
+    .black-banner .container {
+      padding: 44px 0;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 45px;
+    }
+
+    .banner-copy {
+      max-width: 760px;
+    }
+
+    .banner-eyebrow {
+      margin-bottom: 9px;
+      font-family: Futura, "Century Gothic", Arial, Helvetica, sans-serif;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+    }
+
+    .black-banner h2 {
+      margin: 0 0 10px;
+      font-family: Futura, "Century Gothic", Arial, Helvetica, sans-serif;
+      font-size: 30px;
+      line-height: 1.2;
+      font-weight: 500;
+    }
+
+    .black-banner p {
+      margin: 0;
+      color: #cccccc;
+      font-size: 15px;
+    }
+
+    .banner-button {
+      display: inline-block;
+      flex: 0 0 auto;
+      padding: 13px 22px;
+      border: 1px solid var(--white);
+      color: var(--white);
+      text-decoration: none;
+      font-family: Futura, "Century Gothic", Arial, Helvetica, sans-serif;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.09em;
+      text-transform: uppercase;
+      transition: background 0.2s ease, color 0.2s ease;
+    }
+
+    .banner-button:hover {
+      background: var(--white);
+      color: var(--black);
+    }
+
     /* GENERAL SECTIONS */
 
     .section {
+      padding: 90px 0;
       border-bottom: 1px solid var(--line);
     }
 
-    .section-grid {
-      display: grid;
-      grid-template-columns: minmax(190px, 0.32fr) minmax(0, 1fr);
-      gap: 80px;
-      padding: 90px 0;
+    .section-light {
+      background: var(--light);
     }
 
     .section-heading {
-      align-self: start;
+      display: grid;
+      grid-template-columns: minmax(190px, 0.32fr) minmax(0, 1fr);
+      gap: 80px;
+      margin-bottom: 65px;
     }
 
     .section-number {
-      display: block;
-      margin-bottom: 12px;
-      color: var(--muted);
-      font-size: 13px;
+      font-family: Futura, "Century Gothic", Arial, Helvetica, sans-serif;
+      font-size: 12px;
+      font-weight: 700;
       letter-spacing: 0.12em;
     }
 
     .section-heading h2 {
-      margin-bottom: 0;
-      font-size: 28px;
-      line-height: 1.15;
+      max-width: 820px;
+      margin: 0;
+      font-family: Futura, "Century Gothic", Arial, Helvetica, sans-serif;
+      font-size: clamp(34px, 5vw, 58px);
+      line-height: 1.05;
       font-weight: 500;
-      letter-spacing: -0.02em;
+      letter-spacing: -0.025em;
     }
 
-    .section-body {
-      max-width: 800px;
-    }
-
-    .section-body > p {
+    .section-heading p {
+      max-width: 760px;
+      margin: 20px 0 0;
+      color: var(--muted);
       font-size: 17px;
     }
 
-    .section-body > p:last-child {
-      margin-bottom: 0;
+    /* ABOUT */
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: minmax(190px, 0.32fr) minmax(0, 1fr);
+      gap: 80px;
     }
 
-    /* INTRO */
+    .about-label {
+      font-family: Futura, "Century Gothic", Arial, Helvetica, sans-serif;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+    }
 
-    .intro-statement {
-      font-size: 29px !important;
-      line-height: 1.4;
-      letter-spacing: -0.02em;
+    .about-copy {
+      max-width: 800px;
+    }
+
+    .about-copy p {
+      margin: 0 0 22px;
+      font-size: 18px;
+    }
+
+    .about-copy p:last-child {
+      margin-bottom: 0;
     }
 
     /* SERVICES */
 
+    .services {
+      border-top: 1px solid var(--line);
+    }
+
     .service {
-      padding: 0 0 34px;
-      margin-bottom: 34px;
+      display: grid;
+      grid-template-columns: 80px minmax(0, 1fr);
+      gap: 35px;
+      padding: 38px 0;
       border-bottom: 1px solid var(--line);
     }
 
     .service:last-child {
-      padding-bottom: 0;
-      margin-bottom: 0;
       border-bottom: 0;
     }
 
+    .service-number {
+      font-family: Futura, "Century Gothic", Arial, Helvetica, sans-serif;
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+    }
+
     .service h3 {
-      margin-bottom: 10px;
-      font-size: 22px;
+      margin: 0 0 9px;
+      font-family: Futura, "Century Gothic", Arial, Helvetica, sans-serif;
+      font-size: 25px;
+      line-height: 1.2;
       font-weight: 500;
     }
 
     .service p {
-      margin-bottom: 0;
+      max-width: 780px;
+      margin: 0;
       color: var(--muted);
-      font-size: 15px;
+      font-size: 16px;
     }
 
-    /* REPRESENTATION */
+    /* HOW WE WORK */
 
-    .feature-box {
-      padding: 34px;
-      background: var(--light);
-    }
-
-    .feature-box h3 {
-      margin-bottom: 15px;
-      font-size: 21px;
-      font-weight: 500;
-    }
-
-    .feature-box p {
-      margin-bottom: 14px;
-      color: var(--muted);
-      font-size: 15px;
-    }
-
-    .feature-box p:last-child {
-      margin-bottom: 0;
-    }
-
-    /* TWO COLUMN */
-
-    .two-column {
+    .process {
       display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 35px;
+      grid-template-columns: repeat(5, 1fr);
+      border-top: 1px solid var(--line);
+      border-left: 1px solid var(--line);
     }
-
-    .info-block {
-      padding-top: 5px;
-    }
-
-    .info-block h3 {
-      margin-bottom: 12px;
-      font-size: 20px;
-      font-weight: 500;
-    }
-
-    .info-block p {
-      margin-bottom: 0;
-      color: var(--muted);
-      font-size: 15px;
-    }
-
-    /* PROCESS */
 
     .process-item {
-      display: grid;
-      grid-template-columns: 50px 1fr;
-      gap: 20px;
-      padding-bottom: 28px;
-      margin-bottom: 28px;
+      min-height: 230px;
+      padding: 28px;
+      border-right: 1px solid var(--line);
       border-bottom: 1px solid var(--line);
     }
 
-    .process-item:last-child {
-      padding-bottom: 0;
-      margin-bottom: 0;
-      border-bottom: 0;
-    }
-
     .process-number {
+      margin-bottom: 42px;
       font-family: Futura, "Century Gothic", Arial, Helvetica, sans-serif;
-      color: var(--muted);
-      font-size: 13px;
-      letter-spacing: 0.1em;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.12em;
     }
 
     .process-item h3 {
-      margin-bottom: 8px;
-      font-size: 19px;
+      margin: 0 0 10px;
+      font-family: Futura, "Century Gothic", Arial, Helvetica, sans-serif;
+      font-size: 20px;
+      line-height: 1.2;
       font-weight: 500;
     }
 
     .process-item p {
-      margin-bottom: 0;
+      margin: 0;
+      color: var(--muted);
+      font-size: 14px;
+      line-height: 1.55;
+    }
+
+    /* WHO WE WORK WITH */
+
+    .audience-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      border-top: 1px solid var(--line);
+      border-left: 1px solid var(--line);
+    }
+
+    .audience-item {
+      padding: 35px;
+      border-right: 1px solid var(--line);
+      border-bottom: 1px solid var(--line);
+    }
+
+    .audience-item h3 {
+      margin: 0 0 10px;
+      font-family: Futura, "Century Gothic", Arial, Helvetica, sans-serif;
+      font-size: 23px;
+      font-weight: 500;
+    }
+
+    .audience-item p {
+      margin: 0;
       color: var(--muted);
       font-size: 15px;
+    }
+
+    /* NOTE */
+
+    .note {
+      padding: 50px;
+      background: var(--light);
+      border: 1px solid var(--line);
+    }
+
+    .note h3 {
+      margin: 0 0 15px;
+      font-family: Futura, "Century Gothic", Arial, Helvetica, sans-serif;
+      font-size: 27px;
+      font-weight: 500;
+    }
+
+    .note p {
+      max-width: 850px;
+      margin: 0 0 14px;
+      color: var(--muted);
+    }
+
+    .note p:last-child {
+      margin-bottom: 0;
     }
 
     /* SUBSTACK */
@@ -372,11 +449,11 @@
       align-items: center;
       justify-content: space-between;
       gap: 40px;
-      padding: 48px 0;
+      padding: 44px 0;
     }
 
     .substack-copy {
-      max-width: 730px;
+      max-width: 720px;
     }
 
     .substack-eyebrow {
@@ -389,14 +466,15 @@
     }
 
     .substack-banner h2 {
-      margin-bottom: 10px;
-      font-size: 29px;
+      margin: 0 0 10px;
+      font-family: Futura, "Century Gothic", Arial, Helvetica, sans-serif;
+      font-size: 28px;
       line-height: 1.2;
       font-weight: 500;
     }
 
     .substack-banner p {
-      margin-bottom: 0;
+      margin: 0;
       color: #cccccc;
       font-size: 15px;
     }
@@ -409,7 +487,7 @@
       color: var(--white);
       text-decoration: none;
       font-family: Futura, "Century Gothic", Arial, Helvetica, sans-serif;
-      font-size: 12px;
+      font-size: 11px;
       font-weight: 700;
       letter-spacing: 0.08em;
       text-transform: uppercase;
@@ -421,28 +499,27 @@
       color: var(--black);
     }
 
-    /* CTA */
+    /* FAQ TEASER */
 
-    .cta {
-      padding: 105px 0;
-      background: var(--light);
+    .faq-teaser {
+      display: grid;
+      grid-template-columns: minmax(190px, 0.32fr) minmax(0, 1fr);
+      gap: 80px;
+      align-items: start;
     }
 
-    .cta-content {
-      max-width: 850px;
-    }
-
-    .cta h2 {
-      margin-bottom: 20px;
-      font-size: clamp(38px, 5vw, 62px);
+    .faq-teaser h2 {
+      margin: 0 0 18px;
+      font-family: Futura, "Century Gothic", Arial, Helvetica, sans-serif;
+      font-size: clamp(34px, 5vw, 55px);
       line-height: 1.05;
       font-weight: 500;
-      letter-spacing: -0.035em;
+      letter-spacing: -0.025em;
     }
 
-    .cta p {
-      max-width: 720px;
-      margin-bottom: 30px;
+    .faq-teaser p {
+      max-width: 760px;
+      margin: 0 0 28px;
       color: var(--muted);
       font-size: 17px;
     }
@@ -450,104 +527,124 @@
     /* FOOTER */
 
     footer {
-      padding: 38px 0;
+      padding: 35px 0;
+      background: var(--white);
+    }
+
+    .footer-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 25px;
+    }
+
+    .footer-brand {
+      font-family: Futura, "Century Gothic", Arial, Helvetica, sans-serif;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+    }
+
+    .footer-meta {
       color: var(--muted);
       font-size: 12px;
     }
 
-    footer .container {
-      display: flex;
-      justify-content: space-between;
-      gap: 30px;
-    }
-
-    footer a {
-      text-decoration: none;
-    }
-
-    footer a:hover {
-      text-decoration: underline;
-    }
-
     /* MOBILE */
+
+    @media (max-width: 900px) {
+      .process {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .process-item:last-child {
+        grid-column: 1 / -1;
+      }
+
+      .section-heading,
+      .about-grid,
+      .faq-teaser {
+        grid-template-columns: 1fr;
+        gap: 25px;
+      }
+    }
 
     @media (max-width: 800px) {
       .container {
-        width: min(100% - 32px, 680px);
+        width: min(100% - 32px, 1180px);
       }
 
-      .nav-container {
-        min-height: auto;
-        padding: 22px 0;
-        align-items: flex-start;
+      .nav {
+        min-height: 70px;
       }
 
-      nav {
-        gap: 13px;
-        flex-wrap: wrap;
-        justify-content: flex-end;
+      .nav-links {
+        gap: 14px;
       }
 
-      .brand {
-        font-size: 15px;
-      }
-
-      .nav-button {
-        padding: 8px 10px;
+      .nav-links .hide-mobile {
+        display: none;
       }
 
       .hero {
-        padding: 80px 0 75px;
+        padding: 75px 0 70px;
       }
 
       .hero h1 {
-        font-size: clamp(46px, 14vw, 72px);
+        font-size: clamp(48px, 14vw, 72px);
       }
 
       .hero-lead {
-        font-size: 21px;
+        font-size: 19px;
       }
 
-      .section-grid {
-        display: block;
-        padding: 68px 0;
+      .section {
+        padding: 65px 0;
       }
 
       .section-heading {
-        margin-bottom: 35px;
+        margin-bottom: 45px;
       }
 
-      .section-heading h2 {
-        font-size: 25px;
+      .service {
+        grid-template-columns: 45px minmax(0, 1fr);
+        gap: 18px;
       }
 
-      .intro-statement {
-        font-size: 24px !important;
-      }
-
-      .two-column {
+      .audience-grid {
         grid-template-columns: 1fr;
-        gap: 30px;
       }
 
+      .process {
+        grid-template-columns: 1fr;
+      }
+
+      .process-item:last-child {
+        grid-column: auto;
+      }
+
+      .black-banner .container,
       .substack-banner .container {
         display: block;
-        padding: 40px 0;
+        padding: 38px 0;
       }
 
+      .banner-button,
       .substack-button {
+        display: inline-block;
         margin-top: 25px;
       }
 
-      .cta {
-        padding: 75px 0;
+      .note {
+        padding: 30px;
       }
 
-      footer .container {
+      .footer-inner {
         display: block;
       }
 
-      footer .container div + div {
+      .footer-meta {
         margin-top: 10px;
       }
     }
@@ -556,65 +653,44 @@
 
 <body>
 
-  <!-- NAVIGATION -->
+  <header>
+    <div class="container nav">
+      <a href="index.html" class="logo">Ace Pen Studio</a>
 
-  <header class="site-header">
-    <div class="container nav-container">
-
-      <a class="brand" href="index.html">
-        ACE PEN STUDIO
-      </a>
-
-      <nav aria-label="Main navigation">
-        <a href="#about">About</a>
-        <a href="#what-we-do">What We Do</a>
-        <a href="faqs.html">FAQs</a>
-        <a href="inquiry.html" class="nav-button">Start an Inquiry</a>
+      <nav class="nav-links" aria-label="Main navigation">
+        <a href="#work" class="hide-mobile">What We Do</a>
+        <a href="#process" class="hide-mobile">How We Work</a>
+        <a href="faqs.html" class="hide-mobile">FAQs</a>
+        <a href="inquiry.html" class="nav-button">Start an Inquiry →</a>
       </nav>
-
     </div>
   </header>
 
 
-  <!-- HERO -->
-
   <main>
+
+    <!-- HERO -->
 
     <section class="hero">
       <div class="container">
 
-        <div class="eyebrow">Your Literary Agency · A Writers' Hub</div>
-
-        <h1>
-          Your story deserves to be told.
-        </h1>
-
-        <p class="hero-lead">
-          We help writers turn ideas, manuscripts and lived experience into
-          work that can be read, published and remembered.
-        </p>
-
-        <div class="hero-copy">
-          <p>
-           We are a Tanzanian literary agency and creative studio working
-            with writers and creators across Tanzania, East Africa and the
-            wider African literary ecosystem.
-          </p>
-
-          <p>
-            We work across the parts of a writer's journey that are often
-            treated separately: developing the work, shaping the manuscript,
-            finding the right publishing path, building the author's profile,
-            and helping good stories reach the people they are meant to reach.
-          </p>
+        <div class="eyebrow">
+          Literary Agency · Tanzania · East Africa
         </div>
 
+        <h1>Your story deserves to be told.</h1>
+
+        <p class="hero-lead">
+          Ace Pen Studio works with writers, authors and creative projects
+          from idea to manuscript, publication and beyond.
+        </p>
+
         <div class="hero-actions">
-          <a class="button primary" href="inquiry.html">
+          <a href="inquiry.html" class="button primary">
             Start an Inquiry →
           </a>
 
-          <a class="button secondary" href="#what-we-do">
+          <a href="#work" class="button secondary">
             Explore What We Do
           </a>
         </div>
@@ -623,154 +699,65 @@
     </section>
 
 
+    <!-- WHAT WE DO BANNER -->
+
+    <section class="black-banner" id="work">
+      <div class="container">
+
+        <div class="banner-copy">
+          <div class="banner-eyebrow">
+            What We Do
+          </div>
+
+          <h2>
+            Writing is only part of the work.
+          </h2>
+
+          <p>
+            We help develop the story, shape the manuscript, position the
+            author and navigate the path toward publication.
+          </p>
+        </div>
+
+        <a href="#services" class="banner-button">
+          Our Services →
+        </a>
+
+      </div>
+    </section>
+
+
     <!-- ABOUT -->
 
-    <section class="section" id="about">
-      <div class="container section-grid">
-
-        <div class="section-heading">
-          <span class="section-number">01</span>
-          <h2>About Ace Pen</h2>
-        </div>
-
-        <div class="section-body">
-
-          <p class="intro-statement">
-            We believe African writers deserve professional support built
-            around the realities of African publishing.
-          </p>
-
-          <p>
-          We want to help build a stronger ecosystem around
-            African writers and their work. That means taking writing seriously
-            as both a creative practice and a professional endeavour.
-          </p>
-
-          <p>
-            Some writers come to us with a book they have already written.
-            Others simply have an idea they can't get out of their heads, or years of experience they cannot wait to tell,
-            or a story they know needs to be written but cannot yet shape into a book.
-          </p>
-
-          <p>
-            Our role is not to assume that every writer needs the same thing.
-            We look at the work, the writer, the goal and the publishing
-            context, then determine what kind of support makes sense.
-          </p>
-
-        </div>
-
-      </div>
-    </section>
-
-
-    <!-- WHAT WE DO -->
-
-    <section class="section" id="what-we-do">
-      <div class="container section-grid">
-
-        <div class="section-heading">
-          <span class="section-number">02</span>
-          <h2>What We Do</h2>
-        </div>
-
-        <div class="section-body">
-
-          <div class="service">
-            <h3>Literary Representation</h3>
-            <p>
-              We represent selected writers and their books, helping develop
-              publishing opportunities and navigate relationships with
-              publishers and other industry partners.
-            </p>
-          </div>
-
-          <div class="service">
-            <h3>Manuscript Development & Editing</h3>
-            <p>
-              We help writers tell their stories by strengthening the structure, argument, narrative,
-              voice, clarity and overall readiness for publication. Sometimes
-              the work needs editing. Sometimes it needs deeper development
-              before it is ready to be edited.
-            </p>
-          </div>
-
-          <div class="service">
-            <h3>Writing & Ghostwriting</h3>
-            <p>
-              Through MS — Your Writing Consultant, we provide confidential
-              writing and ghostwriting support for people who have a story, but maybe not the time or skills to turn it into a book. 
-              We help you turn your expertise and body of work into a book you can be proud of. Our pen, your voice! 
-            </p>
-          </div>
-
-          <div class="service">
-            <h3>Publishing Consultancy</h3>
-            <p>
-              We help writers understand their publishing options, assess
-              opportunities and prepare strategically for conversations with
-              publishers and other publishing professionals.
-            </p>
-          </div>
-
-          <div class="service">
-            <h3>Author Development & Positioning</h3>
-            <p>
-              A book does not exist in isolation from its author. We support
-              selected writers with author positioning, media materials,
-              public-facing storytelling and other tools that help build a
-              sustainable author profile.
-            </p>
-          </div>
-
-          <div class="service">
-            <h3>Workshops & Literary Programmes</h3>
-            <p>
-              We develop workshops, bootcamps, conversations and other
-              programmes designed to create practical pathways for writers and
-              strengthen literary communities.
-            </p>
-          </div>
-
-        </div>
-
-      </div>
-    </section>
-
-
-    <!-- REPRESENTATION -->
-
     <section class="section">
-      <div class="container section-grid">
+      <div class="container">
 
-        <div class="section-heading">
-          <span class="section-number">03</span>
-          <h2>Representation</h2>
-        </div>
+        <div class="about-grid">
 
-        <div class="section-body">
+          <div class="about-label">
+            About Ace Pen
+          </div>
 
-          <p>
-            Literary representation is not simply about finding a publisher.
-            It is about understanding where a particular work belongs, what it
-            needs before it gets there, and how to build a professional
-            relationship around it.
-          </p>
-
-          <div class="feature-box">
-
-            <h3>We do not believe every project should be represented immediately.</h3>
+          <div class="about-copy">
 
             <p>
-              A manuscript may need development first. An idea may need to be
-              written. A writer may need help understanding their options. A
-              publishing opportunity may need to be assessed before anyone
-              signs anything.
+              Ace Pen Studio is a literary agency and creative writing studio
+              built around one simple belief: good stories deserve serious
+              attention.
             </p>
 
             <p>
-              That is why our first step is understanding the project rather
-              than promising a publishing deal.
+              We work with writers and project owners at different stages of
+              the creative process — from an idea that needs shaping, to a
+              manuscript that needs development, to a publishing opportunity
+              that needs professional guidance.
+            </p>
+
+            <p>
+              Our work sits between creativity and strategy. We care about
+              the writing itself, but we also care about what happens around
+              it: the author, the audience, the market, the opportunity and
+              the path forward.
             </p>
 
           </div>
@@ -781,56 +768,120 @@
     </section>
 
 
-    <!-- WRITERS -->
+    <!-- SERVICES -->
 
-    <section class="section">
-      <div class="container section-grid">
+    <section class="section section-light" id="services">
+      <div class="container">
 
         <div class="section-heading">
-          <span class="section-number">04</span>
-          <h2>Who We Work With</h2>
+
+          <div class="section-number">
+            01 / Services
+          </div>
+
+          <div>
+            <h2>
+              Help us find you the right support for the work in front of you.
+            </h2>
+
+            <p>
+              Not every project needs the same thing. Sometimes the next step
+              is representation. Sometimes it is better writing, a stronger
+              manuscript or a clearer publishing strategy.
+            </p>
+          </div>
+
         </div>
 
-        <div class="section-body">
 
-          <div class="two-column">
+        <div class="services">
 
-            <div class="info-block">
-              <h3>First-time writers</h3>
+          <div class="service">
+            <div class="service-number">01</div>
+
+            <div>
+              <h3>Literary Representation</h3>
+
               <p>
-                You do not need a publishing history to have a serious project.
-                If you have a strong idea and a genuine commitment to developing
-                it, there may be a place for us to start.
+                For selected writers and projects, we provide representation
+                and help navigate publisher relationships, submissions,
+                opportunities and negotiations.
               </p>
             </div>
+          </div>
 
-            <div class="info-block">
-              <h3>Established writers</h3>
+
+          <div class="service">
+            <div class="service-number">02</div>
+
+            <div>
+              <h3>Editorial & Manuscript Development</h3>
+
               <p>
-                We also work with writers who have already published and are
-                looking for editorial, strategic, publishing or representation
-                support for their next stage.
+                We help writers turn promising material into stronger,
+                clearer and more purposeful work through developmental
+                editing, narrative development, structural thinking and manuscript support.
               </p>
             </div>
+          </div>
 
-            <div class="info-block">
-              <h3>Experts with stories to tell</h3>
+
+          <div class="service">
+            <div class="service-number">03</div>
+
+            <div>
+              <h3>Ghostwriting & Writing Support</h3>
+
               <p>
-                Researchers, professionals, entrepreneurs, academics and
-                public figures often have valuable knowledge that has never
-                been shaped into a book. We can help explore that possibility.
+                Through MS – Your Writing Consultant, our confidential
+                writing practice, we help people turn ideas, expertise and
+                lived experience into books you can be proud of. Your voice, our pen, your story! 
               </p>
             </div>
+          </div>
 
-            <div class="info-block">
-              <h3>People with a story</h3>
+
+          <div class="service">
+            <div class="service-number">04</div>
+
+            <div>
+              <h3>Author Development & Positioning</h3>
+
               <p>
-                Memoir, biography, lived experience and personal histories can
-                become meaningful books when the story is approached with care,
-                structure and editorial discipline.
+                We help authors think beyond the manuscript by finding you the right literary opportunities, author
+                positioning, media kits, and long-term profile development.
               </p>
             </div>
+          </div>
 
+
+          <div class="service">
+            <div class="service-number">05</div>
+
+            <div>
+              <h3>Publishing Strategy & Consultancy</h3>
+
+              <p>
+                We provide practical guidance on publishing routes,
+                opportunities, proposals, positioning and the decisions that
+                surround taking a project to market.
+              </p>
+            </div>
+          </div>
+
+
+          <div class="service">
+            <div class="service-number">06</div>
+
+            <div>
+              <h3>Workshops, Bootcamps & Partnerships</h3>
+
+              <p>
+                We develop workshops, writing programmes and creative
+                partnerships that create space for writers to learn, connect
+                and develop their work.
+              </p>
+            </div>
           </div>
 
         </div>
@@ -839,118 +890,254 @@
     </section>
 
 
-    <!-- PUBLISHING -->
+    <!-- HOW WE WORK -->
 
-    <section class="section">
-      <div class="container section-grid">
-
-        <div class="section-heading">
-          <span class="section-number">05</span>
-          <h2>Publishing in Context</h2>
-        </div>
-
-        <div class="section-body">
-
-          <p>
-            Publishing does not work the same way everywhere. The realities of
-            publishing in Tanzania and across Africa are different from the
-            publishing models writers may encounter in North America, the UK
-            or other international markets.
-          </p>
-
-          <p>
-            An agent does not automatically mean a publishing deal. A
-            publishing deal does not automatically mean an advance. And a
-            completed manuscript does not automatically mean that it is ready
-            to be submitted.
-          </p>
-
-          <p>
-            We therefore approach each project individually. Where
-            representation makes sense, we can explore it. Where the work
-            needs writing, editing, development or strategic support first, we
-            will say so.
-          </p>
-
-          <p>
-            Our aim is to give writers a clearer understanding of where they
-            are, what their work needs, and what a realistic next step looks
-            like.
-          </p>
-
-        </div>
-
-      </div>
-    </section>
-
-
-    <!-- HOW IT WORKS -->
-
-    <section class="section">
-      <div class="container section-grid">
+    <section class="section" id="process">
+      <div class="container">
 
         <div class="section-heading">
-          <span class="section-number">06</span>
-          <h2>How We Work</h2>
+
+          <div class="section-number">
+            02 / Process
+          </div>
+
+          <div>
+            <h2>
+              We start with the project, not the package.
+            </h2>
+
+            <p>
+              We do not assume every writer needs an agent, an editor or a
+              ghostwriter. We first understand what you are actually trying
+              to build, then recommend the most useful path.
+            </p>
+          </div>
+
         </div>
 
-        <div class="section-body">
+
+        <div class="process">
 
           <div class="process-item">
             <div class="process-number">01</div>
 
-            <div>
-              <h3>Start with the project</h3>
+            <h3>Start with the project</h3>
 
-              <p>
-                Tell us what you are working on, where you are with it, and
-                what you are trying to achieve.
-              </p>
-            </div>
+            <p>
+              Tell us what you are working on, where it stands and what has
+              brought you to us.
+            </p>
           </div>
+
 
           <div class="process-item">
             <div class="process-number">02</div>
 
-            <div>
-              <h3>We assess the need</h3>
+            <h3>Understand what it needs</h3>
 
-              <p>
-                We review the information you provide and consider whether
-                your project is something Ace Pen can meaningfully support.
-              </p>
-            </div>
+            <p>
+              We look at the project, the stage it is in and the outcome you
+              are trying to achieve.
+            </p>
           </div>
+
 
           <div class="process-item">
             <div class="process-number">03</div>
 
-            <div>
-              <h3>We determine the next step</h3>
+            <h3>Recommend a path</h3>
 
-              <p>
-                If there is a fit, we will contact you. Depending on the
-                project, that may lead to a conversation, a request for
-                materials, an editorial recommendation, a service proposal or
-                a discussion about representation.
-              </p>
-            </div>
+            <p>
+              We identify the kind of support that makes sense rather than
+              forcing every project into the same service.
+            </p>
           </div>
+
 
           <div class="process-item">
             <div class="process-number">04</div>
 
-            <div>
-              <h3>We agree before we begin</h3>
+            <h3>Agree scope & terms</h3>
 
-              <p>
-                Any service, fee or representation arrangement is discussed
-                separately and agreed before work begins.
-              </p>
-            </div>
+            <p>
+              Before paid work begins, we explain what we recommend, what it
+              involves and what it will cost.
+            </p>
+          </div>
+
+
+          <div class="process-item">
+            <div class="process-number">05</div>
+
+            <h3>Do the work</h3>
+
+            <p>
+              Once we agree to work together, we get on with the actual work
+              of making the project stronger.
+            </p>
           </div>
 
         </div>
+
+      </div>
+    </section>
+
+
+    <!-- WHO WE WORK WITH -->
+
+    <section class="section section-light">
+      <div class="container">
+
+        <div class="section-heading">
+
+          <div class="section-number">
+            03 / People
+          </div>
+
+          <div>
+            <h2>
+              Writers, authors and people with something worth building.
+            </h2>
+
+            <p>
+              Our work is not limited to one type of writer or one stage of
+              the publishing journey.
+            </p>
+          </div>
+
+        </div>
+
+
+        <div class="audience-grid">
+
+          <div class="audience-item">
+            <h3>Emerging Writers</h3>
+
+            <p>
+              Writers with an idea, early draft or developing manuscript who
+              need clarity, structure or professional guidance.
+            </p>
+          </div>
+
+
+          <div class="audience-item">
+            <h3>Established Authors</h3>
+
+            <p>
+              Authors developing new work, exploring new publishing
+              opportunities or looking for representation and strategic
+              support.
+            </p>
+          </div>
+
+
+          <div class="audience-item">
+            <h3>Professionals & Experts</h3>
+
+            <p>
+              People with knowledge, experience or a body of work that could
+              become a book, thought-leadership project or other substantial
+              creative work.
+            </p>
+          </div>
+
+
+          <div class="audience-item">
+            <h3>Organisations & Partners</h3>
+
+            <p>
+              Organisations looking for writing, editorial, storytelling,
+              workshop, publishing or creative-development support.
+            </p>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- IMPORTANT EXPECTATIONS -->
+
+    <section class="section">
+      <div class="container">
+
+        <div class="section-heading">
+
+          <div class="section-number">
+            04 / A Note
+          </div>
+
+          <div>
+            <h2>
+              Representation is not the only way we can help.
+            </h2>
+
+            <p>
+              And having an idea does not automatically mean you need an
+              agent.
+            </p>
+          </div>
+
+        </div>
+
+
+        <div class="note">
+
+          <h3>
+            We would rather recommend the right thing than sell you the wrong thing.
+          </h3>
+
+          <p>
+            A writer may need representation. Another may need to finish the
+            manuscript first. Someone else may need a ghostwriter, editorial
+            development, publishing advice or help positioning an existing
+            body of work.
+          </p>
+
+          <p>
+            We assess projects individually. Where representation makes sense,
+            we can discuss it. Where another form of support is more useful,
+            we will say so.
+          </p>
+
+          <p>
+            General publishing questions do not require a private consultation.
+            We are building our FAQ to answer the questions we receive most
+            often, so start there if you are looking for general information.
+          </p>
+
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- INQUIRY CTA -->
+
+    <section class="black-banner">
+      <div class="container">
+
+        <div class="banner-copy">
+
+          <div class="banner-eyebrow">
+            Have a Project?
+          </div>
+
+          <h2>
+            Tell us what you’re working on.
+          </h2>
+
+          <p>
+            Our inquiry form is for specific projects, manuscripts, publishing
+            opportunities and professional writing work.
+          </p>
+
+        </div>
+
+        <a href="inquiry.html" class="banner-button">
+          Start an Inquiry →
+        </a>
 
       </div>
     </section>
@@ -984,6 +1171,7 @@
           href="https://acepenstudio.substack.com/"
           target="_blank"
           rel="noopener noreferrer"
+          aria-label="Visit Ace Pen Studio on Substack"
         >
           Read Ace Pen Studio on Substack →
         </a>
@@ -992,45 +1180,34 @@
     </section>
 
 
-    <!-- INQUIRY CTA -->
+    <!-- FAQ TEASER -->
 
-    <section class="cta">
+    <section class="section">
       <div class="container">
 
-        <div class="cta-content">
+        <div class="faq-teaser">
 
-          <div class="eyebrow">
-            Have a Project?
+          <div class="section-number">
+            05 / Before You Write
           </div>
 
-          <h2>
-            Start where you are.
-          </h2>
+          <div>
 
-          <p>
-            You do not need to know exactly which Ace Pen service you need.
-            But you should have a project, idea, manuscript, publishing
-            opportunity or specific writing goal you would like us to
-            understand.
-          </p>
+            <h2>
+              Have a general publishing question?
+            </h2>
 
-          <p>
-            If you are simply looking for general information about publishing,
-            start with our FAQs. If you have something you are actually working
-            on, tell us about it through the inquiry form.
-          </p>
+            <p>
+              Our FAQ is designed to answer the practical questions writers
+              often have about publishing, representation, manuscripts,
+              advances, royalties and working with a literary agency.
+            </p>
 
-          <a class="button primary" href="inquiry.html">
-            Start an Inquiry →
-          </a>
+            <a href="faqs.html" class="button secondary">
+              Read the FAQs →
+            </a>
 
-          <a
-            class="button secondary"
-            href="faqs.html"
-            style="margin-left: 10px;"
-          >
-            Publishing FAQs
-          </a>
+          </div>
 
         </div>
 
@@ -1040,21 +1217,15 @@
   </main>
 
 
-  <!-- FOOTER -->
-
   <footer>
-    <div class="container">
+    <div class="container footer-inner">
 
-      <div>
-        © 2026 Ace Pen Studio Literary Agency · Tanzania · East Africa
+      <div class="footer-brand">
+        Ace Pen Studio Literary Agency
       </div>
 
-      <div>
-        <a href="index.html">Home</a>
-        &nbsp;·&nbsp;
-        <a href="faqs.html">FAQs</a>
-        &nbsp;·&nbsp;
-        <a href="inquiry.html">Start an Inquiry</a>
+      <div class="footer-meta">
+        © 2026 · Tanzania · East Africa
       </div>
 
     </div>
