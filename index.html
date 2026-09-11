@@ -2,29 +2,23 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <meta
-    name="viewport"
-    content="width=device-width, initial-scale=1.0"
-  >
-
-  <title>Ace Pen Studio — First-Time Inquiry</title>
+  <title>First-Time Inquiry | Ace Pen Studio</title>
 
   <meta
     name="description"
-    content="Tell Ace Pen Studio about yourself, your writing, and what you hope to do with it."
+    content="Tell Ace Pen Studio about yourself, your writing, and what you're working on."
   >
 
   <style>
     :root {
       --black: #111111;
-      --dark: #222222;
-      --mid: #666666;
-      --light: #999999;
-      --line: #ddddda;
-      --soft: #f6f6f3;
+      --text: #222222;
+      --muted: #6f6f6f;
+      --line: #dedede;
+      --light: #f7f7f5;
       --white: #ffffff;
-      --accent: #111111;
     }
 
     * {
@@ -38,118 +32,75 @@
     body {
       margin: 0;
       background: var(--white);
-      color: var(--black);
-      font-family:
-        "Helvetica Neue",
-        Helvetica,
-        Arial,
-        sans-serif;
-      font-size: 16px;
-      line-height: 1.65;
+      color: var(--text);
+      font-family: Arial, Helvetica, sans-serif;
+      line-height: 1.6;
     }
 
-    button,
-    input,
-    textarea {
-      font: inherit;
+    h1,
+    h2,
+    h3,
+    p {
+      margin-top: 0;
+    }
+
+    h1,
+    h2,
+    h3,
+    .eyebrow,
+    .section-number,
+    .button {
+      font-family: "Futura", "Century Gothic", Arial, Helvetica, sans-serif;
     }
 
     .container {
-      width: min(1180px, calc(100% - 64px));
+      width: min(1120px, calc(100% - 48px));
       margin: 0 auto;
     }
 
-    /* --------------------------------
-       HEADER
-    -------------------------------- */
-
-    header {
-      padding: 28px 0;
-      border-bottom: 1px solid var(--line);
-    }
-
-    .header-inner {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 30px;
-    }
-
-    .brand {
-      font-size: 15px;
-      font-weight: 700;
-      letter-spacing: 0.12em;
-    }
-
-    .header-meta {
-      color: var(--mid);
-      font-size: 13px;
-      letter-spacing: 0.05em;
-    }
-
-    /* --------------------------------
-       HERO
-    -------------------------------- */
+    /* HERO */
 
     .hero {
-      padding: 110px 0 95px;
+      padding: 90px 0 85px;
       border-bottom: 1px solid var(--line);
-    }
-
-    .hero-inner {
-      max-width: 920px;
     }
 
     .eyebrow {
-      margin: 0 0 22px;
-      color: var(--mid);
+      margin-bottom: 24px;
+      color: var(--muted);
       font-size: 12px;
       font-weight: 700;
-      letter-spacing: 0.14em;
+      letter-spacing: 0.16em;
       text-transform: uppercase;
     }
 
     .hero h1 {
-      margin: 0;
-      max-width: 900px;
-      font-family: Georgia, "Times New Roman", serif;
-      font-size: clamp(48px, 7vw, 88px);
-      font-weight: 400;
-      line-height: 0.98;
+      max-width: 850px;
+      margin-bottom: 25px;
+      color: var(--black);
+      font-size: clamp(46px, 7vw, 82px);
+      font-weight: 500;
       letter-spacing: -0.045em;
+      line-height: 0.98;
     }
 
-    .hero-lead {
-      max-width: 720px;
-      margin: 38px 0 28px;
-      font-size: 22px;
-      line-height: 1.5;
+    .hero .lead {
+      max-width: 760px;
+      margin-bottom: 24px;
+      font-size: 23px;
+      line-height: 1.45;
     }
 
-    .hero-copy {
-      max-width: 720px;
-      color: var(--mid);
-      font-size: 16px;
+    .hero p:not(.lead) {
+      max-width: 760px;
+      color: #444;
+      font-size: 17px;
+      line-height: 1.75;
     }
 
-    .hero-copy p {
-      margin: 0 0 18px;
-    }
-
-    .hero-copy p:last-child {
-      margin-bottom: 0;
-    }
-
-    /* --------------------------------
-       FORM
-    -------------------------------- */
-
-    form {
-      margin: 0;
-    }
+    /* FORM SECTIONS */
 
     .form-section {
-      padding: 0;
       border-bottom: 1px solid var(--line);
     }
 
@@ -162,256 +113,226 @@
 
     .section-heading {
       align-self: start;
+      position: sticky;
+      top: 30px;
     }
 
     .section-number {
-      display: block;
-      margin-bottom: 16px;
-      color: var(--light);
-      font-size: 12px;
-      letter-spacing: 0.1em;
+      margin-bottom: 10px;
+      color: var(--muted);
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 0.12em;
     }
 
     .section-heading h2 {
       margin: 0;
-      font-family: Georgia, "Times New Roman", serif;
-      font-size: 30px;
-      font-weight: 400;
-      line-height: 1.15;
+      color: var(--black);
+      font-size: 27px;
+      font-weight: 500;
+      line-height: 1.2;
     }
 
-    .section-body {
-      min-width: 0;
+    .section-intro {
+      margin-bottom: 42px;
+      color: #555;
+      font-size: 16px;
+      line-height: 1.7;
     }
 
-    .field {
-      margin-bottom: 34px;
+    .question {
+      margin-bottom: 38px;
     }
 
-    .field:last-child {
+    .question:last-child {
       margin-bottom: 0;
     }
 
-    .field-label {
+    label.question-label,
+    .question > legend {
       display: block;
-      margin-bottom: 9px;
+      margin-bottom: 11px;
+      color: var(--black);
+      font-size: 16px;
+      font-weight: 600;
+      line-height: 1.45;
+    }
+
+    fieldset {
+      min-width: 0;
+      margin: 0 0 38px;
+      padding: 0;
+      border: 0;
+    }
+
+    fieldset:last-child {
+      margin-bottom: 0;
+    }
+
+    legend {
+      padding: 0;
+      width: 100%;
+    }
+
+    .hint {
+      margin: -3px 0 14px;
+      color: var(--muted);
       font-size: 14px;
-      font-weight: 700;
-    }
-
-    .required {
-      color: var(--light);
-      font-weight: 400;
-    }
-
-    .field-hint {
-      margin: -2px 0 12px;
-      color: var(--light);
-      font-size: 13px;
+      line-height: 1.6;
     }
 
     input[type="text"],
     input[type="email"],
     input[type="tel"],
-    textarea {
+    textarea,
+    select {
       width: 100%;
-      border: 1px solid var(--line);
+      padding: 14px 0;
+      border: 0;
+      border-bottom: 1px solid #bdbdbd;
       border-radius: 0;
-      background: var(--white);
+      background: transparent;
       color: var(--black);
-      padding: 14px 15px;
+      font: inherit;
       outline: none;
-      transition:
-        border-color 0.2s ease,
-        box-shadow 0.2s ease;
-    }
-
-    input[type="text"],
-    input[type="email"],
-    input[type="tel"] {
-      min-height: 50px;
     }
 
     textarea {
       min-height: 145px;
       resize: vertical;
-      line-height: 1.6;
     }
 
     input[type="text"]:focus,
     input[type="email"]:focus,
     input[type="tel"]:focus,
-    textarea:focus {
-      border-color: var(--black);
-      box-shadow: 0 0 0 1px var(--black);
+    textarea:focus,
+    select:focus {
+      border-bottom-color: var(--black);
     }
 
-    .field-grid {
-      display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 26px;
+    input::placeholder,
+    textarea::placeholder {
+      color: #999;
     }
-
-    .field-grid .field {
-      margin-bottom: 0;
-    }
-
-    .field-grid + .field {
-      margin-top: 34px;
-    }
-
-    /* --------------------------------
-       CHECKBOXES / RADIOS
-    -------------------------------- */
 
     .options {
       display: grid;
       grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 10px 28px;
+      gap: 11px 28px;
     }
 
     .option {
       display: flex;
       align-items: flex-start;
       gap: 10px;
-      cursor: pointer;
-      color: var(--dark);
-      font-size: 14px;
+      min-width: 0;
+      color: #333;
+      font-size: 15px;
       line-height: 1.45;
+      cursor: pointer;
     }
 
     .option input {
       flex: 0 0 auto;
-      margin-top: 4px;
+      width: 16px;
+      height: 16px;
+      margin-top: 3px;
       accent-color: var(--black);
+    }
+
+    .option span {
+      display: block;
     }
 
     .radio-options {
       display: flex;
       flex-wrap: wrap;
-      gap: 18px 30px;
+      gap: 12px 28px;
     }
 
-    /* --------------------------------
-       PUBLISHING NOTE
-    -------------------------------- */
+    .radio-options .option {
+      min-width: 100px;
+    }
+
+    /* PUBLISHING NOTE */
 
     .publishing-note {
-      margin-top: 18px;
-      padding: 28px;
-      background: var(--soft);
+      margin-top: 52px;
+      padding: 30px;
+      background: var(--light);
     }
 
     .publishing-note h3 {
-      margin: 0 0 12px;
-      font-family: Georgia, "Times New Roman", serif;
-      font-size: 23px;
-      font-weight: 400;
+      margin-bottom: 18px;
+      color: var(--black);
+      font-size: 21px;
+      font-weight: 500;
     }
 
     .publishing-note p {
-      margin: 0 0 12px;
-      color: var(--mid);
-      font-size: 14px;
+      margin-bottom: 17px;
+      color: #444;
+      font-size: 15px;
+      line-height: 1.75;
     }
 
     .publishing-note p:last-child {
       margin-bottom: 0;
     }
 
-    /* --------------------------------
-       CONSENT
-    -------------------------------- */
-
-    .consent-section {
-      padding: 70px 0;
-      border-bottom: 1px solid var(--line);
-    }
-
-    .consent-inner {
-      max-width: 760px;
-    }
-
-    .consent-heading {
-      margin-bottom: 28px;
-    }
-
-    .consent-heading h2 {
-      margin: 0 0 10px;
-      font-family: Georgia, "Times New Roman", serif;
-      font-size: 30px;
-      font-weight: 400;
-    }
-
-    .consent-heading p {
-      margin: 0;
-      color: var(--mid);
-      font-size: 14px;
-    }
-
-    .consent-option {
-      display: flex;
-      align-items: flex-start;
-      gap: 12px;
-      margin-bottom: 18px;
-      color: var(--mid);
-      font-size: 14px;
-      line-height: 1.55;
-      cursor: pointer;
-    }
-
-    .consent-option input {
-      flex: 0 0 auto;
-      margin-top: 5px;
-      accent-color: var(--black);
-    }
-
-    /* --------------------------------
-       SUBMIT
-    -------------------------------- */
+    /* SUBMISSION */
 
     .submit-section {
-      padding: 85px 0;
-      text-align: center;
+      padding: 85px 0 100px;
     }
 
     .submit-inner {
-      max-width: 720px;
-      margin: 0 auto;
+      max-width: 760px;
     }
 
     .submit-inner h2 {
-      margin: 0 0 15px;
-      font-family: Georgia, "Times New Roman", serif;
-      font-size: 34px;
-      font-weight: 400;
-      line-height: 1.2;
+      margin-bottom: 18px;
+      color: var(--black);
+      font-size: 38px;
+      font-weight: 500;
+      letter-spacing: -0.025em;
     }
 
-    .submit-inner p {
-      margin: 0 auto 30px;
-      max-width: 600px;
-      color: var(--mid);
+    .submit-inner > p {
+      color: #555;
+      font-size: 17px;
+      line-height: 1.75;
+    }
+
+    .consent {
+      margin: 40px 0;
+      padding-top: 30px;
+      border-top: 1px solid var(--line);
+    }
+
+    .consent .option {
+      margin-bottom: 18px;
+    }
+
+    .consent .option:last-child {
+      margin-bottom: 0;
     }
 
     .submit-button {
       display: inline-flex;
       align-items: center;
       justify-content: center;
-      min-width: 190px;
-      min-height: 54px;
-      padding: 14px 24px;
+      min-height: 52px;
+      padding: 0 30px;
       border: 1px solid var(--black);
-      border-radius: 0;
       background: var(--black);
       color: var(--white);
-      cursor: pointer;
+      font-family: "Futura", "Century Gothic", Arial, Helvetica, sans-serif;
       font-size: 14px;
       font-weight: 700;
       letter-spacing: 0.03em;
-      transition:
-        background 0.2s ease,
-        color 0.2s ease;
+      cursor: pointer;
+      transition: all 0.2s ease;
     }
 
     .submit-button:hover {
@@ -420,160 +341,70 @@
     }
 
     .submit-button:disabled {
-      opacity: 0.55;
+      opacity: 0.5;
       cursor: wait;
     }
 
-    /* --------------------------------
-       FORM STATUS
-    -------------------------------- */
-
-    .form-status {
+    .form-message {
       display: none;
-      max-width: 680px;
-      margin: 0 auto;
-      padding: 38px;
-      border: 1px solid var(--line);
-      text-align: center;
+      margin-top: 25px;
+      padding: 20px;
+      font-size: 15px;
+      line-height: 1.6;
     }
 
-    .form-status.is-visible {
-      display: block;
-    }
-
-    .form-status h2 {
-      margin: 0 0 14px;
-      font-family: Georgia, "Times New Roman", serif;
-      font-size: 34px;
-      font-weight: 400;
-    }
-
-    .form-status p {
-      margin: 0;
-      color: var(--mid);
-    }
-
-    .form-status.error {
-      border-color: #b00020;
-    }
-
-    .form-status.error h2 {
-      color: #b00020;
-    }
-
-    /* --------------------------------
-       SCOTTFREE BANNER
-    -------------------------------- */
-
-    .scottfree-banner {
-      background: var(--black);
-      color: var(--white);
-      padding: 80px 0;
-    }
-
-    .scottfree-inner {
-      display: grid;
-      grid-template-columns: minmax(0, 1fr) auto;
-      align-items: center;
-      gap: 60px;
-    }
-
-    .scottfree-eyebrow {
-      margin: 0 0 14px;
-      color: #aaaaaa;
-      font-size: 12px;
-      font-weight: 700;
-      letter-spacing: 0.14em;
-      text-transform: uppercase;
-    }
-
-    .scottfree-banner h2 {
-      margin: 0 0 18px;
-      font-family: Georgia, "Times New Roman", serif;
-      font-size: clamp(34px, 5vw, 58px);
-      font-weight: 400;
-      line-height: 1.05;
-      letter-spacing: -0.025em;
-    }
-
-    .scottfree-banner p {
-      max-width: 650px;
-      margin: 0;
-      color: #c7c7c7;
-      font-size: 16px;
-      line-height: 1.65;
-    }
-
-    .scottfree-link {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      min-width: 165px;
-      padding: 14px 22px;
-      border: 1px solid var(--white);
-      color: var(--white);
-      text-decoration: none;
-      font-size: 14px;
-      font-weight: 700;
-      transition:
-        background 0.2s ease,
-        color 0.2s ease;
-    }
-
-    .scottfree-link:hover {
-      background: var(--white);
+    .form-message.success {
+      border: 1px solid #cfcfcf;
+      background: var(--light);
       color: var(--black);
     }
 
-    /* --------------------------------
-       FOOTER
-    -------------------------------- */
+    .form-message.error {
+      border: 1px solid #cfcfcf;
+      background: #fafafa;
+      color: #8a1f1f;
+    }
+
+    /* FOOTER */
 
     footer {
       padding: 28px 0;
-      background: var(--white);
+      border-top: 1px solid var(--line);
     }
 
     .footer-inner {
       display: flex;
-      align-items: center;
       justify-content: space-between;
-      gap: 30px;
-      color: var(--light);
-      font-size: 12px;
+      gap: 20px;
+      color: var(--muted);
+      font-size: 13px;
     }
 
-    /* --------------------------------
-       MOBILE
-    -------------------------------- */
+    /* REQUIRED FIELD */
 
-    @media (max-width: 800px) {
+    .required {
+      color: #777;
+      font-size: 12px;
+      font-weight: 400;
+    }
+
+    /* MOBILE */
+
+    @media (max-width: 760px) {
       .container {
-        width: min(100% - 40px, 680px);
-      }
-
-      header {
-        padding: 22px 0;
-      }
-
-      .header-inner {
-        align-items: flex-start;
-      }
-
-      .header-meta {
-        text-align: right;
+        width: min(100% - 32px, 1120px);
       }
 
       .hero {
-        padding: 75px 0 65px;
+        padding: 65px 0 60px;
       }
 
       .hero h1 {
-        font-size: clamp(48px, 14vw, 72px);
+        font-size: clamp(43px, 13vw, 64px);
       }
 
-      .hero-lead {
-        font-size: 19px;
+      .hero .lead {
+        font-size: 20px;
       }
 
       .form-section > .container {
@@ -582,94 +413,42 @@
       }
 
       .section-heading {
+        position: static;
         margin-bottom: 38px;
       }
 
       .section-heading h2 {
-        font-size: 28px;
-      }
-
-      .field-grid {
-        grid-template-columns: 1fr;
-        gap: 0;
-      }
-
-      .field-grid .field {
-        margin-bottom: 28px;
-      }
-
-      .field-grid .field:last-child {
-        margin-bottom: 0;
-      }
-
-      .field-grid + .field {
-        margin-top: 34px;
+        font-size: 25px;
       }
 
       .options {
         grid-template-columns: 1fr;
       }
 
-      .consent-section {
-        padding: 60px 0;
+      .radio-options {
+        flex-direction: column;
+        gap: 12px;
+      }
+
+      .publishing-note {
+        padding: 24px;
       }
 
       .submit-section {
-        padding: 65px 0;
+        padding: 60px 0 70px;
       }
 
-      .scottfree-banner {
-        padding: 60px 0;
+      .submit-inner h2 {
+        font-size: 31px;
       }
 
-      .scottfree-inner {
-        grid-template-columns: 1fr;
-        gap: 30px;
-      }
-
-      .scottfree-link {
+      .submit-button {
         width: 100%;
       }
 
       .footer-inner {
         flex-direction: column;
-        align-items: flex-start;
-        gap: 8px;
-      }
-    }
-
-    @media (max-width: 520px) {
-      .container {
-        width: min(100% - 32px, 680px);
-      }
-
-      .header-inner {
-        flex-direction: column;
-        gap: 8px;
-      }
-
-      .header-meta {
-        text-align: left;
-      }
-
-      .hero {
-        padding: 60px 0 55px;
-      }
-
-      .hero h1 {
-        font-size: 50px;
-      }
-
-      .hero-lead {
-        font-size: 18px;
-      }
-
-      .publishing-note {
-        padding: 22px;
-      }
-
-      .form-status {
-        padding: 28px 22px;
+        gap: 7px;
       }
     }
   </style>
@@ -677,45 +456,127 @@
 
 <body>
 
-  <!-- HEADER -->
-  <header>
-    <div class="container header-inner">
-      <div class="brand">ACE PEN STUDIO</div>
-      <div class="header-meta">Tanzania · East Africa</div>
+  <!-- HERO -->
+
+  <header class="hero">
+    <div class="container">
+      <div class="eyebrow">First-Time Inquiry</div>
+
+      <h1>Your story deserves to be told.</h1>
+
+      <p class="lead">
+        Tell us about yourself, what you're working on, and what you hope to do with it.
+      </p>
+
+      <p>
+        Whether you have a book idea, a finished manuscript, are trying to understand
+        how publishing works, or simply know that you want to write but don't know
+        where to begin, this is a good place to start.
+      </p>
+
+      <p>
+        This form helps us understand who you are, what you're working on, and how
+        we may be able to support you.
+      </p>
+
+      <p>
+        You do not need to know which Ace Pen service you need before filling this in.
+        We'll use what you tell us to help determine the most useful next step.
+      </p>
+
+      <p>
+        Please answer as openly as you can. There are no wrong answers.
+      </p>
     </div>
   </header>
 
 
-  <!-- HERO -->
-  <main>
+  <!-- FORM -->
 
-    <section class="hero">
+  <form
+    id="inquiry-form"
+    action="https://formspree.io/f/xaeykzop"
+    method="POST"
+  >
+
+    <!-- SECTION 1 -->
+
+    <section class="form-section">
       <div class="container">
-        <div class="hero-inner">
 
-          <p class="eyebrow">First-Time Inquiry</p>
+        <div class="section-heading">
+          <div class="section-number">01</div>
+          <h2>About You</h2>
+        </div>
 
-          <h1>Your story deserves to be told.</h1>
+        <div class="section-content">
 
-          <p class="hero-lead">
-            Tell us about yourself, what you're working on, and what you hope
-            to do with it.
-          </p>
+          <div class="question">
+            <label class="question-label" for="full_name">
+              Full name <span class="required">Required</span>
+            </label>
+            <input
+              type="text"
+              id="full_name"
+              name="full_name"
+              required
+            >
+          </div>
 
-          <div class="hero-copy">
-            <p>
-              Do you have a book idea? A finished manuscript? Perhaps you are
-              simply trying to understand how publishing works... or maybe you
-              know that you want to write but don't know where to begin.
-              Well, this is a good place to start.
-            </p>
+          <div class="question">
+            <label class="question-label" for="preferred_name">
+              Name you would like us to use when communicating with you
+            </label>
+            <input
+              type="text"
+              id="preferred_name"
+              name="preferred_name"
+            >
+          </div>
 
-            <p>
-              The first thing you need to know is... You do not need to know
-              which Ace Pen service you need before filling this in. Start where
-              you are. We'll use what you tell us to help determine the most
-              useful next step.
-            </p>
+          <div class="question">
+            <label class="question-label" for="pen_name">
+              Pen name / pseudonym (if applicable)
+            </label>
+            <input
+              type="text"
+              id="pen_name"
+              name="pen_name"
+            >
+          </div>
+
+          <div class="question">
+            <label class="question-label" for="email">
+              Email address <span class="required">Required</span>
+            </label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              required
+            >
+          </div>
+
+          <div class="question">
+            <label class="question-label" for="phone">
+              Phone / WhatsApp number
+            </label>
+            <input
+              type="tel"
+              id="phone"
+              name="phone"
+            >
+          </div>
+
+          <div class="question">
+            <label class="question-label" for="location">
+              Where are you currently based?
+            </label>
+            <input
+              type="text"
+              id="location"
+              name="location"
+            >
           </div>
 
         </div>
@@ -723,872 +584,1311 @@
     </section>
 
 
-    <!-- FORM -->
-    <form
-      id="inquiry-form"
-      action="https://formspree.io/f/xaeykzop"
-      method="POST"
-    >
+    <!-- SECTION 2 -->
 
-      <!-- 01 ABOUT YOU -->
-      <section class="form-section">
-        <div class="container">
+    <section class="form-section">
+      <div class="container">
 
-          <div class="section-heading">
-            <span class="section-number">01</span>
-            <h2>About you</h2>
+        <div class="section-heading">
+          <div class="section-number">02</div>
+          <h2>How Did You Find Us?</h2>
+        </div>
+
+        <div class="section-content">
+
+          <p class="section-intro">
+            We'd love to know how you found us. This helps us understand where
+            writers and creatives are discovering Ace Pen Studio.
+          </p>
+
+          <fieldset class="question">
+            <legend>
+              How did you first hear about Ace Pen Studio?
+            </legend>
+
+            <p class="hint">
+              Please tick the option that best applies.
+            </p>
+
+            <div class="options">
+
+              <label class="option">
+                <input type="checkbox" name="how_found_us[]" value="A friend or colleague recommended Ace Pen Studio">
+                <span>A friend or colleague recommended Ace Pen Studio</span>
+              </label>
+
+              <label class="option">
+                <input type="checkbox" name="how_found_us[]" value="Someone shared an Ace Pen Studio post with me">
+                <span>Someone shared an Ace Pen Studio post with me</span>
+              </label>
+
+              <label class="option">
+                <input type="checkbox" name="how_found_us[]" value="WhatsApp group">
+                <span>WhatsApp group</span>
+              </label>
+
+              <label class="option">
+                <input type="checkbox" name="how_found_us[]" value="Facebook">
+                <span>Facebook</span>
+              </label>
+
+              <label class="option">
+                <input type="checkbox" name="how_found_us[]" value="Instagram">
+                <span>Instagram</span>
+              </label>
+
+              <label class="option">
+                <input type="checkbox" name="how_found_us[]" value="LinkedIn">
+                <span>LinkedIn</span>
+              </label>
+
+              <label class="option">
+                <input type="checkbox" name="how_found_us[]" value="Substack">
+                <span>Substack</span>
+              </label>
+
+              <label class="option">
+                <input type="checkbox" name="how_found_us[]" value="Google or another search engine">
+                <span>Google or another search engine</span>
+              </label>
+
+              <label class="option">
+                <input type="checkbox" name="how_found_us[]" value="Ace Pen Studio website / GitHub page">
+                <span>Ace Pen Studio website / GitHub page</span>
+              </label>
+
+              <label class="option">
+                <input type="checkbox" name="how_found_us[]" value="An Ace Pen Studio event or workshop">
+                <span>An Ace Pen Studio event or workshop</span>
+              </label>
+
+              <label class="option">
+                <input type="checkbox" name="how_found_us[]" value="I met someone from Ace Pen Studio">
+                <span>I met someone from Ace Pen Studio</span>
+              </label>
+
+              <label class="option">
+                <input type="checkbox" name="how_found_us[]" value="Another writer or author">
+                <span>Another writer or author</span>
+              </label>
+
+              <label class="option">
+                <input type="checkbox" name="how_found_us[]" value="Publisher or publishing professional">
+                <span>Publisher or publishing professional</span>
+              </label>
+
+              <label class="option">
+                <input type="checkbox" name="how_found_us[]" value="Other">
+                <span>Other</span>
+              </label>
+
+            </div>
+          </fieldset>
+
+          <div class="question">
+            <label class="question-label" for="referral_details">
+              If someone recommended us or shared something with you,
+              do you remember who or where?
+            </label>
+
+            <textarea
+              id="referral_details"
+              name="referral_details"
+            ></textarea>
           </div>
 
-          <div class="section-body">
-
-            <div class="field-grid">
-
-              <div class="field">
-                <label class="field-label" for="full_name">
-                  Full name <span class="required">Required</span>
-                </label>
-
-                <input
-                  type="text"
-                  id="full_name"
-                  name="full_name"
-                  required
-                >
-              </div>
-
-              <div class="field">
-                <label class="field-label" for="preferred_name">
-                  What should we call you?
-                </label>
-
-                <input
-                  type="text"
-                  id="preferred_name"
-                  name="preferred_name"
-                >
-              </div>
-
-            </div>
+        </div>
+      </div>
+    </section>
 
 
-            <div class="field-grid">
+    <!-- SECTION 3 -->
 
-              <div class="field">
-                <label class="field-label" for="location">
-                  Where are you based?
-                </label>
+    <section class="form-section">
+      <div class="container">
 
-                <input
-                  type="text"
-                  id="location"
-                  name="location"
-                  placeholder="City, country"
-                >
-              </div>
+        <div class="section-heading">
+          <div class="section-number">03</div>
+          <h2>Tell Us About Your Writing</h2>
+        </div>
 
-              <div class="field">
-                <label class="field-label" for="pen_name">
-                  Pen name
-                </label>
+        <div class="section-content">
 
-                <input
-                  type="text"
-                  id="pen_name"
-                  name="pen_name"
-                >
-              </div>
+          <fieldset class="question">
+            <legend>
+              Which of these best describes where you are with your writing?
+              (Tick all that apply)
+            </legend>
 
-            </div>
+            <div class="options">
 
+              <label class="option">
+                <input type="checkbox" name="writing_stage[]" value="I have an idea but haven't started writing">
+                <span>I have an idea but haven't started writing</span>
+              </label>
 
-            <div class="field-grid">
+              <label class="option">
+                <input type="checkbox" name="writing_stage[]" value="I have started writing">
+                <span>I have started writing</span>
+              </label>
 
-              <div class="field">
-                <label class="field-label" for="email">
-                  Email <span class="required">Required</span>
-                </label>
+              <label class="option">
+                <input type="checkbox" name="writing_stage[]" value="I have a partial draft">
+                <span>I have a partial draft</span>
+              </label>
 
-                <input
-                  type="email"
-                  id="email"
-                  name="email"
-                  required
-                >
-              </div>
+              <label class="option">
+                <input type="checkbox" name="writing_stage[]" value="I have a completed manuscript">
+                <span>I have a completed manuscript</span>
+              </label>
 
-              <div class="field">
-                <label class="field-label" for="phone">
-                  Phone / WhatsApp
-                </label>
+              <label class="option">
+                <input type="checkbox" name="writing_stage[]" value="I am revising my manuscript">
+                <span>I am revising my manuscript</span>
+              </label>
 
-                <input
-                  type="tel"
-                  id="phone"
-                  name="phone"
-                >
-              </div>
+              <label class="option">
+                <input type="checkbox" name="writing_stage[]" value="I have previously published a book">
+                <span>I have previously published a book</span>
+              </label>
+
+              <label class="option">
+                <input type="checkbox" name="writing_stage[]" value="I am currently self-published">
+                <span>I am currently self-published</span>
+              </label>
+
+              <label class="option">
+                <input type="checkbox" name="writing_stage[]" value="I have published through a publisher">
+                <span>I have published through a publisher</span>
+              </label>
+
+              <label class="option">
+                <input type="checkbox" name="writing_stage[]" value="I write professionally for other people">
+                <span>I write professionally for other people</span>
+              </label>
+
+              <label class="option">
+                <input type="checkbox" name="writing_stage[]" value="I am interested in ghostwriting">
+                <span>I am interested in ghostwriting</span>
+              </label>
+
+              <label class="option">
+                <input type="checkbox" name="writing_stage[]" value="I am not sure yet — I just know I want to write">
+                <span>I am not sure yet — I just know I want to write</span>
+              </label>
+
+              <label class="option">
+                <input type="checkbox" name="writing_stage[]" value="Other">
+                <span>Other</span>
+              </label>
 
             </div>
+          </fieldset>
+
+
+          <fieldset class="question">
+            <legend>
+              What kind of writing do you do or want to do?
+              (Tick all that apply)
+            </legend>
+
+            <div class="options">
+
+              <label class="option">
+                <input type="checkbox" name="writing_type[]" value="Fiction">
+                <span>Fiction</span>
+              </label>
+
+              <label class="option">
+                <input type="checkbox" name="writing_type[]" value="Non-fiction">
+                <span>Non-fiction</span>
+              </label>
+
+              <label class="option">
+                <input type="checkbox" name="writing_type[]" value="Memoir / autobiography">
+                <span>Memoir / autobiography</span>
+              </label>
+
+              <label class="option">
+                <input type="checkbox" name="writing_type[]" value="Children's literature">
+                <span>Children's literature</span>
+              </label>
+
+              <label class="option">
+                <input type="checkbox" name="writing_type[]" value="Young adult">
+                <span>Young adult</span>
+              </label>
+
+              <label class="option">
+                <input type="checkbox" name="writing_type[]" value="Romance">
+                <span>Romance</span>
+              </label>
+
+              <label class="option">
+                <input type="checkbox" name="writing_type[]" value="Literary fiction">
+                <span>Literary fiction</span>
+              </label>
+
+              <label class="option">
+                <input type="checkbox" name="writing_type[]" value="Crime / thriller">
+                <span>Crime / thriller</span>
+              </label>
+
+              <label class="option">
+                <input type="checkbox" name="writing_type[]" value="Fantasy / science fiction">
+                <span>Fantasy / science fiction</span>
+              </label>
+
+              <label class="option">
+                <input type="checkbox" name="writing_type[]" value="Poetry">
+                <span>Poetry</span>
+              </label>
+
+              <label class="option">
+                <input type="checkbox" name="writing_type[]" value="Essays">
+                <span>Essays</span>
+              </label>
+
+              <label class="option">
+                <input type="checkbox" name="writing_type[]" value="Academic / professional writing">
+                <span>Academic / professional writing</span>
+              </label>
+
+              <label class="option">
+                <input type="checkbox" name="writing_type[]" value="Business / leadership">
+                <span>Business / leadership</span>
+              </label>
+
+              <label class="option">
+                <input type="checkbox" name="writing_type[]" value="Self-help / personal development">
+                <span>Self-help / personal development</span>
+              </label>
+
+              <label class="option">
+                <input type="checkbox" name="writing_type[]" value="Religious / spiritual writing">
+                <span>Religious / spiritual writing</span>
+              </label>
+
+              <label class="option">
+                <input type="checkbox" name="writing_type[]" value="Other">
+                <span>Other</span>
+              </label>
+
+            </div>
+          </fieldset>
+
+
+          <div class="question">
+            <label class="question-label" for="writing_description">
+              Tell us briefly about what you're working on.
+            </label>
+
+            <p class="hint">
+              You can tell us about your idea, manuscript, book, writing career,
+              or whatever you're hoping to develop.
+            </p>
+
+            <textarea
+              id="writing_description"
+              name="writing_description"
+            ></textarea>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+
+    <!-- SECTION 4 -->
+
+    <section class="form-section">
+      <div class="container">
+
+        <div class="section-heading">
+          <div class="section-number">04</div>
+          <h2>Where Are You With the Project?</h2>
+        </div>
+
+        <div class="section-content">
+
+          <fieldset class="question">
+            <legend>
+              What stage is your project currently at?
+            </legend>
+
+            <div class="options">
+
+              <label class="option">
+                <input type="checkbox" name="project_stage[]" value="I only have an idea">
+                <span>I only have an idea</span>
+              </label>
+
+              <label class="option">
+                <input type="checkbox" name="project_stage[]" value="I have notes or an outline">
+                <span>I have notes or an outline</span>
+              </label>
+
+              <label class="option">
+                <input type="checkbox" name="project_stage[]" value="I have written some chapters">
+                <span>I have written some chapters</span>
+              </label>
+
+              <label class="option">
+                <input type="checkbox" name="project_stage[]" value="I have a first draft">
+                <span>I have a first draft</span>
+              </label>
+
+              <label class="option">
+                <input type="checkbox" name="project_stage[]" value="I have a completed manuscript">
+                <span>I have a completed manuscript</span>
+              </label>
+
+              <label class="option">
+                <input type="checkbox" name="project_stage[]" value="I have a completed manuscript that has already been edited">
+                <span>I have a completed manuscript that has already been edited</span>
+              </label>
+
+              <label class="option">
+                <input type="checkbox" name="project_stage[]" value="I have already submitted it to publishers">
+                <span>I have already submitted it to publishers</span>
+              </label>
+
+              <label class="option">
+                <input type="checkbox" name="project_stage[]" value="I have received feedback or rejection from publishers">
+                <span>I have received feedback or rejection from publishers</span>
+              </label>
+
+              <label class="option">
+                <input type="checkbox" name="project_stage[]" value="I have already published it">
+                <span>I have already published it</span>
+              </label>
+
+              <label class="option">
+                <input type="checkbox" name="project_stage[]" value="I'm not sure">
+                <span>I'm not sure</span>
+              </label>
+
+            </div>
+          </fieldset>
+
+
+          <div class="question">
+            <label class="question-label" for="amount_written">
+              Approximately how much have you written?
+            </label>
+
+            <p class="hint">
+              For example: 5,000 words, three chapters, an 80-page manuscript,
+              a complete 60,000-word draft, etc.
+            </p>
+
+            <input
+              type="text"
+              id="amount_written"
+              name="amount_written"
+            >
+          </div>
+
+
+          <fieldset class="question">
+            <legend>
+              Have you previously worked with an editor, writing consultant,
+              publisher, literary agent or other publishing professional?
+            </legend>
+
+            <div class="radio-options">
+
+              <label class="option">
+                <input
+                  type="radio"
+                  name="worked_with_professional"
+                  value="Yes"
+                >
+                <span>Yes</span>
+              </label>
+
+              <label class="option">
+                <input
+                  type="radio"
+                  name="worked_with_professional"
+                  value="No"
+                >
+                <span>No</span>
+              </label>
+
+            </div>
+          </fieldset>
+
+
+          <div class="question">
+            <label class="question-label" for="professional_experience">
+              If yes, tell us briefly about your experience.
+            </label>
+
+            <textarea
+              id="professional_experience"
+              name="professional_experience"
+            ></textarea>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+
+    <!-- SECTION 5 -->
+
+    <section class="form-section">
+      <div class="container">
+
+        <div class="section-heading">
+          <div class="section-number">05</div>
+          <h2>What Are You Hoping to Do?</h2>
+        </div>
+
+        <div class="section-content">
+
+          <fieldset class="question">
+            <legend>
+              What would you most like help with right now?
+              (Tick all that apply)
+            </legend>
+
+            <div class="options">
+
+              <label class="option">
+                <input type="checkbox" name="help_needed[]" value="Developing an idea into a book">
+                <span>Developing an idea into a book</span>
+              </label>
+
+              <label class="option">
+                <input type="checkbox" name="help_needed[]" value="Writing the book">
+                <span>Writing the book</span>
+              </label>
+
+              <label class="option">
+                <input type="checkbox" name="help_needed[]" value="Ghostwriting">
+                <span>Ghostwriting</span>
+              </label>
+
+              <label class="option">
+                <input type="checkbox" name="help_needed[]" value="Editing">
+                <span>Editing</span>
+              </label>
+
+              <label class="option">
+                <input type="checkbox" name="help_needed[]" value="Manuscript development">
+                <span>Manuscript development</span>
+              </label>
+
+              <label class="option">
+                <input type="checkbox" name="help_needed[]" value="Understanding the publishing process">
+                <span>Understanding the publishing process</span>
+              </label>
+
+              <label class="option">
+                <input type="checkbox" name="help_needed[]" value="Preparing my manuscript for submission">
+                <span>Preparing my manuscript for submission</span>
+              </label>
+
+              <label class="option">
+                <input type="checkbox" name="help_needed[]" value="Finding suitable publishers">
+                <span>Finding suitable publishers</span>
+              </label>
+
+              <label class="option">
+                <input type="checkbox" name="help_needed[]" value="Literary representation">
+                <span>Literary representation</span>
+              </label>
+
+              <label class="option">
+                <input type="checkbox" name="help_needed[]" value="Understanding or negotiating a publishing opportunity">
+                <span>Understanding or negotiating a publishing opportunity</span>
+              </label>
+
+              <label class="option">
+                <input type="checkbox" name="help_needed[]" value="Building my profile as an author">
+                <span>Building my profile as an author</span>
+              </label>
+
+              <label class="option">
+                <input type="checkbox" name="help_needed[]" value="Developing my author brand">
+                <span>Developing my author brand</span>
+              </label>
+
+              <label class="option">
+                <input type="checkbox" name="help_needed[]" value="Publishing strategy">
+                <span>Publishing strategy</span>
+              </label>
+
+              <label class="option">
+                <input type="checkbox" name="help_needed[]" value="I am not sure yet">
+                <span>I am not sure yet</span>
+              </label>
+
+              <label class="option">
+                <input type="checkbox" name="help_needed[]" value="Something else">
+                <span>Something else</span>
+              </label>
+
+            </div>
+          </fieldset>
+
+
+          <div class="question">
+            <label class="question-label" for="success">
+              What would success look like for you?
+            </label>
+
+            <p class="hint">
+              Tell us what you would ideally like to achieve with this project.
+            </p>
+
+            <textarea
+              id="success"
+              name="success"
+            ></textarea>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+
+    <!-- SECTION 6 -->
+
+    <section class="form-section">
+      <div class="container">
+
+        <div class="section-heading">
+          <div class="section-number">06</div>
+          <h2>What Can You Bring to the Project?</h2>
+        </div>
+
+        <div class="section-content">
+
+          <p class="section-intro">
+            Every project is different. Understanding what you can already do
+            helps us determine what support you actually need.
+          </p>
+
+
+          <fieldset class="question">
+            <legend>
+              Which skills or experience do you already have?
+              (Tick all that apply)
+            </legend>
+
+            <div class="options">
+
+              <label class="option">
+                <input type="checkbox" name="skills[]" value="Writing">
+                <span>Writing</span>
+              </label>
+
+              <label class="option">
+                <input type="checkbox" name="skills[]" value="Editing">
+                <span>Editing</span>
+              </label>
+
+              <label class="option">
+                <input type="checkbox" name="skills[]" value="Research">
+                <span>Research</span>
+              </label>
+
+              <label class="option">
+                <input type="checkbox" name="skills[]" value="Journalism">
+                <span>Journalism</span>
+              </label>
+
+              <label class="option">
+                <input type="checkbox" name="skills[]" value="Academic writing">
+                <span>Academic writing</span>
+              </label>
+
+              <label class="option">
+                <input type="checkbox" name="skills[]" value="Storytelling">
+                <span>Storytelling</span>
+              </label>
+
+              <label class="option">
+                <input type="checkbox" name="skills[]" value="Public speaking">
+                <span>Public speaking</span>
+              </label>
+
+              <label class="option">
+                <input type="checkbox" name="skills[]" value="Teaching / training">
+                <span>Teaching / training</span>
+              </label>
+
+              <label class="option">
+                <input type="checkbox" name="skills[]" value="Marketing">
+                <span>Marketing</span>
+              </label>
+
+              <label class="option">
+                <input type="checkbox" name="skills[]" value="Social media">
+                <span>Social media</span>
+              </label>
+
+              <label class="option">
+                <input type="checkbox" name="skills[]" value="Graphic design">
+                <span>Graphic design</span>
+              </label>
+
+              <label class="option">
+                <input type="checkbox" name="skills[]" value="Photography">
+                <span>Photography</span>
+              </label>
+
+              <label class="option">
+                <input type="checkbox" name="skills[]" value="Video production">
+                <span>Video production</span>
+              </label>
+
+              <label class="option">
+                <input type="checkbox" name="skills[]" value="Podcasting">
+                <span>Podcasting</span>
+              </label>
+
+              <label class="option">
+                <input type="checkbox" name="skills[]" value="Business / entrepreneurship">
+                <span>Business / entrepreneurship</span>
+              </label>
+
+              <label class="option">
+                <input type="checkbox" name="skills[]" value="Project management">
+                <span>Project management</span>
+              </label>
+
+              <label class="option">
+                <input type="checkbox" name="skills[]" value="Publishing">
+                <span>Publishing</span>
+              </label>
+
+              <label class="option">
+                <input type="checkbox" name="skills[]" value="Sales / business development">
+                <span>Sales / business development</span>
+              </label>
+
+              <label class="option">
+                <input type="checkbox" name="skills[]" value="Community building">
+                <span>Community building</span>
+              </label>
+
+              <label class="option">
+                <input type="checkbox" name="skills[]" value="Other">
+                <span>Other</span>
+              </label>
+
+            </div>
+          </fieldset>
+
+
+          <div class="question">
+            <label class="question-label" for="difficulties">
+              Which parts of writing or developing your project do you find most difficult?
+            </label>
+
+            <textarea
+              id="difficulties"
+              name="difficulties"
+            ></textarea>
+          </div>
+
+
+          <div class="question">
+            <label class="question-label" for="prefer_handle">
+              Are there parts of the project you would prefer to handle yourself?
+            </label>
+
+            <p class="hint">
+              For example: writing, research, editing, design, marketing,
+              publishing, etc.
+            </p>
+
+            <textarea
+              id="prefer_handle"
+              name="prefer_handle"
+            ></textarea>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+
+    <!-- SECTION 7 -->
+
+    <section class="form-section">
+      <div class="container">
+
+        <div class="section-heading">
+          <div class="section-number">07</div>
+          <h2>Your Publishing Goals</h2>
+        </div>
+
+        <div class="section-content">
+
+          <fieldset class="question">
+            <legend>
+              What are you hoping to do with the finished work?
+              (Tick all that apply)
+            </legend>
+
+            <div class="options">
+
+              <label class="option">
+                <input type="checkbox" name="publishing_goal[]" value="Publish with a Tanzanian publisher">
+                <span>Publish with a Tanzanian publisher</span>
+              </label>
+
+              <label class="option">
+                <input type="checkbox" name="publishing_goal[]" value="Publish elsewhere in East Africa">
+                <span>Publish elsewhere in East Africa</span>
+              </label>
+
+              <label class="option">
+                <input type="checkbox" name="publishing_goal[]" value="Seek international publishing opportunities">
+                <span>Seek international publishing opportunities</span>
+              </label>
+
+              <label class="option">
+                <input type="checkbox" name="publishing_goal[]" value="Self-publish">
+                <span>Self-publish</span>
+              </label>
+
+              <label class="option">
+                <input type="checkbox" name="publishing_goal[]" value="Explore both traditional and independent publishing">
+                <span>Explore both traditional and independent publishing</span>
+              </label>
+
+              <label class="option">
+                <input type="checkbox" name="publishing_goal[]" value="I'm not sure yet">
+                <span>I'm not sure yet</span>
+              </label>
+
+              <label class="option">
+                <input type="checkbox" name="publishing_goal[]" value="Other">
+                <span>Other</span>
+              </label>
+
+            </div>
+          </fieldset>
+
+
+          <fieldset class="question">
+            <legend>
+              Have you already approached any publishers or publishing
+              professionals about this project?
+            </legend>
+
+            <div class="radio-options">
+
+              <label class="option">
+                <input
+                  type="radio"
+                  name="approached_publishers"
+                  value="Yes"
+                >
+                <span>Yes</span>
+              </label>
+
+              <label class="option">
+                <input
+                  type="radio"
+                  name="approached_publishers"
+                  value="No"
+                >
+                <span>No</span>
+              </label>
+
+            </div>
+          </fieldset>
+
+
+          <div class="question">
+            <label class="question-label" for="publisher_experience">
+              If yes, what happened?
+            </label>
+
+            <textarea
+              id="publisher_experience"
+              name="publisher_experience"
+            ></textarea>
+          </div>
+
+
+          <fieldset class="question">
+            <legend>
+              Do you currently have an audience or platform connected to your work?
+            </legend>
+
+            <div class="radio-options">
+
+              <label class="option">
+                <input
+                  type="radio"
+                  name="audience"
+                  value="Yes"
+                >
+                <span>Yes</span>
+              </label>
+
+              <label class="option">
+                <input
+                  type="radio"
+                  name="audience"
+                  value="No"
+                >
+                <span>No</span>
+              </label>
+
+              <label class="option">
+                <input
+                  type="radio"
+                  name="audience"
+                  value="I have a small or new audience"
+                >
+                <span>I have a small or new audience</span>
+              </label>
+
+              <label class="option">
+                <input
+                  type="radio"
+                  name="audience"
+                  value="I'm not sure"
+                >
+                <span>I'm not sure</span>
+              </label>
+
+            </div>
+          </fieldset>
+
+
+          <div class="question">
+            <label class="question-label" for="audience_details">
+              If yes, tell us about it.
+            </label>
+
+            <p class="hint">
+              For example: social media following, newsletter, professional
+              network, existing readers, community, public profile, etc.
+            </p>
+
+            <textarea
+              id="audience_details"
+              name="audience_details"
+            ></textarea>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+
+    <!-- SECTION 8 -->
+
+    <section class="form-section">
+      <div class="container">
+
+        <div class="section-heading">
+          <div class="section-number">08</div>
+          <h2>How Ace Pen Might Support You</h2>
+        </div>
+
+        <div class="section-content">
+
+          <p class="section-intro">
+            You don't need to choose a service now. This simply helps us
+            understand what you are considering.
+          </p>
+
+
+          <fieldset class="question">
+            <legend>
+              Which of these would you be open to discussing?
+              (Tick all that apply)
+            </legend>
+
+            <div class="options">
+
+              <label class="option">
+                <input type="checkbox" name="ace_support[]" value="Literary representation">
+                <span>Literary representation</span>
+              </label>
+
+              <label class="option">
+                <input type="checkbox" name="ace_support[]" value="Editing">
+                <span>Editing</span>
+              </label>
+
+              <label class="option">
+                <input type="checkbox" name="ace_support[]" value="Manuscript development">
+                <span>Manuscript development</span>
+              </label>
+
+              <label class="option">
+                <input type="checkbox" name="ace_support[]" value="Ghostwriting">
+                <span>Ghostwriting</span>
+              </label>
+
+              <label class="option">
+                <input type="checkbox" name="ace_support[]" value="Writing support">
+                <span>Writing support</span>
+              </label>
+
+              <label class="option">
+                <input type="checkbox" name="ace_support[]" value="Publishing consultancy">
+                <span>Publishing consultancy</span>
+              </label>
+
+              <label class="option">
+                <input type="checkbox" name="ace_support[]" value="Author positioning / branding">
+                <span>Author positioning / branding</span>
+              </label>
+
+              <label class="option">
+                <input type="checkbox" name="ace_support[]" value="Research support">
+                <span>Research support</span>
+              </label>
+
+              <label class="option">
+                <input type="checkbox" name="ace_support[]" value="Other creative or professional services">
+                <span>Other creative or professional services</span>
+              </label>
+
+              <label class="option">
+                <input type="checkbox" name="ace_support[]" value="I would like Ace Pen Studio to recommend what would be most appropriate">
+                <span>I would like Ace Pen Studio to recommend what would be most appropriate</span>
+              </label>
+
+            </div>
+          </fieldset>
+
+
+          <div class="publishing-note">
+
+            <h3>A Note About Publishing</h3>
+
+            <p>
+              Publishing works differently in different parts of the world.
+              Since Ace Pen Studio works primarily with writers and publishers
+              in Tanzania, East Africa and the wider African publishing market,
+              some of the things you may have heard about publishing elsewhere
+              may not apply here.
+            </p>
+
+            <p>
+              For example, in some markets, authors may receive an advance from
+              a publisher when their book is accepted. This is not always the
+              case in Tanzania. A publisher may instead agree to publish a
+              manuscript without paying an advance, with the author earning
+              royalties from sales later. Having a literary agent also does not
+              automatically mean that you will receive an advance, a publishing
+              deal, or immediate income.
+            </p>
+
+            <p>
+              This is why we look at each writer and project individually.
+              Sometimes the best way for us to support you may be through
+              literary representation. In other cases, your project may first
+              need writing, editing, manuscript development, publishing advice
+              or other support before it is ready to be presented to publishers.
+            </p>
+
+            <p>
+              If we think you would benefit from one of these services, we will
+              explain why, what we recommend, and what it will cost before any
+              work begins.
+            </p>
+
+            <p>
+              You are not expected to know which service you need when you first
+              contact us. That's part of what we help you figure out.
+            </p>
 
           </div>
 
         </div>
-      </section>
+      </div>
+    </section>
 
 
-      <!-- 02 YOUR WRITING -->
-      <section class="form-section">
-        <div class="container">
+    <!-- SECTION 9 -->
 
-          <div class="section-heading">
-            <span class="section-number">02</span>
-            <h2>Your writing</h2>
-          </div>
+    <section class="form-section">
+      <div class="container">
 
-          <div class="section-body">
+        <div class="section-heading">
+          <div class="section-number">09</div>
+          <h2>Let's Talk</h2>
+        </div>
 
-            <div class="field">
-              <span class="field-label">Which of these describe where you are with writing?</span>
+        <div class="section-content">
 
-              <div class="options">
+          <fieldset class="question">
+            <legend>
+              How would you prefer to continue the conversation?
+            </legend>
 
-                <label class="option">
-                  <input type="checkbox" name="writing_stage[]" value="Previously published">
-                  <span>Previously published</span>
-                </label>
+            <div class="options">
 
-                <label class="option">
-                  <input type="checkbox" name="writing_stage[]" value="Started writing">
-                  <span>Started writing</span>
-                </label>
-
-                <label class="option">
-                  <input type="checkbox" name="writing_stage[]" value="Interested in ghostwriting">
-                  <span>Interested in ghostwriting</span>
-                </label>
-
-                <label class="option">
-                  <input type="checkbox" name="writing_stage[]" value="Completed manuscript">
-                  <span>Completed manuscript</span>
-                </label>
-
-                <label class="option">
-                  <input type="checkbox" name="writing_stage[]" value="Published through publisher">
-                  <span>Published through a publisher</span>
-                </label>
-
-                <label class="option">
-                  <input type="checkbox" name="writing_stage[]" value="Idea">
-                  <span>I have an idea</span>
-                </label>
-
-                <label class="option">
-                  <input type="checkbox" name="writing_stage[]" value="Partial draft">
-                  <span>Partial draft</span>
-                </label>
-
-                <label class="option">
-                  <input type="checkbox" name="writing_stage[]" value="Self-published">
-                  <span>Self-published</span>
-                </label>
-
-                <label class="option">
-                  <input type="checkbox" name="writing_stage[]" value="Not sure">
-                  <span>Not sure</span>
-                </label>
-
-                <label class="option">
-                  <input type="checkbox" name="writing_stage[]" value="Revising">
-                  <span>Currently revising</span>
-                </label>
-
-                <label class="option">
-                  <input type="checkbox" name="writing_stage[]" value="Professional writer">
-                  <span>Professional writer</span>
-                </label>
-
-              </div>
-            </div>
-
-
-            <div class="field">
-              <span class="field-label">What kind of writing are you working with?</span>
-
-              <div class="options">
-
-                <label class="option">
-                  <input type="checkbox" name="genre[]" value="Fiction">
-                  <span>Fiction</span>
-                </label>
-
-                <label class="option">
-                  <input type="checkbox" name="genre[]" value="Literary fiction">
-                  <span>Literary fiction</span>
-                </label>
-
-                <label class="option">
-                  <input type="checkbox" name="genre[]" value="Romance">
-                  <span>Romance</span>
-                </label>
-
-                <label class="option">
-                  <input type="checkbox" name="genre[]" value="Fantasy or science fiction">
-                  <span>Fantasy or science fiction</span>
-                </label>
-
-                <label class="option">
-                  <input type="checkbox" name="genre[]" value="Crime or thriller">
-                  <span>Crime or thriller</span>
-                </label>
-
-                <label class="option">
-                  <input type="checkbox" name="genre[]" value="Young adult">
-                  <span>Young adult</span>
-                </label>
-
-                <label class="option">
-                  <input type="checkbox" name="genre[]" value="Children's literature">
-                  <span>Children's literature</span>
-                </label>
-
-                <label class="option">
-                  <input type="checkbox" name="genre[]" value="Poetry">
-                  <span>Poetry</span>
-                </label>
-
-                <label class="option">
-                  <input type="checkbox" name="genre[]" value="Essays">
-                  <span>Essays</span>
-                </label>
-
-                <label class="option">
-                  <input type="checkbox" name="genre[]" value="Memoir">
-                  <span>Memoir</span>
-                </label>
-
-                <label class="option">
-                  <input type="checkbox" name="genre[]" value="Non-fiction">
-                  <span>Non-fiction</span>
-                </label>
-
-                <label class="option">
-                  <input type="checkbox" name="genre[]" value="Self-help">
-                  <span>Self-help</span>
-                </label>
-
-                <label class="option">
-                  <input type="checkbox" name="genre[]" value="Business">
-                  <span>Business</span>
-                </label>
-
-                <label class="option">
-                  <input type="checkbox" name="genre[]" value="Academic">
-                  <span>Academic</span>
-                </label>
-
-                <label class="option">
-                  <input type="checkbox" name="genre[]" value="Religious">
-                  <span>Religious</span>
-                </label>
-
-              </div>
-            </div>
-
-
-            <div class="field">
-              <label class="field-label" for="project_description">
-                Tell us about what you're writing
+              <label class="option">
+                <input type="checkbox" name="conversation_preference[]" value="WhatsApp">
+                <span>WhatsApp</span>
               </label>
 
-              <p class="field-hint">
-                What is the project? What is it about? What made you start it?
-                Don't hold anything back.
-              </p>
+              <label class="option">
+                <input type="checkbox" name="conversation_preference[]" value="Phone call">
+                <span>Phone call</span>
+              </label>
 
-              <textarea
-                id="project_description"
-                name="project_description"
-              ></textarea>
+              <label class="option">
+                <input type="checkbox" name="conversation_preference[]" value="Video call">
+                <span>Video call</span>
+              </label>
+
+              <label class="option">
+                <input type="checkbox" name="conversation_preference[]" value="Email">
+                <span>Email</span>
+              </label>
+
+              <label class="option">
+                <input type="checkbox" name="conversation_preference[]" value="I would prefer to communicate in writing for now">
+                <span>I would prefer to communicate in writing for now</span>
+              </label>
+
+              <label class="option">
+                <input type="checkbox" name="conversation_preference[]" value="I'm flexible">
+                <span>I'm flexible</span>
+              </label>
+
             </div>
+          </fieldset>
 
+
+          <div class="question">
+            <label class="question-label" for="availability">
+              When are you generally available for a conversation?
+            </label>
+
+            <textarea
+              id="availability"
+              name="availability"
+            ></textarea>
+          </div>
+
+
+          <div class="question">
+            <label class="question-label" for="anything_else">
+              Is there anything else you would like us to know about you or your project?
+            </label>
+
+            <textarea
+              id="anything_else"
+              name="anything_else"
+            ></textarea>
           </div>
 
         </div>
-      </section>
+      </div>
+    </section>
 
 
-      <!-- 03 YOUR PROJECT -->
-      <section class="form-section">
-        <div class="container">
+    <!-- SECTION 10 -->
 
-          <div class="section-heading">
-            <span class="section-number">03</span>
-            <h2>Your project</h2>
-          </div>
+    <section class="form-section">
+      <div class="container">
 
-          <div class="section-body">
+        <div class="section-heading">
+          <div class="section-number">10</div>
+          <h2>Your Work</h2>
+        </div>
 
-            <div class="field">
-              <span class="field-label">
-                Where would you say the project is right now?
-              </span>
+        <div class="section-content">
 
-              <div class="options">
+          <fieldset class="question">
+            <legend>
+              Do you currently have something you would like to share with us?
+            </legend>
 
-                <label class="option">
-                  <input type="checkbox" name="project_stage[]" value="Idea">
-                  <span>Idea</span>
-                </label>
+            <div class="radio-options">
 
-                <label class="option">
-                  <input type="checkbox" name="project_stage[]" value="Notes or outline">
-                  <span>Notes or outline</span>
-                </label>
-
-                <label class="option">
-                  <input type="checkbox" name="project_stage[]" value="Some chapters">
-                  <span>Some chapters</span>
-                </label>
-
-                <label class="option">
-                  <input type="checkbox" name="project_stage[]" value="First draft">
-                  <span>First draft</span>
-                </label>
-
-                <label class="option">
-                  <input type="checkbox" name="project_stage[]" value="Completed manuscript">
-                  <span>Completed manuscript</span>
-                </label>
-
-                <label class="option">
-                  <input type="checkbox" name="project_stage[]" value="Edited manuscript">
-                  <span>Edited manuscript</span>
-                </label>
-
-                <label class="option">
-                  <input type="checkbox" name="project_stage[]" value="Submitted to publishers">
-                  <span>Submitted to publishers</span>
-                </label>
-
-                <label class="option">
-                  <input type="checkbox" name="project_stage[]" value="Published">
-                  <span>Published</span>
-                </label>
-
-                <label class="option">
-                  <input type="checkbox" name="project_stage[]" value="Feedback or rejection">
-                  <span>Received feedback or rejection</span>
-                </label>
-
-                <label class="option">
-                  <input type="checkbox" name="project_stage[]" value="Not sure">
-                  <span>Not sure</span>
-                </label>
-
-              </div>
-            </div>
-
-
-            <div class="field">
-              <label class="field-label" for="amount_written">
-                Approximately how much have you written?
+              <label class="option">
+                <input
+                  type="radio"
+                  name="has_work_to_share"
+                  value="Yes"
+                >
+                <span>Yes</span>
               </label>
 
-              <input
-                type="text"
-                id="amount_written"
-                name="amount_written"
-                placeholder="For example: 15,000 words / 5 chapters / a full manuscript"
-              >
-            </div>
-
-
-            <div class="field">
-              <span class="field-label">
-                Have you worked with a writing, publishing, or editorial professional before?
-              </span>
-
-              <div class="radio-options">
-
-                <label class="option">
-                  <input
-                    type="radio"
-                    name="worked_with_professional"
-                    value="Yes"
-                  >
-                  <span>Yes</span>
-                </label>
-
-                <label class="option">
-                  <input
-                    type="radio"
-                    name="worked_with_professional"
-                    value="No"
-                  >
-                  <span>No</span>
-                </label>
-
-              </div>
-            </div>
-
-
-            <div class="field">
-              <label class="field-label" for="professional_experience">
-                If yes, tell us a little about that experience
+              <label class="option">
+                <input
+                  type="radio"
+                  name="has_work_to_share"
+                  value="No"
+                >
+                <span>No</span>
               </label>
 
-              <textarea
-                id="professional_experience"
-                name="professional_experience"
-              ></textarea>
-            </div>
+              <label class="option">
+                <input
+                  type="radio"
+                  name="has_work_to_share"
+                  value="I can share it later"
+                >
+                <span>I can share it later</span>
+              </label>
 
-          </div>
+            </div>
+          </fieldset>
+
+
+          <fieldset class="question">
+            <legend>
+              What would you like to share?
+              (Tick all that apply)
+            </legend>
+
+            <div class="options">
+
+              <label class="option">
+                <input type="checkbox" name="work_to_share[]" value="Manuscript">
+                <span>Manuscript</span>
+              </label>
+
+              <label class="option">
+                <input type="checkbox" name="work_to_share[]" value="Book proposal">
+                <span>Book proposal</span>
+              </label>
+
+              <label class="option">
+                <input type="checkbox" name="work_to_share[]" value="Synopsis">
+                <span>Synopsis</span>
+              </label>
+
+              <label class="option">
+                <input type="checkbox" name="work_to_share[]" value="Writing sample">
+                <span>Writing sample</span>
+              </label>
+
+              <label class="option">
+                <input type="checkbox" name="work_to_share[]" value="Portfolio">
+                <span>Portfolio</span>
+              </label>
+
+              <label class="option">
+                <input type="checkbox" name="work_to_share[]" value="Previously published work">
+                <span>Previously published work</span>
+              </label>
+
+              <label class="option">
+                <input type="checkbox" name="work_to_share[]" value="Other">
+                <span>Other</span>
+              </label>
+
+            </div>
+          </fieldset>
+
+
+          <p class="section-intro">
+            If you are completing this form digitally, you may attach a document
+            where requested. You don't need to share anything at this stage.
+            If we need to see your work, we'll let you know what would be most useful.
+          </p>
 
         </div>
-      </section>
+      </div>
+    </section>
 
 
-      <!-- 04 WHAT YOU NEED -->
-      <section class="form-section">
-        <div class="container">
+    <!-- WHAT HAPPENS NEXT / SUBMIT -->
 
-          <div class="section-heading">
-            <span class="section-number">04</span>
-            <h2>What you need</h2>
-          </div>
+    <section class="submit-section">
+      <div class="container">
 
-          <div class="section-body">
+        <div class="submit-inner">
 
-            <div class="field">
-              <span class="field-label">
-                What kind of help are you looking for?
-              </span>
+          <h2>What Happens Next?</h2>
 
-              <div class="options">
+          <p>
+            Thank you for taking the time to tell us about yourself and your work.
+          </p>
 
-                <label class="option">
-                  <input type="checkbox" name="help_needed[]" value="Developing idea">
-                  <span>Developing an idea</span>
-                </label>
+          <p>
+            We review your inquiry and determine what kind of conversation or
+            service may be most appropriate.
+          </p>
 
-                <label class="option">
-                  <input type="checkbox" name="help_needed[]" value="Writing">
-                  <span>Writing</span>
-                </label>
+          <p>
+            If your project appears suitable for further discussion, we will
+            contact you to arrange a conversation.
+          </p>
 
-                <label class="option">
-                  <input type="checkbox" name="help_needed[]" value="Ghostwriting">
-                  <span>Ghostwriting</span>
-                </label>
+          <p>
+            You may not need to decide on a service before speaking with us.
+            In many cases, the first conversation helps us understand what your
+            project actually needs.
+          </p>
 
-                <label class="option">
-                  <input type="checkbox" name="help_needed[]" value="Manuscript development">
-                  <span>Manuscript development</span>
-                </label>
+          <p>
+            Our goal is not simply to sell you a service. It is to understand
+            your project and determine the most useful way Ace Pen Studio can
+            support you.
+          </p>
 
-                <label class="option">
-                  <input type="checkbox" name="help_needed[]" value="Editing">
-                  <span>Editing</span>
-                </label>
+          <p>
+            In the meantime, you can stay connected with Ace Pen Studio by
+            subscribing to our Substack newsletter. We share announcements,
+            opportunities, stories from the literary world, updates on our work,
+            and news from the studio.
+          </p>
 
-                <label class="option">
-                  <input type="checkbox" name="help_needed[]" value="Publishing process">
-                  <span>Understanding the publishing process</span>
-                </label>
+          <p>
+            Stay connected. Don't miss what's happening next.
+          </p>
 
-                <label class="option">
-                  <input type="checkbox" name="help_needed[]" value="Literary representation">
-                  <span>Literary representation</span>
-                </label>
 
-                <label class="option">
-                  <input type="checkbox" name="help_needed[]" value="Submission preparation">
-                  <span>Submission preparation</span>
-                </label>
+          <div class="consent">
 
-                <label class="option">
-                  <input type="checkbox" name="help_needed[]" value="Finding publishers">
-                  <span>Finding publishers</span>
-                </label>
-
-                <label class="option">
-                  <input type="checkbox" name="help_needed[]" value="Publishing opportunity">
-                  <span>Publishing opportunity</span>
-                </label>
-
-                <label class="option">
-                  <input type="checkbox" name="help_needed[]" value="Author profile">
-                  <span>Author profile</span>
-                </label>
-
-                <label class="option">
-                  <input type="checkbox" name="help_needed[]" value="Author brand">
-                  <span>Author brand</span>
-                </label>
-
-                <label class="option">
-                  <input type="checkbox" name="help_needed[]" value="Not sure">
-                  <span>I'm not sure yet</span>
-                </label>
-
-              </div>
-            </div>
-
-
-            <div class="field">
-              <label class="field-label" for="success">
-                What would a successful outcome look like for you?
-              </label>
-
-              <textarea
-                id="success"
-                name="success"
-              ></textarea>
-            </div>
-
-          </div>
-
-        </div>
-      </section>
-
-
-      <!-- 05 PUBLISHING GOALS -->
-      <section class="form-section">
-        <div class="container">
-
-          <div class="section-heading">
-            <span class="section-number">05</span>
-            <h2>Publishing goals</h2>
-          </div>
-
-          <div class="section-body">
-
-            <div class="field">
-              <span class="field-label">
-                Where would you ideally like to publish?
-              </span>
-
-              <div class="options">
-
-                <label class="option">
-                  <input type="checkbox" name="publishing_goal[]" value="Tanzania">
-                  <span>Tanzania</span>
-                </label>
-
-                <label class="option">
-                  <input type="checkbox" name="publishing_goal[]" value="East Africa">
-                  <span>East Africa</span>
-                </label>
-
-                <label class="option">
-                  <input type="checkbox" name="publishing_goal[]" value="International">
-                  <span>International</span>
-                </label>
-
-                <label class="option">
-                  <input type="checkbox" name="publishing_goal[]" value="Self-publish">
-                  <span>Self-publish</span>
-                </label>
-
-                <label class="option">
-                  <input type="checkbox" name="publishing_goal[]" value="Both">
-                  <span>I'm open to both</span>
-                </label>
-
-                <label class="option">
-                  <input type="checkbox" name="publishing_goal[]" value="Not sure">
-                  <span>Not sure</span>
-                </label>
-
-              </div>
-            </div>
-
-
-            <div class="field">
-              <span class="field-label">
-                Have you approached any publishers before?
-              </span>
-
-              <div class="radio-options">
-
-                <label class="option">
-                  <input
-                    type="radio"
-                    name="approached_publishers"
-                    value="Yes"
-                  >
-                  <span>Yes</span>
-                </label>
-
-                <label class="option">
-                  <input
-                    type="radio"
-                    name="approached_publishers"
-                    value="No"
-                  >
-                  <span>No</span>
-                </label>
-
-              </div>
-            </div>
-
-
-            <div class="field">
-              <label class="field-label" for="publisher_experience">
-                Tell us about that experience
-              </label>
-
-              <textarea
-                id="publisher_experience"
-                name="publisher_experience"
-              ></textarea>
-            </div>
-
-
-            <div class="field">
-              <span class="field-label">
-                Do you already have an audience?
-              </span>
-
-              <div class="radio-options">
-
-                <label class="option">
-                  <input
-                    type="radio"
-                    name="audience"
-                    value="Yes"
-                  >
-                  <span>Yes</span>
-                </label>
-
-                <label class="option">
-                  <input
-                    type="radio"
-                    name="audience"
-                    value="No"
-                  >
-                  <span>No</span>
-                </label>
-
-                <label class="option">
-                  <input
-                    type="radio"
-                    name="audience"
-                    value="Small or new audience"
-                  >
-                  <span>Small or new audience</span>
-                </label>
-
-                <label class="option">
-                  <input
-                    type="radio"
-                    name="audience"
-                    value="Not sure"
-                  >
-                  <span>Not sure</span>
-                </label>
-
-              </div>
-            </div>
-
-
-            <div class="field">
-              <label class="field-label" for="audience_details">
-                Tell us about your audience
-              </label>
-
-              <textarea
-                id="audience_details"
-                name="audience_details"
-              ></textarea>
-            </div>
-
-          </div>
-
-        </div>
-      </section>
-
-
-      <!-- 06 WORKING WITH ACE PEN -->
-      <section class="form-section">
-        <div class="container">
-
-          <div class="section-heading">
-            <span class="section-number">06</span>
-            <h2>Working with Ace Pen</h2>
-          </div>
-
-          <div class="section-body">
-
-            <div class="field">
-              <span class="field-label">
-                Which kinds of support are you interested in?
-              </span>
-
-              <div class="options">
-
-                <label class="option">
-                  <input type="checkbox" name="ace_support[]" value="Literary representation">
-                  <span>Literary representation</span>
-                </label>
-
-                <label class="option">
-                  <input type="checkbox" name="ace_support[]" value="Editing">
-                  <span>Editing</span>
-                </label>
-
-                <label class="option">
-                  <input type="checkbox" name="ace_support[]" value="Writing support">
-                  <span>Writing support</span>
-                </label>
-
-                <label class="option">
-                  <input type="checkbox" name="ace_support[]" value="Manuscript development">
-                  <span>Manuscript development</span>
-                </label>
-
-                <label class="option">
-                  <input type="checkbox" name="ace_support[]" value="Ghostwriting">
-                  <span>Ghostwriting</span>
-                </label>
-
-                <label class="option">
-                  <input type="checkbox" name="ace_support[]" value="Research support">
-                  <span>Research support</span>
-                </label>
-
-                <label class="option">
-                  <input type="checkbox" name="ace_support[]" value="Publishing consultancy">
-                  <span>Publishing consultancy</span>
-                </label>
-
-                <label class="option">
-                  <input type="checkbox" name="ace_support[]" value="Author positioning">
-                  <span>Author positioning</span>
-                </label>
-
-                <label class="option">
-                  <input type="checkbox" name="ace_support[]" value="Other">
-                  <span>Other</span>
-                </label>
-
-                <label class="option">
-                  <input type="checkbox" name="ace_support[]" value="Recommend">
-                  <span>Recommend what would be most useful</span>
-                </label>
-
-              </div>
-            </div>
-
-
-            <div class="publishing-note">
-
-              <h3>
-                Before you leave, here's a note about publishing
-              </h3>
-
-              <p>
-                Publishing does not look exactly the same everywhere.
-                In Tanzania and across Africa, publishing structures,
-                contracts, advances, distribution and author opportunities
-                can differ significantly from the models you may have seen
-                elsewhere.
-              </p>
-
-              <p>
-                An advance is not guaranteed, and it is not necessarily part
-                of every publishing arrangement. Working with a literary
-                representative also does not guarantee an advance, a
-                publishing deal, or future income.
-              </p>
-
-              <p>
-                What we can do is help you understand your options, develop
-                the work, position it appropriately and determine what kind
-                of opportunity makes sense for you. If we recommend a paid
-                service, the scope and fees will always be explained before
-                any work begins.
-              </p>
-
-            </div>
-
-          </div>
-
-        </div>
-      </section>
-
-
-      <!-- CONSENT -->
-      <section class="consent-section">
-
-        <div class="container">
-
-          <div class="consent-inner">
-
-            <div class="consent-heading">
-              <h2>Before you submit</h2>
-
-              <p>
-                A few final things so we can handle your inquiry properly.
-              </p>
-            </div>
-
-
-            <label class="consent-option">
+            <label class="option">
               <input
                 type="checkbox"
                 name="consent_response"
-                value="I consent to Ace Pen Studio using the information provided to respond to my inquiry and determine appropriate support."
+                value="I understand"
                 required
               >
 
               <span>
                 I understand that the information I provide may be used by
-                Ace Pen Studio to respond to my inquiry and determine what
-                kind of support may be appropriate.
+                Ace Pen Studio to respond to my inquiry and determine how the
+                studio may be able to support me.
               </span>
             </label>
 
 
-            <label class="consent-option">
+            <label class="option">
               <input
                 type="checkbox"
                 name="consent_representation"
-                value="I understand that this inquiry does not constitute a representation or service agreement."
+                value="I understand"
                 required
               >
 
               <span>
-                I understand that submitting this inquiry does not mean that
-                Ace Pen Studio has agreed to represent me or provide any
-                service. Any representation or service arrangement will be
-                agreed separately.
+                I understand that submitting this form does not mean that
+                Ace Pen Studio has agreed to represent me or provide any service.
+                Any service, fee or representation arrangement will be discussed
+                and agreed separately before work begins.
               </span>
             </label>
 
           </div>
 
-        </div>
 
-      </section>
-
-
-      <!-- SUBMIT -->
-      <section class="submit-section">
-
-        <div class="container">
-
-          <div class="submit-inner" id="submit-area">
-
-            <h2>
-              Thank you for telling us about yourself and your work.
-            </h2>
-
-            <p>
-              We'll review your inquiry and determine what kind of
-              conversation or service may be most appropriate.
-            </p>
+          <div id="submit-area">
 
             <button
               type="submit"
@@ -1601,112 +1901,50 @@
           </div>
 
 
-          <!-- SUCCESS MESSAGE -->
           <div
-            class="form-status"
             id="success-message"
+            class="form-message success"
             role="status"
             aria-live="polite"
           >
-
-            <h2>We've received your inquiry.</h2>
-
-            <p>
-              Thank you for telling us about your work. We'll review what
-              you've shared and get back to you with the most appropriate
-              next step.
-            </p>
-
+            <strong>We've received your inquiry.</strong><br>
+            Thank you for telling us about yourself and your work.
+            We'll review it and determine what kind of conversation or
+            support may be most appropriate.
           </div>
 
 
-          <!-- ERROR MESSAGE -->
           <div
-            class="form-status error"
             id="error-message"
+            class="form-message error"
             role="alert"
             aria-live="assertive"
           >
-
-            <h2>Something went wrong.</h2>
-
-            <p>
-              We couldn't submit your inquiry right now. Please check your
-              connection and try again. If the problem continues, you can
-              contact Ace Pen Studio directly.
-            </p>
-
+            Something went wrong while submitting your inquiry.
+            Please try again in a moment.
           </div>
 
         </div>
-
-      </section>
-
-    </form>
-
-
-    <!-- SCOTTFREE BANNER -->
-    <section class="scottfree-banner">
-
-      <div class="container scottfree-inner">
-
-        <div>
-
-          <p class="scottfree-eyebrow">
-            From Ace Pen Studio
-          </p>
-
-          <h2>
-            Read Scottfree.
-          </h2>
-
-          <p>
-            A novella by Ace about love, memory, and the things we carry
-            long after we think we've left them behind.
-            Follow the writing, thoughts and ideas behind Ace Pen Studio
-            on Substack.
-          </p>
-
-        </div>
-
-
-        <div>
-          <a
-            class="scottfree-link"
-            href="https://acepenstudio.substack.com/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read Scottfree →
-          </a>
-        </div>
-
       </div>
-
     </section>
 
-  </main>
+  </form>
 
 
   <!-- FOOTER -->
+
   <footer>
-
-    <div class="container footer-inner">
-
-      <div>
-        © 2026 Ace Pen Studio Literary Agency
+    <div class="container">
+      <div class="footer-inner">
+        <span>© 2026 Ace Pen Studio Literary Agency</span>
+        <span>Tanzania · East Africa</span>
       </div>
-
-      <div>
-        Tanzania · East Africa
-      </div>
-
     </div>
-
   </footer>
 
 
   <!-- FORM SUBMISSION -->
+
   <script>
     const form = document.getElementById("inquiry-form");
     const submitButton = document.getElementById("submit-button");
@@ -1717,11 +1955,11 @@
     form.addEventListener("submit", async function (event) {
       event.preventDefault();
 
-      successMessage.classList.remove("is-visible");
-      errorMessage.classList.remove("is-visible");
-
       submitButton.disabled = true;
       submitButton.textContent = "Sending...";
+
+      successMessage.style.display = "none";
+      errorMessage.style.display = "none";
 
       const formData = new FormData(form);
 
@@ -1738,7 +1976,7 @@
           form.reset();
 
           submitArea.style.display = "none";
-          successMessage.classList.add("is-visible");
+          successMessage.style.display = "block";
 
           successMessage.scrollIntoView({
             behavior: "smooth",
@@ -1750,16 +1988,15 @@
         }
 
       } catch (error) {
+        errorMessage.style.display = "block";
 
-        errorMessage.classList.add("is-visible");
+        submitButton.disabled = false;
+        submitButton.textContent = "Submit Inquiry →";
 
         errorMessage.scrollIntoView({
           behavior: "smooth",
           block: "center"
         });
-
-        submitButton.disabled = false;
-        submitButton.textContent = "Submit Inquiry →";
       }
     });
   </script>
