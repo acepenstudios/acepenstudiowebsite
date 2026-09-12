@@ -1,0 +1,1448 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>FAQs — Ace Pen Studio</title>
+
+  <meta
+    name="description"
+    content="Answers to common questions about writing, publishing, literary representation, manuscripts, ghostwriting, rights and working with Ace Pen Studio."
+  >
+
+  <style>
+
+    :root {
+      --black: #111111;
+      --text: #222222;
+      --muted: #666666;
+      --line: #dddddd;
+      --light: #f7f7f7;
+      --white: #ffffff;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      color: var(--text);
+      background: var(--white);
+      font-family: Arial, Helvetica, sans-serif;
+      line-height: 1.65;
+    }
+
+    a {
+      color: inherit;
+    }
+
+    .container {
+      width: min(1180px, calc(100% - 48px));
+      margin: 0 auto;
+    }
+
+    .site-header {
+      border-bottom: 1px solid var(--line);
+      background: var(--white);
+    }
+
+    .header-inner {
+      min-height: 78px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 30px;
+    }
+
+    .logo {
+      text-decoration: none;
+      font-family: Futura, "Century Gothic", Arial, Helvetica, sans-serif;
+      font-size: 17px;
+      font-weight: 700;
+      letter-spacing: .03em;
+    }
+
+    .nav {
+      display: flex;
+      gap: 28px;
+      align-items: center;
+    }
+
+    .nav a {
+      text-decoration: none;
+      font-family: Futura, "Century Gothic", Arial, Helvetica, sans-serif;
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+    }
+
+    .nav a:hover {
+      text-decoration: underline;
+      text-underline-offset: 5px;
+    }
+
+    .hero {
+      padding: 90px 0 75px;
+    }
+
+    .eyebrow,
+    .section-label {
+      margin-bottom: 14px;
+      font-family: Futura, "Century Gothic", Arial, Helvetica, sans-serif;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: .16em;
+      text-transform: uppercase;
+    }
+
+    .hero h1 {
+      max-width: 900px;
+      margin: 0 0 25px;
+      font-family: Futura, "Century Gothic", Arial, Helvetica, sans-serif;
+      font-size: clamp(48px, 8vw, 82px);
+      line-height: .98;
+      letter-spacing: -.045em;
+      font-weight: 500;
+    }
+
+    .hero .lead {
+      max-width: 750px;
+      margin: 0;
+      font-size: 20px;
+      line-height: 1.55;
+    }
+
+    .faq-nav {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 35px;
+    }
+
+    .faq-nav a {
+      padding: 9px 13px;
+      border: 1px solid var(--line);
+      text-decoration: none;
+      font-family: Futura, "Century Gothic", Arial, Helvetica, sans-serif;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: .06em;
+      text-transform: uppercase;
+    }
+
+    .faq-nav a:hover {
+      border-color: var(--black);
+      background: var(--black);
+      color: var(--white);
+    }
+
+    .black-band {
+      background: var(--black);
+      color: var(--white);
+    }
+
+    .black-band .container {
+      padding: 54px 0;
+    }
+
+    .black-band h2 {
+      max-width: 900px;
+      margin: 0;
+      font-family: Futura, "Century Gothic", Arial, Helvetica, sans-serif;
+      font-size: clamp(30px, 4vw, 48px);
+      line-height: 1.12;
+      font-weight: 500;
+      letter-spacing: -.02em;
+    }
+
+    .black-band p {
+      max-width: 760px;
+      margin: 18px 0 0;
+      color: #cccccc;
+    }
+
+    .section {
+      padding: 85px 0;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .section-grid {
+      display: grid;
+      grid-template-columns: minmax(190px, .32fr) minmax(0, 1fr);
+      gap: 80px;
+    }
+
+    .section h2 {
+      margin: 0 0 20px;
+      font-family: Futura, "Century Gothic", Arial, Helvetica, sans-serif;
+      font-size: 38px;
+      line-height: 1.15;
+      font-weight: 500;
+      letter-spacing: -.025em;
+    }
+
+    .faq-category {
+      scroll-margin-top: 90px;
+    }
+
+    .faq-item {
+      padding: 26px 0;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .faq-item:first-child {
+      padding-top: 0;
+    }
+
+    .faq-item h3 {
+      margin: 0 0 10px;
+      font-family: Futura, "Century Gothic", Arial, Helvetica, sans-serif;
+      font-size: 20px;
+      line-height: 1.3;
+      font-weight: 500;
+    }
+
+    .faq-item p {
+      max-width: 790px;
+      margin: 0;
+      color: #444444;
+    }
+
+    .note {
+      margin-top: 30px;
+      padding: 25px;
+      background: var(--light);
+      border-left: 3px solid var(--black);
+    }
+
+    .cta {
+      background: var(--light);
+      border-bottom: 1px solid var(--line);
+    }
+
+    .cta .container {
+      padding: 70px 0;
+    }
+
+    .cta h2 {
+      max-width: 700px;
+    }
+
+    .cta p {
+      max-width: 680px;
+    }
+
+    .button {
+      display: inline-block;
+      margin-top: 15px;
+      padding: 13px 22px;
+      border: 1px solid var(--black);
+      background: var(--black);
+      color: var(--white);
+      text-decoration: none;
+      font-family: Futura, "Century Gothic", Arial, Helvetica, sans-serif;
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+    }
+
+    .button:hover {
+      background: var(--white);
+      color: var(--black);
+    }
+
+    .substack-banner {
+      background: var(--black);
+      color: var(--white);
+      border-bottom: 1px solid var(--line);
+    }
+
+    .substack-banner .container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 40px;
+      padding: 42px 0;
+    }
+
+    .substack-copy {
+      max-width: 720px;
+    }
+
+    .substack-eyebrow {
+      margin-bottom: 9px;
+      font-family: Futura, "Century Gothic", Arial, Helvetica, sans-serif;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: .16em;
+      text-transform: uppercase;
+    }
+
+    .substack-banner h2 {
+      margin: 0 0 10px;
+      font-size: 27px;
+      line-height: 1.2;
+      font-weight: 500;
+    }
+
+    .substack-banner p {
+      margin: 0;
+      color: #cccccc;
+      font-size: 15px;
+    }
+
+    .substack-button {
+      display: inline-block;
+      flex: 0 0 auto;
+      padding: 13px 22px;
+      border: 1px solid var(--white);
+      color: var(--white);
+      text-decoration: none;
+      font-family: Futura, "Century Gothic", Arial, Helvetica, sans-serif;
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+    }
+
+    .substack-button:hover {
+      background: var(--white);
+      color: var(--black);
+    }
+
+    .footer {
+      padding: 34px 0;
+    }
+
+    .footer-inner {
+      display: flex;
+      justify-content: space-between;
+      gap: 30px;
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    .footer a {
+      text-decoration: none;
+    }
+
+    .footer a:hover {
+      text-decoration: underline;
+    }
+
+    @media (max-width: 800px) {
+
+      .container {
+        width: min(100% - 32px, 1180px);
+      }
+
+      .header-inner {
+        min-height: 70px;
+      }
+
+      .nav {
+        gap: 16px;
+      }
+
+      .hero {
+        padding: 65px 0 55px;
+      }
+
+      .hero .lead {
+        font-size: 18px;
+      }
+
+      .section {
+        padding: 62px 0;
+      }
+
+      .section-grid {
+        grid-template-columns: 1fr;
+        gap: 28px;
+      }
+
+      .substack-banner .container {
+        display: block;
+        padding: 38px 0;
+      }
+
+      .substack-button {
+        margin-top: 25px;
+      }
+
+      .footer-inner {
+        display: block;
+      }
+
+      .footer-inner > * {
+        margin-bottom: 10px;
+      }
+    }
+
+  </style>
+
+</head>
+
+<body>
+
+
+<header class="site-header">
+
+  <div class="container header-inner">
+
+    <a class="logo" href="index.html">
+      ACE PEN STUDIO
+    </a>
+
+    <nav class="nav" aria-label="Main navigation">
+      <a href="index.html">Home</a>
+      <a href="faqs.html">FAQs</a>
+      <a href="inquiry.html">Inquire</a>
+    </nav>
+
+  </div>
+
+</header>
+
+
+<main>
+
+
+  <!-- HERO -->
+
+  <section class="hero">
+
+    <div class="container">
+
+      <div class="eyebrow">
+        Publishing · Writing · Representation
+      </div>
+
+      <h1>
+        Before you ask, start here.
+      </h1>
+
+      <p class="lead">
+        Publishing is not one thing. And there is usually more than one
+        route to getting a piece of writing where you want it to go.
+        Here are some of the questions we hear most often.
+      </p>
+
+
+      <nav class="faq-nav" aria-label="FAQ categories">
+
+        <a href="#starting">Starting out</a>
+        <a href="#publishing">Publishing</a>
+        <a href="#representation">Representation</a>
+        <a href="#manuscripts">Manuscripts</a>
+        <a href="#money">Money & Rights</a>
+        <a href="#ghostwriting">Ghostwriting</a>
+        <a href="#africa">Publishing in Africa</a>
+        <a href="#working">Working With Us</a>
+
+      </nav>
+
+    </div>
+
+  </section>
+
+
+  <!-- THE TWO DOORS -->
+
+  <section class="black-band">
+
+    <div class="container">
+
+      <div class="section-label">
+        A useful distinction
+      </div>
+
+      <h2>
+        Not every conversation needs a proposal attached to it.
+      </h2>
+
+      <p>
+        If you want to talk books, writing, ideas or the wider literary
+        world, the door is open. If you want Ace Pen to professionally
+        assess a project, that's what the inquiry form is for.
+      </p>
+
+    </div>
+
+  </section>
+
+
+  <!-- STARTING -->
+
+  <section class="section faq-category" id="starting">
+
+    <div class="container section-grid">
+
+      <div>
+
+        <div class="section-label">
+          01 · Starting out
+        </div>
+
+        <h2>
+          Still figuring it out?
+        </h2>
+
+      </div>
+
+
+      <div>
+
+        <article class="faq-item">
+
+          <h3>
+            Do I really need to finish the whole book before I talk to you?
+          </h3>
+
+          <p>
+            Not always. It depends on the kind of book, how far along you
+            are and what you're looking for. If you're seeking representation,
+            we'll usually need enough of the project to understand what
+            you're building. If the book needs development first, that's a
+            different conversation — and one we can have before you've
+            written “THE END.”
+          </p>
+
+        </article>
+
+
+        <article class="faq-item">
+
+          <h3>
+            I have a book idea but I haven't written it yet. Can I still contact you?
+          </h3>
+
+          <p>
+            Yes, if there is a specific project behind the idea and you can
+            tell us what you're trying to make. We are not asking you to
+            arrive with a perfect manuscript. We are asking for enough
+            substance to have a useful professional conversation.
+          </p>
+
+        </article>
+
+
+        <article class="faq-item">
+
+          <h3>
+            Do you work with first-time authors?
+          </h3>
+
+          <p>
+            Yes. Being unpublished is not the same thing as being unready.
+            We care about the project, the writing, the author's goals and
+            what the work needs next.
+          </p>
+
+        </article>
+
+
+        <article class="faq-item">
+
+          <h3>
+            What if I'm not sure what kind of help I need?
+          </h3>
+
+          <p>
+            That's fine. You don't need to diagnose your own publishing
+            problem. Tell us what you're working on, where it stands and
+            what you are trying to achieve. We'll tell you what we think
+            the useful next step is.
+          </p>
+
+        </article>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- PUBLISHING -->
+
+  <section class="section faq-category" id="publishing">
+
+    <div class="container section-grid">
+
+      <div>
+
+        <div class="section-label">
+          02 · Publishing
+        </div>
+
+        <h2>
+          So what does “getting published” actually mean?
+        </h2>
+
+      </div>
+
+
+      <div>
+
+        <article class="faq-item">
+
+          <h3>
+            What does “getting published” actually mean?
+          </h3>
+
+          <p>
+            It can mean different things: signing with a traditional
+            publisher, working with an independent press, self-publishing,
+            publishing digitally, or pursuing a hybrid route. The important
+            question is not just “How do I get published?” but “What route
+            makes sense for this work and what do I want it to do?”
+          </p>
+
+        </article>
+
+
+        <article class="faq-item">
+
+          <h3>
+            Okay, but what's the difference between a publisher and a literary agency?
+          </h3>
+
+          <p>
+            A publisher publishes and sells books. An agent represents the
+            author's professional interests and can help develop opportunities,
+            negotiate agreements and manage rights. An agent does not replace
+            the publisher, and having an agent does not automatically produce
+            a publishing deal.
+          </p>
+
+        </article>
+
+
+        <article class="faq-item">
+
+          <h3>
+            Do I have to publish through a Tanzanian publisher?
+          </h3>
+
+          <p>
+            No. Where you publish should depend on the work, the market,
+            the rights involved and your goals. For some projects a local
+            or regional publisher makes sense. For others, an international
+            route may be worth exploring.
+          </p>
+
+        </article>
+
+
+        <article class="faq-item">
+
+          <h3>
+            Is self-publishing the same as traditional publishing?
+          </h3>
+
+          <p>
+            No. They involve different responsibilities, costs, control,
+            timelines and routes to market. Neither is automatically the
+            “better” option. The right question is which model serves the project.
+          </p>
+
+        </article>
+
+
+        <article class="faq-item">
+
+          <h3>
+            Does having a publisher mean the publisher pays for everything?
+          </h3>
+
+          <p>
+            Not necessarily. Publishing agreements vary. Costs, marketing
+            responsibilities, production, distribution, advances, royalties
+            and rights should all be understood from the actual agreement
+            rather than assumed from what happens in another market.
+          </p>
+
+        </article>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- REPRESENTATION -->
+
+  <section class="section faq-category" id="representation">
+
+    <div class="container section-grid">
+
+      <div>
+
+        <div class="section-label">
+          03 · Representation
+        </div>
+
+        <h2>
+          Okay, but what does an agent actually do?
+        </h2>
+
+      </div>
+
+
+      <div>
+
+        <article class="faq-item">
+
+          <h3>
+            What does literary representation mean?
+          </h3>
+
+          <p>
+            Representation means an agent is working on the author's
+            professional behalf in relation to agreed work and opportunities.
+            Depending on the arrangement, that can include positioning a
+            project, approaching publishers, negotiating terms and managing
+            rights and relationships.
+          </p>
+
+        </article>
+
+
+        <article class="faq-item">
+
+          <h3>
+            Does Ace Pen Studio represent every writer who contacts you?
+          </h3>
+
+          <p>
+            No. Representation is selective. We assess the project, the
+            writing, the fit and the opportunity. Sometimes we may recommend
+            another form of support instead.
+          </p>
+
+        </article>
+
+
+        <article class="faq-item">
+
+          <h3>
+            Does having an agent guarantee that my book will be published?
+          </h3>
+
+          <p>
+            No. An agent can improve the way a project is positioned and
+            help pursue opportunities, but no agent can guarantee that a
+            publisher will acquire a book.
+          </p>
+
+        </article>
+
+
+        <article class="faq-item">
+
+          <h3>
+            Does having an agent guarantee that I will make money?
+          </h3>
+
+          <p>
+            No. Representation is not a guarantee of an advance, a deal,
+            sales or immediate income. Publishing is a commercial process
+            with no guaranteed outcome.
+          </p>
+
+        </article>
+
+
+        <article class="faq-item">
+
+          <h3>
+            If Ace Pen represents me, do I pay a fee?
+          </h3>
+
+          <p>
+            Our representation model is commission-based, with the exact
+            arrangement agreed separately. Other editorial, writing or
+            consultancy services are separate and will be explained and
+            priced before work begins.
+          </p>
+
+        </article>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- MANUSCRIPTS -->
+
+  <section class="section faq-category" id="manuscripts">
+
+    <div class="container section-grid">
+
+      <div>
+
+        <div class="section-label">
+          04 · Manuscripts
+        </div>
+
+        <h2>
+          Your manuscript deserves context.
+        </h2>
+
+      </div>
+
+
+      <div>
+
+        <article class="faq-item">
+
+          <h3>
+            Do I need a professionally edited manuscript before contacting you?
+          </h3>
+
+          <p>
+            No. A manuscript does not need to be polished to perfection
+            before you ask about professional support. But if you're seeking
+            representation, it should be developed enough for us to assess seriously.
+          </p>
+
+        </article>
+
+
+        <article class="faq-item">
+
+          <h3>
+            Can Ace Pen edit my manuscript?
+          </h3>
+
+          <p>
+            Yes. Editorial work can include developmental feedback, structure,
+            clarity, voice and manuscript development. The scope depends on
+            what the project actually needs.
+          </p>
+
+        </article>
+
+
+        <article class="faq-item">
+
+          <h3>
+            Can you tell me whether my book is good enough?
+          </h3>
+
+          <p>
+            We can give you an honest professional assessment of the project
+            as we understand it. “Good enough” is not a single technical
+            threshold, though. A manuscript can be promising but unfinished,
+            well-written but poorly positioned, or commercially interesting
+            but in need of major development.
+          </p>
+
+        </article>
+
+
+        <article class="faq-item">
+
+          <h3>
+            Can I just email you my entire manuscript?
+          </h3>
+
+          <p>
+            Please don't send us a 300-page attachment with “Hi, see attached”
+            and nothing else. We need context first. Tell us what the project
+            is, where it stands and what you're looking for. If we need to see
+            the manuscript or sample chapters, we'll tell you what to send
+            and how to send it.
+          </p>
+
+        </article>
+
+
+        <article class="faq-item">
+
+          <h3>
+            Why does the inquiry form ask me to explain my project?
+          </h3>
+
+          <p>
+            Because the context matters. We need to know what you're making,
+            where you are with it and what you want from us before we can tell
+            you whether representation, editorial work, writing support or
+            something else makes sense.
+          </p>
+
+        </article>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- MONEY -->
+
+  <section class="section faq-category" id="money">
+
+    <div class="container section-grid">
+
+      <div>
+
+        <div class="section-label">
+          05 · Money & Rights
+        </div>
+
+        <h2>
+          The part nobody should be vague about.
+        </h2>
+
+      </div>
+
+
+      <div>
+
+        <article class="faq-item">
+
+          <h3>
+            What are royalties?
+          </h3>
+
+          <p>
+            Royalties are payments to a rights holder based on agreed sales
+            or other uses of a work. The percentage and calculation depend
+            on the contract.
+          </p>
+
+        </article>
+
+
+        <article class="faq-item">
+
+          <h3>
+            What rights am I giving a publisher?
+          </h3>
+
+          <p>
+            That depends on the agreement. Rights can be divided by territory,
+            language, format, term and type of use. Do not assume “publishing
+            the book” means giving away every possible right.
+          </p>
+
+        </article>
+
+
+        <article class="faq-item">
+
+          <h3>
+            Should I sign a publishing contract immediately if a publisher approaches me?
+          </h3>
+
+          <p>
+            No. Read it carefully and understand what you are granting, for
+            how long, in which territories, for which formats and on what
+            financial terms. If you're unsure, get professional advice before signing.
+          </p>
+
+        </article>
+
+
+        <article class="faq-item">
+
+          <h3>
+            Does copyright protect my book idea?
+          </h3>
+
+          <p>
+            Generally, copyright protects original expression fixed in a
+            tangible form, not an idea by itself. Once an idea has been
+            developed into protected expression, copyright may apply to that
+            work. For Tanzania-specific information, consult COSOTA or a
+            qualified legal professional.
+          </p>
+
+        </article>
+
+
+        <article class="faq-item">
+
+          <h3>
+            Should I register my work with COSOTA?
+          </h3>
+
+          <p>
+            COSOTA provides registration services for works and explains that
+            registration can help provide evidence of ownership and assist
+            with rights administration. Whether and how you register depends
+            on the work and your circumstances, so treat registration as a
+            rights-management decision rather than a substitute for understanding
+            copyright law.
+          </p>
+
+        </article>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- GHOSTWRITING -->
+
+  <section class="section faq-category" id="ghostwriting">
+
+    <div class="container section-grid">
+
+      <div>
+
+        <div class="section-label">
+          06 · Ghostwriting
+        </div>
+
+        <h2>
+          You bring the story. We help shape the words.
+        </h2>
+
+      </div>
+
+
+      <div>
+
+        <article class="faq-item">
+
+          <h3>
+            What is ghostwriting?
+          </h3>
+
+          <p>
+            Ghostwriting is writing carried out on behalf of another person,
+            with the final work typically presented under that person's name
+            or agreed authorship arrangement.
+          </p>
+
+        </article>
+
+
+        <article class="faq-item">
+
+          <h3>
+            Can Ace Pen help me write a book if I'm not a writer?
+          </h3>
+
+          <p>
+            Yes. If you have the expertise, experience or story and need a
+            writing partner, we can discuss a ghostwriting or writing-support
+            arrangement.
+          </p>
+
+        </article>
+
+
+        <article class="faq-item">
+
+          <h3>
+            Will a ghostwriter make the book sound like me?
+          </h3>
+
+          <p>
+            That is the point of good ghostwriting. The process should involve
+            interviews, research, drafts, feedback and revision so the finished
+            work reflects the intended voice, perspective and story.
+          </p>
+
+        </article>
+
+
+        <article class="faq-item">
+
+          <h3>
+            Is ghostwriting confidential?
+          </h3>
+
+          <p>
+            Confidentiality and authorship arrangements should be agreed
+            clearly at the start of the engagement. The details belong in
+            the written agreement, not in assumptions.
+          </p>
+
+        </article>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- AFRICA -->
+
+  <section class="section faq-category" id="africa">
+
+    <div class="container section-grid">
+
+      <div>
+
+        <div class="section-label">
+          07 · Publishing in Africa
+        </div>
+
+        <h2>
+          The market matters.
+        </h2>
+
+      </div>
+
+
+      <div>
+
+        <article class="faq-item">
+
+          <h3>
+            Is publishing in Africa different from publishing elsewhere?
+          </h3>
+
+          <p>
+            Yes, in important ways. Markets, distribution systems, reader
+            behaviour, rights structures, publisher capacity and commercial
+            expectations vary. Advice copied from another publishing market
+            may not translate neatly here.
+          </p>
+
+        </article>
+
+
+        <article class="faq-item">
+
+          <h3>
+            If I'm Tanzanian, should I only look for Tanzanian publishers?
+          </h3>
+
+          <p>
+            No. Your nationality does not determine the only market your work
+            can belong in. The right territory depends on the book, its
+            readership, rights and commercial opportunity.
+          </p>
+
+        </article>
+
+
+        <article class="faq-item">
+
+          <h3>
+            Does my book have to be written in English to be internationally relevant?
+          </h3>
+
+          <p>
+            No. Language affects readership and rights strategy, but literary
+            value and international relevance are not exclusive to English-language work.
+          </p>
+
+        </article>
+
+
+        <article class="faq-item">
+
+          <h3>
+            What about Kiswahili books?
+          </h3>
+
+          <p>
+            Kiswahili is central to East African literary life and can support
+            both local and regional readership. Translation and rights strategy
+            can also open additional markets where appropriate.
+
+
+
+            Absolutely. Kiswahili has a huge place in East African literature. 
+            A book does not have to be written in English to travel. 
+            A strong Kiswahili book can find readers locally and across the region,
+            and translation can help it reach audiences elsewhere when the opportunity makes sense.
+          </p>
+
+        </article>
+
+
+        <article class="faq-item">
+
+          <h3>
+            Can an African author work with an international publisher?
+          </h3>
+
+          <p>
+            Yes. It can happen through direct submissions, agents, rights
+            relationships, regional publishers and other routes. The practical
+            route depends on the project and the rights being offered.
+          </p>
+
+        </article>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- WORKING WITH ACE PEN -->
+
+  <section class="section faq-category" id="working">
+
+    <div class="container section-grid">
+
+      <div>
+
+        <div class="section-label">
+          08 · Working with Ace Pen
+        </div>
+
+        <h2>
+          Two doors. Pick the one that fits.
+        </h2>
+
+      </div>
+
+
+      <div>
+
+        <article class="faq-item">
+
+          <h3>
+            Can I just write to you?
+          </h3>
+
+          <p>
+            Yes. If you want to talk books, writing, ideas or the literary
+            world, you can find us through our public channels and Substack.
+            Not every conversation needs a proposal attached to it.
+          </p>
+
+        </article>
+
+
+        <article class="faq-item">
+
+          <h3>
+            So when should I use the inquiry form?
+          </h3>
+
+          <p>
+            Use it when you want us to seriously consider a specific
+            project, manuscript, publishing opportunity or professional
+            writing engagement. The form is not a wall. It's a filter —
+            it gives us enough context to assess what you're bringing us.
+          </p>
+
+        </article>
+
+
+        <article class="faq-item">
+
+          <h3>
+            Do you accept unsolicited manuscripts?
+          </h3>
+
+          <p>
+            No, we do not. We do not want manuscripts dropped into the inbox without context.
+            Start with an inquiry. If we want to see the work, we'll tell you
+            what material would be useful.
+          </p>
+
+        </article>
+
+
+        <article class="faq-item">
+
+          <h3>
+            How do I start working with Ace Pen Studio?
+          </h3>
+
+          <p>
+            For a professional project, start with the inquiry form. You do
+            not need to know the exact service. Tell us what you're working
+            on, where it stands and what you're trying to achieve.
+          </p>
+
+        </article>
+
+
+        <article class="faq-item">
+
+          <h3>
+            Okay, I sent the inquiry. Now what?
+          </h3>
+
+          <p>
+            We review it. If the project looks like a useful fit for further
+            discussion, we'll contact you. The first conversation may be about
+            representation, another service, or simply what the project needs
+            next. Submission does not create a representation or service agreement.
+          </p>
+
+        </article>
+
+
+        <article class="faq-item">
+
+          <h3>
+            What if Ace Pen isn't the right fit for my project?
+          </h3>
+
+          <p>
+            Then we would rather be clear about that than sell you something
+            you don't need. Where possible, we'll point you toward a more
+            appropriate next step.
+          </p>
+
+        </article>
+
+
+        <div class="note">
+
+          <strong>
+            Still have a general question?
+          </strong>
+
+          <br>
+
+          You're welcome to keep reading, follow the studio on Substack,
+          or send us a general conversation through our public channels.
+          If you want professional assessment of a specific project,
+          use the inquiry form.
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- CTA -->
+
+  <section class="cta">
+
+    <div class="container section-grid">
+
+      <div>
+
+        <div class="section-label">
+          Ready to talk seriously about a project?
+        </div>
+
+      </div>
+
+
+      <div>
+
+        <h2>
+          Tell us what you're building.
+        </h2>
+
+        <p>
+          You don't need a perfect manuscript or a perfect plan.
+          You do need enough context for us to understand the work.
+        </p>
+
+        <a class="button" href="inquiry.html">
+          Start an Inquiry →
+        </a>
+
+      </div>
+
+    </div>
+
+  </section>
+
+</main>
+
+
+<!-- SUBSTACK -->
+
+<section class="substack-banner">
+
+  <div class="container">
+
+    <div class="substack-copy">
+
+      <div class="substack-eyebrow">
+        Stay in the conversation
+      </div>
+
+      <h2>
+        The room next door.
+      </h2>
+
+      <p>
+        Books, writing, publishing, ideas, opportunities, occasional
+        rabbit holes and whatever else we're thinking about at the studio.
+        Read along. Respond. Tell us what you're thinking.
+      </p>
+
+    </div>
+
+
+    <a
+      class="substack-button"
+      href="https://acepenstudio.substack.com/"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      Read Ace Pen Studio on Substack →
+    </a>
+
+  </div>
+
+</section>
+
+
+<footer class="footer">
+
+  <div class="container footer-inner">
+
+    <div>
+      © 2026 Ace Pen Studio. All rights reserved.
+    </div>
+
+    <div>
+
+      <a
+        href="https://acepenstudio.substack.com/"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Substack
+      </a>
+
+      &nbsp;·&nbsp;
+
+      <a
+        href="https://www.instagram.com/acepenstories/"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Instagram
+      </a>
+
+    </div>
+
+  </div>
+
+</footer>
+
+
+</body>
+</html>
