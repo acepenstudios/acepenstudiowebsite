@@ -1,24 +1,34 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#171717">
 
-  <title>Ace Pen Studio — Your Literary Agency & Writing Studio</title>
+  <title>Ace Pen Studio | Consultancy Studio & Creative Hub</title>
 
-  <meta
-    name="description"
-    content="Ace Pen Studio is a Tanzanian literary agency and creative writing studio working with writers, authors and creative projects across Tanzania, East Africa and beyond."
-  >
+  <meta name="description" content="Ace Pen Studio is an Africa-forward consultancy studio and creative hub. We work with writers, authors, professionals and organisations to articulate stories and execute visions.">
+
+  <meta name="keywords" content="Ace Pen Studio, literary agency, writing consultancy, ghostwriting, editorial development, publishing, Tanzania, Africa">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
 
   <style>
     :root {
-      --black: #111111;
-      --text: #222222;
-      --muted: #666666;
-      --line: #dddddd;
-      --light: #f7f7f7;
+      --black: #171717;
+      --deep: #202020;
+      --orange: #a94d25;
+      --orange-dark: #873a1b;
+      --cream: #f6f3ef;
       --white: #ffffff;
+      --grey: #77736f;
+      --line: #dedbd6;
+      --heading: 'DM Sans', 'Century Gothic', Arial, sans-serif;
+      --body: 'DM Sans', Arial, sans-serif;
+      --serif: 'Playfair Display', Georgia, serif;
     }
 
     * {
@@ -27,14 +37,22 @@
 
     html {
       scroll-behavior: smooth;
+      scroll-padding-top: 90px;
     }
 
     body {
       margin: 0;
-      color: var(--text);
+      color: var(--black);
       background: var(--white);
-      font-family: Arial, Helvetica, sans-serif;
-      line-height: 1.65;
+      font-family: var(--body);
+      font-size: 15px;
+      line-height: 1.75;
+    }
+
+    img {
+      display: block;
+      width: 100%;
+      height: auto;
     }
 
     a {
@@ -42,364 +60,885 @@
     }
 
     .container {
-      width: min(1180px, calc(100% - 48px));
+      width: min(1160px, calc(100% - 48px));
       margin: 0 auto;
+    }
+
+    .eyebrow {
+      margin-bottom: 17px;
+      font-size: 10px;
+      font-weight: 800;
+      letter-spacing: .19em;
+      text-transform: uppercase;
+    }
+
+    .orange-text {
+      color: var(--orange);
+    }
+
+    .section {
+      padding: 100px 0;
+    }
+
+    .section-heading {
+      max-width: 700px;
+      margin-bottom: 48px;
+    }
+
+    .section-heading h2 {
+      margin: 0 0 18px;
+      font-family: var(--heading);
+      font-size: clamp(34px, 5vw, 52px);
+      font-weight: 600;
+      letter-spacing: -.055em;
+      line-height: 1.12;
+    }
+
+    .section-heading p {
+      max-width: 640px;
+      margin: 0;
+      color: var(--grey);
+      font-size: 16px;
     }
 
     /* HEADER */
 
     .site-header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(255,255,255,.97);
       border-bottom: 1px solid var(--line);
-      background: var(--white);
+      backdrop-filter: blur(12px);
     }
 
     .header-inner {
-      min-height: 78px;
+      min-height: 82px;
       display: flex;
       align-items: center;
       justify-content: space-between;
       gap: 30px;
     }
 
-    .logo {
+    .brand {
+      display: flex;
+      flex-direction: column;
       text-decoration: none;
-      font-family: Futura, "Century Gothic", Arial, Helvetica, sans-serif;
-      font-size: 17px;
+      line-height: 1.2;
+    }
+
+    .brand-name {
+      font-family: var(--heading);
+      font-size: 18px;
+      font-weight: 800;
+      letter-spacing: -.055em;
+    }
+
+    .brand-caption {
+      margin-top: 5px;
+      color: var(--grey);
+      font-size: 8px;
       font-weight: 700;
-      letter-spacing: 0.03em;
+      letter-spacing: .16em;
+      text-transform: uppercase;
     }
 
     .nav {
       display: flex;
       align-items: center;
-      gap: 28px;
+      gap: 30px;
     }
 
     .nav a {
       text-decoration: none;
-      font-family: Futura, "Century Gothic", Arial, Helvetica, sans-serif;
-      font-size: 12px;
-      font-weight: 700;
-      letter-spacing: 0.08em;
+      font-size: 10px;
+      font-weight: 800;
+      letter-spacing: .1em;
       text-transform: uppercase;
+      transition: color .2s ease;
     }
 
     .nav a:hover {
-      text-decoration: underline;
-      text-underline-offset: 5px;
+      color: var(--orange);
+    }
+
+    .nav .nav-cta {
+      padding: 12px 19px;
+      background: var(--black);
+      color: var(--white);
+    }
+
+    .nav .nav-cta:hover {
+      background: var(--orange);
+      color: var(--white);
     }
 
     /* HERO */
 
     .hero {
-      padding: 105px 0 100px;
-    }
-
-    .eyebrow,
-    .section-label {
-      margin-bottom: 14px;
-      font-family: Futura, "Century Gothic", Arial, Helvetica, sans-serif;
-      font-size: 11px;
-      font-weight: 700;
-      letter-spacing: 0.16em;
-      text-transform: uppercase;
-    }
-
-    .hero h1 {
-      max-width: 1000px;
-      margin: 0 0 25px;
-      font-family: Futura, "Century Gothic", Arial, Helvetica, sans-serif;
-      font-size: clamp(48px, 8vw, 88px);
-      line-height: 0.98;
-      letter-spacing: -0.045em;
-      font-weight: 500;
-    }
-
-    .hero .lead {
-      max-width: 720px;
-      margin: 0;
-      font-size: 20px;
-      line-height: 1.55;
-    }
-
-    /* BLACK BAND */
-
-    .black-band {
+      position: relative;
+      overflow: hidden;
       background: var(--black);
       color: var(--white);
     }
 
-    .black-band .container {
-      padding: 54px 0;
-    }
-
-    .black-band h2 {
-      max-width: 900px;
-      margin: 0;
-      font-family: Futura, "Century Gothic", Arial, Helvetica, sans-serif;
-      font-size: clamp(28px, 4vw, 48px);
-      line-height: 1.12;
-      font-weight: 500;
-      letter-spacing: -0.02em;
-    }
-
-    .black-band p {
-      max-width: 760px;
-      margin: 18px 0 0;
-      color: #cfcfcf;
-    }
-
-    /* SECTIONS */
-
-    .section {
-      padding: 85px 0;
-      border-bottom: 1px solid var(--line);
-    }
-
-    .section-grid {
+    .hero-grid {
+      min-height: 590px;
       display: grid;
-      grid-template-columns: minmax(190px, 0.32fr) minmax(0, 1fr);
-      gap: 80px;
+      grid-template-columns: 1.1fr .9fr;
+      align-items: center;
+      gap: 55px;
+      padding-top: 75px;
+      padding-bottom: 75px;
     }
 
-    .section h2 {
-      margin: 0 0 20px;
-      font-family: Futura, "Century Gothic", Arial, Helvetica, sans-serif;
-      font-size: 38px;
-      line-height: 1.15;
+    .hero-copy {
+      position: relative;
+      z-index: 2;
+      padding: 25px 0;
+    }
+
+    .hero .eyebrow {
+      color: #e8a17d;
+    }
+
+    .hero h1 {
+      max-width: 730px;
+      margin: 0 0 25px;
+      font-family: var(--heading);
+      font-size: clamp(48px, 6.5vw, 82px);
+      font-weight: 600;
+      line-height: .99;
+      letter-spacing: -.075em;
+    }
+
+    .hero h1 span {
+      color: #d17a4e;
+    }
+
+    .hero-lead {
+      max-width: 560px;
+      margin: 0;
+      color: #d2cfcb;
+      font-size: 17px;
+      line-height: 1.8;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+      margin-top: 35px;
+    }
+
+    .button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 48px;
+      padding: 13px 23px;
+      border: 1px solid transparent;
+      background: var(--orange);
+      color: var(--white);
+      text-decoration: none;
+      font-size: 10px;
+      font-weight: 800;
+      letter-spacing: .11em;
+      text-transform: uppercase;
+      transition: background .2s ease, border .2s ease;
+    }
+
+    .button:hover {
+      background: var(--orange-dark);
+    }
+
+    .button-outline {
+      border-color: #77736f;
+      background: transparent;
+      color: var(--white);
+    }
+
+    .button-outline:hover {
+      border-color: var(--white);
+      background: var(--white);
+      color: var(--black);
+    }
+
+    .hero-visual {
+      position: relative;
+      min-height: 430px;
+    }
+
+    .hero-visual img {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+    }
+
+    .hero-visual::after {
+      position: absolute;
+      inset: 0;
+      content: "";
+      background: linear-gradient(135deg, rgba(23,23,23,.05), rgba(23,23,23,.3));
+    }
+
+    .hero-visual-label {
+      position: absolute;
+      right: -1px;
+      bottom: 30px;
+      z-index: 2;
+      max-width: 240px;
+      padding: 20px 24px;
+      background: var(--orange);
+      color: var(--white);
+      font-size: 11px;
+      font-weight: 700;
+      line-height: 1.6;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+    }
+
+    /* BRAND STATEMENT */
+
+    .statement {
+      padding: 65px 0;
+      background: var(--orange);
+      color: var(--white);
+    }
+
+    .statement-inner {
+      display: grid;
+      grid-template-columns: .8fr 2fr;
+      align-items: center;
+      gap: 60px;
+    }
+
+    .statement .eyebrow {
+      margin: 0;
+      color: #f4d0bd;
+    }
+
+    .statement h2 {
+      max-width: 820px;
+      margin: 0;
+      font-family: var(--heading);
+      font-size: clamp(28px, 4vw, 43px);
       font-weight: 500;
-      letter-spacing: -0.025em;
+      letter-spacing: -.045em;
+      line-height: 1.25;
     }
 
-    .section h3 {
-      margin: 0 0 8px;
-      font-family: Futura, "Century Gothic", Arial, Helvetica, sans-serif;
-      font-size: 23px;
-      line-height: 1.2;
-      font-weight: 500;
+    /* INTRODUCTION */
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: .9fr 1.1fr;
+      gap: 85px;
+      align-items: center;
     }
 
-    .section p {
-      margin: 0 0 18px;
+    .about-image {
+      position: relative;
+      min-height: 470px;
+      background: var(--cream);
     }
 
-    .intro {
-      font-size: 21px;
-      line-height: 1.55;
+    .about-image img {
+      width: 100%;
+      height: 470px;
+      object-fit: cover;
+    }
+
+    .about-copy h2 {
+      max-width: 580px;
+      margin: 0 0 25px;
+      font-family: var(--heading);
+      font-size: clamp(35px, 4.5vw, 53px);
+      font-weight: 600;
+      letter-spacing: -.06em;
+      line-height: 1.1;
+    }
+
+    .about-copy p {
+      color: #625e59;
+    }
+
+    .about-copy .intro {
+      color: var(--black);
+      font-size: 19px;
+      line-height: 1.65;
+    }
+
+    .text-link {
+      display: inline-block;
+      margin-top: 14px;
+      color: var(--orange);
+      font-size: 10px;
+      font-weight: 800;
+      letter-spacing: .12em;
+      text-decoration: none;
+      text-transform: uppercase;
+    }
+
+    .text-link:hover {
+      text-decoration: underline;
+      text-underline-offset: 5px;
     }
 
     /* SERVICES */
 
-    .service-list {
-      border-top: 1px solid var(--line);
+    .services-section {
+      background: var(--cream);
     }
 
-    .service {
+    .services-grid {
       display: grid;
-      grid-template-columns: 42px 1fr;
+      grid-template-columns: repeat(3, 1fr);
       gap: 20px;
-      padding: 27px 0;
-      border-bottom: 1px solid var(--line);
+    }
+
+    .service-card {
+      display: flex;
+      flex-direction: column;
+      min-height: 340px;
+      padding: 32px;
+      background: var(--white);
+      border: 1px solid #e8e3dd;
+      transition: transform .25s ease, box-shadow .25s ease;
+    }
+
+    .service-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 15px 35px rgba(0,0,0,.07);
     }
 
     .service-number {
-      font-family: Futura, "Century Gothic", Arial, Helvetica, sans-serif;
-      font-size: 12px;
+      margin-bottom: 28px;
+      color: var(--orange);
+      font-size: 11px;
+      font-weight: 800;
+      letter-spacing: .15em;
+    }
+
+    .service-card h3 {
+      margin: 0 0 14px;
+      font-family: var(--heading);
+      font-size: 22px;
       font-weight: 700;
-      letter-spacing: 0.1em;
-      color: var(--muted);
+      letter-spacing: -.04em;
+      line-height: 1.3;
     }
 
-    .service p {
-      max-width: 700px;
-      color: #444444;
+    .service-card p {
+      margin: 0 0 20px;
+      color: var(--grey);
+      font-size: 14px;
+      line-height: 1.8;
     }
 
-    /* TWO COLUMNS */
+    .service-card .text-link {
+      margin-top: auto;
+    }
 
-    .two-col {
+    /* IMAGE FEATURE */
+
+    .feature-band {
       display: grid;
       grid-template-columns: 1fr 1fr;
-      gap: 55px;
+      min-height: 460px;
+      background: var(--black);
+      color: var(--white);
     }
 
-    /* CTA */
+    .feature-image {
+      min-height: 460px;
+    }
 
-    .cta {
-      background: var(--light);
+    .feature-image img {
+      width: 100%;
+      height: 100%;
+      min-height: 460px;
+      object-fit: cover;
+    }
+
+    .feature-copy {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: center;
+      padding: 75px clamp(35px, 8vw, 100px);
+    }
+
+    .feature-copy .eyebrow {
+      color: #e8a17d;
+    }
+
+    .feature-copy h2 {
+      margin: 0 0 20px;
+      font-family: var(--heading);
+      font-size: clamp(34px, 4.2vw, 49px);
+      font-weight: 600;
+      letter-spacing: -.055em;
+      line-height: 1.12;
+    }
+
+    .feature-copy p {
+      max-width: 500px;
+      margin: 0 0 20px;
+      color: #c8c5c1;
+    }
+
+    /* APPROACH */
+
+    .approach-grid {
+      display: grid;
+      grid-template-columns: .85fr 1.15fr;
+      gap: 80px;
+    }
+
+    .approach-heading h2 {
+      margin: 0;
+      font-family: var(--heading);
+      font-size: clamp(36px, 4.5vw, 52px);
+      font-weight: 600;
+      letter-spacing: -.06em;
+      line-height: 1.12;
+    }
+
+    .approach-list {
+      border-top: 1px solid var(--line);
+    }
+
+    .approach-item {
+      display: grid;
+      grid-template-columns: 45px 1fr;
+      gap: 20px;
+      padding: 24px 0;
       border-bottom: 1px solid var(--line);
     }
 
-    .cta .container {
-      padding: 75px 0;
+    .approach-item span {
+      color: var(--orange);
+      font-size: 11px;
+      font-weight: 800;
     }
 
-    .cta h2 {
-      max-width: 700px;
+    .approach-item h3 {
+      margin: 0 0 7px;
+      font-size: 18px;
+      font-weight: 700;
     }
 
-    .cta p {
-      max-width: 680px;
+    .approach-item p {
+      margin: 0;
+      color: var(--grey);
+      font-size: 14px;
     }
 
-    .button {
-      display: inline-block;
-      margin-top: 15px;
-      padding: 13px 22px;
-      border: 1px solid var(--black);
+    /* WHO WE WORK WITH */
+
+    .audience-section {
+      background: var(--cream);
+    }
+
+    .audience-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 16px;
+    }
+
+    .audience-card {
+      min-height: 225px;
+      padding: 27px;
+      background: var(--white);
+      border-top: 3px solid var(--orange);
+    }
+
+    .audience-card h3 {
+      margin: 0 0 13px;
+      font-size: 18px;
+      font-weight: 700;
+    }
+
+    .audience-card p {
+      margin: 0;
+      color: var(--grey);
+      font-size: 13px;
+    }
+
+    /* CREATIVE HUB */
+
+    .hub-section {
+      padding: 0;
       background: var(--black);
       color: var(--white);
-      text-decoration: none;
-      font-family: Futura, "Century Gothic", Arial, Helvetica, sans-serif;
-      font-size: 12px;
-      font-weight: 700;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-      transition: background 0.2s ease, color 0.2s ease;
     }
 
-    .button:hover {
+    .hub-inner {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      align-items: center;
+      gap: 70px;
+      padding-top: 90px;
+      padding-bottom: 90px;
+    }
+
+    .hub-copy .eyebrow {
+      color: #e8a17d;
+    }
+
+    .hub-copy h2 {
+      margin: 0 0 20px;
+      font-family: var(--heading);
+      font-size: clamp(35px, 4.5vw, 52px);
+      font-weight: 600;
+      letter-spacing: -.055em;
+      line-height: 1.12;
+    }
+
+    .hub-copy p {
+      color: #c8c5c1;
+    }
+
+    .hub-image img {
+      height: 390px;
+      object-fit: cover;
+    }
+
+    /* INQUIRY */
+
+    .inquiry-section {
+      background: var(--orange);
+      color: var(--white);
+    }
+
+    .inquiry-inner {
+      display: grid;
+      grid-template-columns: .8fr 1.2fr;
+      align-items: center;
+      gap: 70px;
+    }
+
+    .inquiry-section .eyebrow {
+      color: #f5d4c4;
+    }
+
+    .inquiry-section h2 {
+      margin: 0;
+      font-family: var(--heading);
+      font-size: clamp(38px, 5vw, 58px);
+      font-weight: 600;
+      letter-spacing: -.06em;
+      line-height: 1.1;
+    }
+
+    .inquiry-copy p {
+      max-width: 620px;
+      color: #f7e7df;
+    }
+
+    .inquiry-section .button {
+      margin-top: 15px;
+      background: var(--black);
+    }
+
+    .inquiry-section .button:hover {
       background: var(--white);
       color: var(--black);
+    }
+
+    .inquiry-note {
+      margin-top: 25px;
+      font-size: 12px;
+    }
+
+    .inquiry-note a {
+      color: var(--white);
     }
 
     /* SUBSTACK */
 
-    .substack-banner {
-      border-bottom: 1px solid var(--line);
-      background: var(--black);
-      color: var(--white);
+    .substack {
+      padding: 65px 0;
+      background: var(--cream);
     }
 
-    .substack-banner .container {
+    .substack-inner {
       display: flex;
       align-items: center;
       justify-content: space-between;
-      gap: 40px;
-      padding: 42px 0;
+      gap: 45px;
     }
 
     .substack-copy {
-      max-width: 720px;
+      max-width: 700px;
     }
 
-    .substack-eyebrow {
-      margin-bottom: 9px;
-      font-family: Futura, "Century Gothic", Arial, Helvetica, sans-serif;
-      font-size: 11px;
-      font-weight: 700;
-      letter-spacing: 0.16em;
-      text-transform: uppercase;
+    .substack-copy .eyebrow {
+      color: var(--orange);
     }
 
-    .substack-banner h2 {
+    .substack-copy h2 {
       margin: 0 0 10px;
-      font-size: 27px;
-      line-height: 1.2;
-      font-weight: 500;
-    }
-
-    .substack-banner p {
-      margin: 0;
-      color: #cccccc;
-      font-size: 15px;
-    }
-
-    .substack-button {
-      display: inline-block;
-      flex: 0 0 auto;
-      padding: 13px 22px;
-      border: 1px solid var(--white);
-      color: var(--white);
-      text-decoration: none;
-      font-family: Futura, "Century Gothic", Arial, Helvetica, sans-serif;
-      font-size: 12px;
+      font-family: var(--heading);
+      font-size: 30px;
       font-weight: 700;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-      transition: background 0.2s ease, color 0.2s ease;
+      letter-spacing: -.04em;
     }
 
-    .substack-button:hover {
-      background: var(--white);
-      color: var(--black);
+    .substack-copy p {
+      margin: 0;
+      color: var(--grey);
+    }
+
+    .substack .button {
+      flex-shrink: 0;
+      background: var(--black);
+    }
+
+    .substack .button:hover {
+      background: var(--orange);
     }
 
     /* FOOTER */
 
     .footer {
-      padding: 34px 0;
+      padding: 38px 0;
+      background: var(--black);
+      color: #bcb8b3;
     }
 
-    .footer-inner {
+    .footer-top {
       display: flex;
+      align-items: flex-start;
       justify-content: space-between;
-      gap: 30px;
-      color: var(--muted);
-      font-size: 13px;
+      gap: 40px;
+      padding-bottom: 30px;
+      border-bottom: 1px solid #393939;
     }
 
-    .footer a {
+    .footer-brand {
+      color: var(--white);
+      font-size: 17px;
+      font-weight: 800;
+      letter-spacing: -.04em;
+    }
+
+    .footer-tagline {
+      margin-top: 6px;
+      font-size: 11px;
+      color: #99948e;
+    }
+
+    .footer-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 25px;
+    }
+
+    .footer-links a {
+      color: #dedbd6;
+      font-size: 11px;
       text-decoration: none;
     }
 
-    .footer a:hover {
-      text-decoration: underline;
+    .footer-links a:hover {
+      color: #e8a17d;
     }
 
-    /* MOBILE */
+    .footer-bottom {
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+      padding-top: 23px;
+      font-size: 11px;
+    }
 
-    @media (max-width: 800px) {
+    /* RESPONSIVE */
 
+    @media (max-width: 900px) {
+      .hero-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 30px;
+      }
+
+      .about-grid,
+      .approach-grid,
+      .inquiry-inner {
+        gap: 45px;
+      }
+
+      .services-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .audience-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .statement-inner {
+        grid-template-columns: 1fr;
+        gap: 20px;
+      }
+    }
+
+    @media (max-width: 650px) {
       .container {
-        width: min(100% - 32px, 1180px);
+        width: calc(100% - 36px);
       }
 
       .header-inner {
-        min-height: 70px;
+        min-height: 72px;
+        gap: 12px;
+      }
+
+      .brand-name {
+        font-size: 15px;
+      }
+
+      .brand-caption {
+        font-size: 7px;
       }
 
       .nav {
-        gap: 16px;
+        gap: 13px;
       }
 
-      .hero {
-        padding: 75px 0 70px;
+      .nav a {
+        font-size: 9px;
+        letter-spacing: .04em;
       }
 
-      .hero .lead {
-        font-size: 18px;
+      .nav .nav-cta {
+        padding: 10px 12px;
+      }
+
+      .hero-grid {
+        grid-template-columns: 1fr;
+        padding-top: 65px;
+        padding-bottom: 55px;
+        gap: 35px;
+      }
+
+      .hero h1 {
+        font-size: clamp(47px, 13vw, 68px);
+      }
+
+      .hero-visual {
+        min-height: 300px;
+      }
+
+      .statement {
+        padding: 48px 0;
       }
 
       .section {
-        padding: 62px 0;
+        padding: 70px 0;
       }
 
-      .section-grid {
-        grid-template-columns: 1fr;
-        gap: 28px;
-      }
-
-      .two-col {
+      .about-grid,
+      .approach-grid,
+      .inquiry-inner,
+      .hub-inner {
         grid-template-columns: 1fr;
         gap: 35px;
       }
 
-      .substack-banner .container {
-        display: block;
-        padding: 38px 0;
+      .about-image,
+      .about-image img {
+        min-height: 300px;
+        height: 300px;
       }
 
-      .substack-button {
+      .services-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .service-card {
+        min-height: auto;
+        padding: 28px;
+      }
+
+      .feature-band {
+        grid-template-columns: 1fr;
+      }
+
+      .feature-image,
+      .feature-image img {
+        min-height: 280px;
+        height: 280px;
+      }
+
+      .feature-copy {
+        padding: 55px 25px;
+      }
+
+      .audience-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .audience-card {
+        min-height: 210px;
+        padding: 20px;
+      }
+
+      .hub-inner {
+        padding-top: 65px;
+        padding-bottom: 65px;
+      }
+
+      .hub-image img {
+        height: 280px;
+      }
+
+      .substack-inner {
+        display: block;
+      }
+
+      .substack .button {
         margin-top: 25px;
       }
 
-      .footer-inner {
-        display: block;
+      .footer-top {
+        flex-direction: column;
       }
 
-      .footer-inner > * {
-        margin-bottom: 10px;
+      .footer-bottom {
+        flex-direction: column;
+        gap: 10px;
+      }
+    }
+
+    @media (max-width: 390px) {
+      .nav {
+        gap: 9px;
+      }
+
+      .nav a {
+        font-size: 8px;
+      }
+
+      .brand-name {
+        font-size: 13px;
+      }
+
+      .audience-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html {
+        scroll-behavior: auto;
+      }
+
+      *,
+      *::before,
+      *::after {
+        transition-duration: .01ms !important;
       }
     }
   </style>
@@ -407,522 +946,599 @@
 
 <body>
 
-<header class="site-header">
-  <div class="container header-inner">
+  <!-- HEADER -->
 
-    <a class="logo" href="index.html">
-      ACE PEN STUDIO
-    </a>
+  <header class="site-header">
+    <div class="container header-inner">
 
-    <nav class="nav" aria-label="Main navigation">
-      <a href="index.html">Home</a>
-      <a href="faqs.html">FAQs</a>
-      <a href="inquiry.html">Inquire</a>
-    </nav>
+      <a class="brand" href="index.html" aria-label="Ace Pen Studio home">
+        <span class="brand-name">ACE PEN STUDIO</span>
+        <span class="brand-caption">Consultancy Studio & Creative Hub</span>
+      </a>
 
-  </div>
-</header>
-
-
-<main>
-
-  <!-- HERO -->
-
-  <section class="hero">
-    <div class="container">
-
-      <div class="eyebrow">
-        Literary Agency · Writing Studio
-      </div>
-
-      <h1>
-        Your story deserves to be told.
-      </h1>
-
-      <p class="lead">
-        Ace Pen Studio helps writers and creative professionals develop
-        strong work, build sustainable author careers, and navigate the
-        path from idea to publication.
-      </p>
+      <nav class="nav" aria-label="Main navigation">
+        <a href="index.html">Home</a>
+        <a href="#services">Our Work</a>
+        <a href="faqs.html">FAQs</a>
+        <a class="nav-cta" href="inquiry.html">Inquire</a>
+      </nav>
 
     </div>
-  </section>
+  </header>
 
 
-  <!-- WHAT WE DO -->
+  <main>
 
-  <section class="black-band">
+    <!-- HERO -->
 
-    <div class="container">
+    <section class="hero">
+      <div class="container hero-grid">
 
-      <div class="section-label">
-        What we do
-      </div>
+        <div class="hero-copy">
 
-      <h2>We work with writers to get their stories published. 
-      </h2>
-
-      <p>
-        Writing is only one part of the work. We help you develop your story,
-        shape the manuscript, position you as an author, and navigate the path
-        toward publication.
-      </p>
-
-    </div>
-
-  </section>
-
-
-  <!-- ABOUT -->
-
-  <section class="section">
-
-    <div class="container section-grid">
-
-      <div>
-        <div class="section-label">
-          About the studio
-        </div>
-      </div>
-
-      <div>
-
-        <p class="intro">
-         We are a boutique literary agency and creative studio
-          built around African writers, ideas and stories.
-        </p>
-
-        <p>
-          We believe good writing deserves serious attention — but serious
-          attention does not always mean the same thing.
-        </p>
-
-        <p>
-          One project may need representation. Another may need a better
-          manuscript. Another may need a writing partner, an editor, a
-          publishing strategy or someone who understands what to do with
-          a publishing opportunity that has landed in its inbox.
-        </p>
-
-        <p>
-          We look at the work first, then work out what it needs.
-        </p>
-
-      </div>
-
-    </div>
-
-  </section>
-
-
-  <!-- SERVICES -->
-
-  <section class="section" id="services">
-
-    <div class="container section-grid">
-
-      <div>
-
-        <div class="section-label">
-          Our work
-        </div>
-
-        <h2>
-          What we can help with.
-        </h2>
-
-      </div>
-
-
-      <div class="service-list">
-
-        <article class="service">
-
-          <div class="service-number">01</div>
-
-          <div>
-
-            <h3>
-              Literary Representation
-            </h3>
-
-            <p>
-              We represent selected writers and projects. We help get your book into the right publishing home and help you navigate negotiations
-              and rights.
-            </p>
-
+          <div class="eyebrow">
+            An African Consultancy Studio & Creative Hub
           </div>
 
-        </article>
-
-
-        <article class="service">
-
-          <div class="service-number">02</div>
-
-          <div>
-
-            <h3>
-              Editorial Development
-            </h3>
-
-            <p>
-             We look at the Story, the structure, argument, voice and manuscript development as part of what makes a book worth reading. 
-              We'll assign you an editor for work that needs another serious pair of eyes before it
-              goes further.
-     
-            </p>
-
-          </div>
-
-        </article>
-
-
-        <article class="service">
-
-          <div class="service-number">03</div>
-
-          <div>
-
-            <h3>
-              Ghostwriting & Writing Support
-            </h3>
-
-            <p>
-              If you have a story but have no idea where to start, we offer you confidential writing partnerships for people with a story,
-              expertise or idea that needs to become a finished piece of work.
-            </p>
-
-          </div>
-
-        </article>
-
-
-        <article class="service">
-
-          <div class="service-number">04</div>
-
-          <div>
-
-            <h3>
-              Author Development
-            </h3>
-
-            <p>
-              Author positioning, profiles, media materials and strategic
-              support for writers building a public life around their work. We make your author dreams a reality.
-            </p>
-
-          </div>
-
-        </article>
-
-
-        <article class="service">
-
-          <div class="service-number">05</div>
-
-          <div>
-
-            <h3>
-              Publishing Strategy & Consultancy
-            </h3>
-
-            <p>
-              You don't know what publishing is all about? Don't sweat it. We give you practical guidance when you need to understand an offer,
-              assess a route to publication, prepare a book proposal for a publishing house or simply just make
-              a better next move.
-            </p>
-
-          </div>
-
-        </article>
-
-
-        <article class="service">
-
-          <div class="service-number">06</div>
-
-          <div>
-
-            <h3>
-              Workshops, Bootcamps & Literary Events 
-            </h3>
-
-            <p>
-              We create spaces for writers to learn, meet, experiment and
-              build the relationships that make a literary ecosystem stronger.
-            </p>
-
-          </div>
-
-        </article>
-
-      </div>
-
-    </div>
-
-  </section>
-
-
-  <!-- HOW WE WORK -->
-
-  <section class="section">
-
-    <div class="container section-grid">
-
-      <div>
-
-        <div class="section-label">
-          How we work
-        </div>
-
-        <h2>
-          Not every project needs an agent.
-        </h2>
-
-      </div>
-
-
-      <div>
-
-        <p class="intro">
-          Sometimes the right next step is representation. Sometimes it is
-          editorial work, manuscript development, writing support or simply
-          better information.
-        </p>
-
-        <p>
-          We do not treat every inquiry as a representation opportunity.
-          We assess the project in front of us and recommend the most
-          useful next step.
-        </p>
-
-        <p>
-          That also means you do not need to arrive knowing exactly which
-          service you need. You do need to give us enough context to
-          understand what you are building.
-        </p>
-
-      </div>
-
-    </div>
-
-  </section>
-
-
-  <!-- WHO WE WORK WITH -->
-
-  <section class="section">
-
-    <div class="container section-grid">
-
-      <div>
-
-        <div class="section-label">
-          Who we work with
-        </div>
-
-      </div>
-
-
-      <div class="two-col">
-
-        <div>
-
-          <h3>
-            Writers
-          </h3>
-
-          <p>
-            First-time authors, experienced writers, self-published authors
-            and people somewhere in between.
+          <h1>
+            Where stories are <span>articulated</span> and visions executed.
+          </h1>
+
+          <p class="hero-lead">
+            We work with writers, professionals, creatives and organisations
+            to develop ideas, articulate meaningful stories and bring
+            ambitious projects to life.
           </p>
 
-        </div>
-
-
-        <div>
-
-          <h3>
-            People with stories
-          </h3>
-
-          <p>
-            Founders, professionals, public figures, organisations and other
-            people whose expertise or experience needs a strong written form.
-          </p>
+          <div class="hero-actions">
+            <a class="button" href="inquiry.html">Work With Us</a>
+            <a class="button button-outline" href="#services">Explore Our Work</a>
+          </div>
 
         </div>
 
-
-        <div>
-
-          <h3>
-            Creative partners
-          </h3>
-
-          <p>
-            Publishers, institutions, brands and organisations looking for
-            thoughtful literary, editorial or storytelling collaboration.
-          </p>
-
-        </div>
-
-
-        <div>
-
-          <h3>
-            Projects with potential
-          </h3>
-
-          <p>
-            We care less about whether a project arrives perfectly packaged
-            and more about whether there is something worth building.
-          </p>
-
-        </div>
-
-      </div>
-
-    </div>
-
-  </section>
-
-
-  <!-- INQUIRY CTA -->
-
-  <section class="cta">
-
-    <div class="container section-grid">
-
-      <div>
-
-        <div class="section-label">
-          Have a project?
-        </div>
-
-      </div>
-
-
-      <div>
-
-        <h2>
-          Tell us what you're working on.
-        </h2>
-
-        <p>
-          Our inquiry form is for specific projects, manuscripts,
-          publishing opportunities and professional writing work.
-        </p>
-
-        <p>
-          You do not need to know exactly what you need from us. But if
-          you want our professional attention, give us something to
-          work with.
-        </p>
-
-        <a class="button" href="inquiry.html">
-          Start an Inquiry →
-        </a>
-
-        <p style="margin-top: 26px;">
-          Looking for general publishing information or simply want to
-          talk books and writing? Start with the
-          <a href="faqs.html">FAQs</a>,
-          or come find us in the conversation on
-          <a
-            href="https://acepenstudio.substack.com/"
-            target="_blank"
-            rel="noopener noreferrer"
+        <div class="hero-visual">
+          <img
+            src="Management%20Banner.png"
+            alt="Ace Pen Studio consultancy and creative management"
+            fetchpriority="high"
           >
-            Substack
-          </a>.
+
+          <div class="hero-visual-label">
+            Ideas deserve more than good intentions. They deserve good execution.
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- BRAND STATEMENT -->
+
+    <section class="statement">
+      <div class="container statement-inner">
+
+        <div class="eyebrow">The Ace Pen approach</div>
+
+        <h2>
+          Good ideas need the right words, the right people and a thoughtful
+          plan to move from possibility to reality.
+        </h2>
+
+      </div>
+    </section>
+
+
+    <!-- ABOUT -->
+
+    <section class="section">
+      <div class="container about-grid">
+
+        <div class="about-image">
+          <img
+            src="Boutique%20Agency.jpg"
+            alt="Ace Pen Studio's literary and creative work"
+            loading="lazy"
+          >
+        </div>
+
+        <div class="about-copy">
+
+          <div class="eyebrow orange-text">About the studio</div>
+
+          <h2>
+            A creative partner for stories, ideas and meaningful work.
+          </h2>
+
+          <p class="intro">
+            Ace Pen Studio is an Africa-forward consultancy studio and
+            creative hub working at the intersection of literature,
+            storytelling, strategy and project execution.
+          </p>
+
+          <p>
+            We believe that stories are more than words on a page.
+            They preserve experiences, communicate knowledge, shape
+            perspectives and create opportunities.
+          </p>
+
+          <p>
+            Our work extends beyond writing. We bring together creative
+            thinking, editorial expertise, project coordination and
+            strategic support to help individuals and organisations
+            make their ideas tangible.
+          </p>
+
+          <p>
+            Whether you are developing a book, building an author platform,
+            shaping an institutional initiative or bringing a creative
+            project to life, we help you work out what it needs and
+            how to move it forward.
+          </p>
+
+          <a class="text-link" href="#services">Discover what we do →</a>
+
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- SERVICES -->
+
+    <section class="section services-section" id="services">
+      <div class="container">
+
+        <div class="section-heading">
+
+          <div class="eyebrow orange-text">What we do</div>
+
+          <h2>
+            Thoughtful work. Practical execution.
+          </h2>
+
+          <p>
+            Our work is organised around two connected areas:
+            literary and creative development, and consultancy
+            and project execution.
+          </p>
+
+        </div>
+
+        <div class="services-grid">
+
+          <article class="service-card">
+            <div class="service-number">01 / LITERARY</div>
+
+            <h3>Literary Representation</h3>
+
+            <p>
+              We represent selected writers and literary projects,
+              connecting promising manuscripts with suitable publishing
+              opportunities and supporting authors through publishing
+              conversations, rights and negotiations.
+            </p>
+
+            <a class="text-link" href="inquiry.html">Explore this service →</a>
+          </article>
+
+
+          <article class="service-card">
+            <div class="service-number">02 / EDITORIAL</div>
+
+            <h3>Editorial Development</h3>
+
+            <p>
+              From developmental editing to manuscript assessment and
+              structural guidance, we help writers strengthen their work
+              while preserving the integrity of their voice and ideas.
+            </p>
+
+            <a class="text-link" href="inquiry.html">Explore this service →</a>
+          </article>
+
+
+          <article class="service-card">
+            <div class="service-number">03 / WRITING</div>
+
+            <h3>Ghostwriting & Writing Consultancy</h3>
+
+            <p>
+              We work with individuals and organisations to turn
+              experiences, expertise and ideas into carefully developed
+              written work through confidential writing partnerships.
+            </p>
+
+            <a class="text-link" href="inquiry.html">Explore this service →</a>
+          </article>
+
+
+          <article class="service-card">
+            <div class="service-number">04 / AUTHORSHIP</div>
+
+            <h3>Author Development</h3>
+
+            <p>
+              We support writers in building their professional identities
+              through author positioning, profiles, media kit development,
+              visibility strategies and the development of their
+              public presence.
+            </p>
+
+            <a class="text-link" href="inquiry.html">Explore this service →</a>
+          </article>
+
+
+          <article class="service-card">
+            <div class="service-number">05 / CONSULTANCY</div>
+
+            <h3>Publishing Strategy & Consultancy</h3>
+
+            <p>
+              We provide practical guidance on publishing routes,
+              book proposals, publishing opportunities, project positioning
+              and the decisions involved in moving a creative idea forward.
+            </p>
+
+            <a class="text-link" href="inquiry.html">Explore this service →</a>
+          </article>
+
+
+          <article class="service-card">
+            <div class="service-number">06 / CREATIVE HUB</div>
+
+            <h3>Projects, Events & Learning</h3>
+
+            <p>
+              We develop and coordinate workshops, bootcamps, literary
+              gatherings, conferences and collaborative initiatives
+              that bring people, knowledge and ideas together.
+            </p>
+
+            <a class="text-link" href="inquiry.html">Explore this service →</a>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+
+    <!-- VISION TO ACTION -->
+
+    <section class="feature-band">
+
+      <div class="feature-image">
+        <img
+          src="Vision%20to%20Action.jpg"
+          alt="Turning ideas and creative visions into action"
+          loading="lazy"
+        >
+      </div>
+
+      <div class="feature-copy">
+
+        <div class="eyebrow">Beyond the page</div>
+
+        <h2>
+          We don't just help articulate the vision. We help move it forward.
+        </h2>
+
+        <p>
+          Some ideas begin as a story. Others begin as a conversation,
+          an institutional need or an opportunity waiting to be explored.
+        </p>
+
+        <p>
+          We bring structure, coordination and creative thinking to the
+          work required to turn those ideas into something real.
+        </p>
+
+        <a class="button" href="inquiry.html">Discuss a Project</a>
+
+      </div>
+
+    </section>
+
+
+    <!-- HOW WE WORK -->
+
+    <section class="section">
+      <div class="container approach-grid">
+
+        <div class="approach-heading">
+
+          <div class="eyebrow orange-text">How we work</div>
+
+          <h2>
+            Every project starts with understanding what it needs.
+          </h2>
+
+        </div>
+
+        <div class="approach-list">
+
+          <article class="approach-item">
+            <span>01</span>
+            <div>
+              <h3>Understand the idea</h3>
+              <p>
+                We begin by understanding your objectives, the work
+                involved and what you hope to achieve.
+              </p>
+            </div>
+          </article>
+
+          <article class="approach-item">
+            <span>02</span>
+            <div>
+              <h3>Establish the right approach</h3>
+              <p>
+                We identify the appropriate service, scope of work,
+                deliverables and professional resources required.
+              </p>
+            </div>
+          </article>
+
+          <article class="approach-item">
+            <span>03</span>
+            <div>
+              <h3>Agree on the engagement</h3>
+              <p>
+                We establish responsibilities, timelines, fees and
+                working arrangements before professional work begins.
+              </p>
+            </div>
+          </article>
+
+          <article class="approach-item">
+            <span>04</span>
+            <div>
+              <h3>Develop and execute</h3>
+              <p>
+                We work through the agreed scope, maintaining
+                communication, quality and attention to the project's
+                intended outcomes.
+              </p>
+            </div>
+          </article>
+
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- WHO WE WORK WITH -->
+
+    <section class="section audience-section">
+      <div class="container">
+
+        <div class="section-heading">
+
+          <div class="eyebrow orange-text">Who we work with</div>
+
+          <h2>
+            Different people. Different ideas. Shared ambition.
+          </h2>
+
+          <p>
+            Our work brings us into collaboration with people and
+            organisations at different stages of their creative
+            and professional journeys.
+          </p>
+
+        </div>
+
+        <div class="audience-grid">
+
+          <article class="audience-card">
+            <h3>Writers & Authors</h3>
+            <p>
+              Emerging and established writers, first-time authors,
+              self-published authors and people developing their
+              first substantial manuscript.
+            </p>
+          </article>
+
+          <article class="audience-card">
+            <h3>Professionals</h3>
+            <p>
+              Founders, executives, experts and public figures
+              seeking to articulate their experiences, knowledge
+              and professional ideas.
+            </p>
+          </article>
+
+          <article class="audience-card">
+            <h3>Organisations</h3>
+            <p>
+              Institutions, businesses and development organisations
+              looking for thoughtful writing, communications,
+              research or project support.
+            </p>
+          </article>
+
+          <article class="audience-card">
+            <h3>Creative Partners</h3>
+            <p>
+              Publishers, cultural institutions, brands and
+              independent creatives interested in meaningful
+              literary and creative collaboration.
+            </p>
+          </article>
+
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- CREATIVE HUB -->
+
+    <section class="hub-section">
+      <div class="container hub-inner">
+
+        <div class="hub-copy">
+
+          <div class="eyebrow">The creative hub</div>
+
+          <h2>
+            A space for stories, conversations and new possibilities.
+          </h2>
+
+          <p>
+            Ace Pen Studio is also a meeting point for literary
+            exploration, creative exchange and the development
+            of ideas.
+          </p>
+
+          <p>
+            Through workshops, bootcamps, conversations, literary
+            events and collaborative projects, we create opportunities
+            for people to learn, connect and contribute to a stronger
+            creative ecosystem.
+          </p>
+
+          <a class="button" href="inquiry.html">Collaborate With Us</a>
+
+        </div>
+
+        <div class="hub-image">
+          <img
+            src="Our%20Services.jpg"
+            alt="Creative and literary services at Ace Pen Studio"
+            loading="lazy"
+          >
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- INQUIRY -->
+
+    <section class="section inquiry-section">
+      <div class="container inquiry-inner">
+
+        <div>
+          <div class="eyebrow">Start a conversation</div>
+
+          <h2>
+            Have a story, an idea or a project in mind?
+          </h2>
+        </div>
+
+        <div class="inquiry-copy">
+
+          <p>
+            Tell us a little about what you are working on,
+            what you hope to achieve and where you think you
+            might need support.
+          </p>
+
+          <p>
+            You do not need to have everything figured out.
+            But meaningful professional work starts with a clear
+            understanding of the project.
+          </p>
+
+          <a class="button" href="inquiry.html">Make an Inquiry →</a>
+
+          <p class="inquiry-note">
+            Looking for general information? Visit our
+            <a href="faqs.html">Frequently Asked Questions</a>
+            or join the conversation on Substack.
+          </p>
+
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+
+  <!-- SUBSTACK -->
+
+  <section class="substack">
+    <div class="container substack-inner">
+
+      <div class="substack-copy">
+
+        <div class="eyebrow">Stay in the conversation</div>
+
+        <h2>The Room Next Door.</h2>
+
+        <p>
+          Books, writing, publishing, ideas, opportunities,
+          occasional rabbit holes and whatever else is happening
+          at the studio. Read along and join the conversation.
         </p>
 
       </div>
-
-    </div>
-
-  </section>
-
-</main>
-
-
-<!-- SUBSTACK -->
-
-<section class="substack-banner">
-
-  <div class="container">
-
-    <div class="substack-copy">
-
-      <div class="substack-eyebrow">
-        Stay in the conversation
-      </div>
-
-      <h2>
-        The room next door.
-      </h2>
-
-      <p>
-        Books, writing, publishing, ideas, opportunities, occasional
-        rabbit holes and whatever else we're thinking about at the studio.
-        Read along. Respond. Tell us what you're thinking.
-      </p>
-
-    </div>
-
-
-    <a
-      class="substack-button"
-      href="https://acepenstudio.substack.com/"
-      target="_blank"
-      rel="noopener noreferrer"
-    >
-      Read Ace Pen Studio on Substack →
-    </a>
-
-  </div>
-
-</section>
-
-
-<!-- FOOTER -->
-
-<footer class="footer">
-
-  <div class="container footer-inner">
-
-    <div>
-      © 2026 Ace Pen Studio. All rights reserved.
-    </div>
-
-    <div>
 
       <a
+        class="button"
         href="https://acepenstudio.substack.com/"
         target="_blank"
         rel="noopener noreferrer"
       >
-        Substack
-      </a>
-
-      &nbsp;·&nbsp;
-
-      <a
-        href="https://www.instagram.com/acepenstories/"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        Instagram
+        Visit Our Substack →
       </a>
 
     </div>
+  </section>
 
-  </div>
 
-</footer>
+  <!-- FOOTER -->
+
+  <footer class="footer">
+    <div class="container">
+
+      <div class="footer-top">
+
+        <div>
+          <div class="footer-brand">ACE PEN STUDIO</div>
+          <div class="footer-tagline">
+            Where your stories are articulated and visions executed.
+          </div>
+        </div>
+
+        <div class="footer-links">
+          <a href="index.html">Home</a>
+          <a href="#services">Our Work</a>
+          <a href="faqs.html">FAQs</a>
+          <a href="inquiry.html">Inquire</a>
+
+          <a
+            href="https://acepenstudio.substack.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >Substack</a>
+
+          <a
+            href="https://www.instagram.com/acepenstories/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >Instagram</a>
+        </div>
+
+      </div>
+
+      <div class="footer-bottom">
+
+        <div>
+          © 2026 Ace Pen Studio. All rights reserved.
+        </div>
+
+        <div>
+          Tanzania · Working across Africa and beyond.
+        </div>
+
+      </div>
+
+    </div>
+  </footer>
 
 </body>
 </html>
