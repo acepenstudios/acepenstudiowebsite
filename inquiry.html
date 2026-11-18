@@ -5,8 +5,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="theme-color" content="#171717">
-  <meta name="description" content="Tell Ace Pen Studio about your writing project, manuscript, publishing opportunity or professional writing work.">
-  <title>First-Time Inquiry — Ace Pen Studio</title>
+  <meta name="description" content="Begin a conversation with Ace Pen Studio about consultancy, creative projects, writing, publishing, events, partnerships and professional support.">
+  <title>Inquiries & Consultations — Ace Pen Studio</title>
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -15,22 +15,25 @@
   <style>
     :root {
       --black: #171717;
-      --black-soft: #222222;
-      --cream: #f5f1e9;
+      --black-soft: #242321;
+      --cream: #f4efe7;
       --paper: #fbf9f5;
+      --white: #fff;
       --orange: #b95b2b;
       --orange-dark: #91431f;
-      --text: #252321;
+      --text: #282522;
       --muted: #77716b;
       --line: #ded8ce;
-      --white: #ffffff;
       --serif: "Playfair Display", Georgia, serif;
       --sans: "DM Sans", Arial, sans-serif;
     }
 
     * { box-sizing: border-box; }
 
-    html { scroll-behavior: smooth; }
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 30px;
+    }
 
     body {
       margin: 0;
@@ -40,85 +43,111 @@
       line-height: 1.7;
     }
 
+    img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
     a { color: inherit; }
+
+    button, input, textarea, select { font: inherit; }
 
     .container {
       width: min(1160px, calc(100% - 48px));
       margin: 0 auto;
     }
 
-    /* HEADER */
+    .eyebrow,
+    .section-label,
+    .small-label {
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: .17em;
+      line-height: 1.5;
+      text-transform: uppercase;
+    }
+
+    .eyebrow { color: #e6a17c; }
+
+    .serif { font-family: var(--serif); }
 
     .site-header {
+      position: relative;
+      z-index: 10;
       background: var(--black);
       color: var(--white);
       border-bottom: 1px solid rgba(255,255,255,.12);
     }
 
     .header-inner {
-      min-height: 82px;
+      min-height: 78px;
       display: flex;
       align-items: center;
+      justify-content: space-between;
+      gap: 25px;
     }
 
     .logo {
       color: var(--white);
       text-decoration: none;
-      font-size: 15px;
+      font-size: 14px;
       font-weight: 700;
-      letter-spacing: .13em;
+      letter-spacing: .15em;
     }
+
+    .header-link {
+      color: #ddd6ce;
+      text-decoration: none;
+      font-size: 12px;
+      transition: color .2s ease;
+    }
+
+    .header-link:hover { color: #e6a17c; }
 
     /* HERO */
 
-    .form-hero {
+    .hero {
       position: relative;
+      min-height: 590px;
+      display: flex;
+      align-items: center;
       overflow: hidden;
-      padding: 100px 0 86px;
       color: var(--white);
-      background:
-        radial-gradient(ellipse at 85% 15%, rgba(185,91,43,.32), transparent 38%),
-        linear-gradient(115deg, #171717 0%, #22201e 65%, #38251d 100%);
+      background: var(--black);
     }
 
-    .form-hero::after {
-      content: "";
+    .hero-image {
       position: absolute;
-      width: 420px;
-      height: 420px;
-      right: -180px;
-      bottom: -260px;
-      border: 1px solid rgba(255,255,255,.12);
-      border-radius: 50%;
-      box-shadow: 0 0 0 45px rgba(255,255,255,.025),
-                  0 0 0 90px rgba(255,255,255,.02);
-      pointer-events: none;
+      inset: 0;
+    }
+
+    .hero-image img {
+      object-position: center;
+      opacity: .56;
+    }
+
+    .hero-overlay {
+      position: absolute;
+      inset: 0;
+      background:
+        linear-gradient(90deg, rgba(17,17,17,.96) 0%, rgba(17,17,17,.78) 48%, rgba(17,17,17,.2) 100%),
+        linear-gradient(0deg, rgba(17,17,17,.35), transparent 60%);
     }
 
     .hero-content {
       position: relative;
       z-index: 1;
-      max-width: 880px;
+      width: 100%;
+      padding: 100px 0;
     }
 
-    .eyebrow,
-    .section-label,
-    .form-number,
-    .substack-eyebrow {
-      font-size: 11px;
-      font-weight: 700;
-      letter-spacing: .17em;
-      text-transform: uppercase;
-    }
+    .hero-copy { max-width: 760px; }
 
-    .eyebrow {
-      margin-bottom: 22px;
-      color: #e6a17c;
-    }
-
-    .form-hero h1 {
-      max-width: 850px;
-      margin: 0 0 25px;
+    .hero h1 {
+      max-width: 760px;
+      margin: 20px 0 25px;
       font-family: var(--serif);
       font-size: clamp(48px, 7vw, 82px);
       font-weight: 400;
@@ -126,153 +155,272 @@
       letter-spacing: -.035em;
     }
 
-    .form-hero .lead {
-      max-width: 700px;
+    .hero p {
+      max-width: 660px;
       margin: 0;
-      color: #ded9d3;
-      font-size: 19px;
-      line-height: 1.7;
+      color: #e3ddd6;
+      font-size: 17px;
+      line-height: 1.8;
     }
 
-    .hero-note {
-      display: grid;
-      grid-template-columns: 4px 1fr;
-      gap: 20px;
-      max-width: 780px;
-      margin-top: 42px;
-      padding: 22px 25px;
-      background: rgba(255,255,255,.07);
-      border: 1px solid rgba(255,255,255,.12);
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 13px;
+      margin-top: 35px;
     }
 
-    .hero-note::before {
-      content: "";
+    .button {
+      display: inline-flex;
+      min-height: 50px;
+      align-items: center;
+      justify-content: center;
+      gap: 18px;
+      padding: 13px 21px;
+      border: 1px solid var(--orange);
       background: var(--orange);
+      color: var(--white);
+      text-decoration: none;
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      cursor: pointer;
+      transition: background .2s ease, border-color .2s ease, color .2s ease;
     }
 
-    .hero-note p {
-      margin: 0;
-      color: #e8e2dc;
-      font-size: 14px;
+    .button:hover {
+      border-color: var(--orange-dark);
+      background: var(--orange-dark);
     }
 
-    .hero-note strong { color: var(--white); }
-
-    .hero-note a {
-      color: #efad87;
-      text-underline-offset: 4px;
+    .button-outline {
+      border-color: rgba(255,255,255,.65);
+      background: transparent;
+      color: var(--white);
     }
 
-    /* FORM INTRO STRIP */
+    .button-outline:hover {
+      border-color: var(--white);
+      background: var(--white);
+      color: var(--black);
+    }
 
-    .form-intro {
-      padding: 27px 0;
+    /* INTRO */
+
+    .intro-strip {
+      padding: 28px 0;
       background: var(--cream);
       border-bottom: 1px solid var(--line);
     }
 
-    .form-intro-inner {
+    .intro-strip-inner {
       display: flex;
       align-items: center;
       justify-content: space-between;
-      gap: 25px;
+      gap: 30px;
     }
 
-    .form-intro p {
-      max-width: 720px;
+    .intro-strip p {
+      max-width: 760px;
       margin: 0;
       font-size: 14px;
     }
 
-    .form-intro span {
+    .intro-strip span {
       flex: 0 0 auto;
       color: var(--orange-dark);
-      font-size: 11px;
+      font-size: 10px;
       font-weight: 700;
       letter-spacing: .12em;
       text-transform: uppercase;
     }
 
-    /* FORM SECTIONS */
+    /* ROUTE CARDS */
 
-    .form-section {
-      padding: 76px 0;
-      border-bottom: 1px solid var(--line);
+    .routes {
+      padding: 88px 0;
     }
 
-    .section-grid {
-      display: grid;
-      grid-template-columns: minmax(190px, .34fr) minmax(0, 1fr);
-      gap: 80px;
-      align-items: start;
+    .section-intro {
+      max-width: 720px;
+      margin-bottom: 42px;
     }
 
-    .section-heading {
-      position: sticky;
-      top: 30px;
+    .section-label { color: var(--orange); }
+
+    .section-intro h2 {
+      margin: 13px 0 15px;
+      font-family: var(--serif);
+      font-size: clamp(34px, 5vw, 52px);
+      font-weight: 400;
+      line-height: 1.15;
     }
 
-    .form-number {
-      margin-bottom: 15px;
-      color: var(--orange);
-    }
-
-    .section-heading h2 {
-      max-width: 230px;
+    .section-intro p {
       margin: 0;
+      color: var(--muted);
+      font-size: 15px;
+    }
+
+    .route-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 22px;
+    }
+
+    .route-card {
+      display: flex;
+      flex-direction: column;
+      min-height: 290px;
+      padding: 34px;
+      background: var(--white);
+      border: 1px solid var(--line);
+      transition: transform .2s ease, border-color .2s ease;
+    }
+
+    .route-card:hover {
+      transform: translateY(-4px);
+      border-color: var(--orange);
+    }
+
+    .route-number {
+      margin-bottom: 28px;
+      color: var(--orange);
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: .15em;
+    }
+
+    .route-card h3 {
+      margin: 0 0 13px;
       font-family: var(--serif);
       font-size: 30px;
       font-weight: 400;
       line-height: 1.2;
     }
 
-    .section-description {
-      max-width: 230px;
-      margin-top: 14px;
+    .route-card p {
+      max-width: 480px;
+      margin: 0 0 28px;
       color: var(--muted);
-      font-size: 13px;
-      line-height: 1.6;
+      font-size: 14px;
     }
 
-    .field { margin-bottom: 34px; }
+    .route-card .text-link {
+      align-self: flex-start;
+      margin-top: auto;
+      color: var(--orange-dark);
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: .1em;
+      text-decoration: none;
+      text-transform: uppercase;
+    }
+
+    .route-card .text-link:hover { text-decoration: underline; }
+
+    /* GENERAL INQUIRY */
+
+    .inquiry-section {
+      padding: 88px 0;
+      background: var(--cream);
+      border-top: 1px solid var(--line);
+      border-bottom: 1px solid var(--line);
+    }
+
+    .section-grid {
+      display: grid;
+      grid-template-columns: minmax(200px, .34fr) minmax(0, 1fr);
+      gap: 75px;
+      align-items: start;
+    }
+
+    .section-heading {
+      position: sticky;
+      top: 25px;
+    }
+
+    .section-heading h2 {
+      max-width: 270px;
+      margin: 13px 0;
+      font-family: var(--serif);
+      font-size: 36px;
+      font-weight: 400;
+      line-height: 1.15;
+    }
+
+    .section-heading p {
+      max-width: 260px;
+      margin: 0;
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    .form-panel {
+      padding: 38px;
+      background: var(--paper);
+      border: 1px solid var(--line);
+    }
+
+    .form-heading {
+      margin-bottom: 32px;
+      padding-bottom: 25px;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .form-heading h3 {
+      margin: 0 0 8px;
+      font-family: var(--serif);
+      font-size: 27px;
+      font-weight: 400;
+    }
+
+    .form-heading p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    .field { margin-bottom: 27px; }
     .field:last-child { margin-bottom: 0; }
 
     label,
     .legend {
       display: block;
-      margin-bottom: 10px;
+      margin-bottom: 9px;
       color: var(--black);
-      font-size: 12px;
+      font-size: 11px;
       font-weight: 700;
-      letter-spacing: .045em;
+      letter-spacing: .035em;
     }
 
-    .required {
-      color: var(--orange);
-      font-weight: 600;
-    }
+    .required { color: var(--orange); }
 
     input[type="text"],
     input[type="email"],
     input[type="tel"],
+    input[type="date"],
+    input[type="time"],
+    input[type="datetime-local"],
+    input[type="number"],
     textarea,
     select {
       display: block;
       width: 100%;
-      padding: 13px 14px;
+      min-height: 48px;
+      padding: 12px 14px;
       border: 1px solid #d6d0c7;
       border-radius: 0;
       outline: none;
       background: #fffefa;
       color: var(--text);
-      font: 15px/1.55 var(--sans);
+      font: 14px/1.55 var(--sans);
       transition: border-color .2s ease, box-shadow .2s ease;
     }
 
     input::placeholder,
-    textarea::placeholder {
-      color: #a49d94;
-    }
+    textarea::placeholder { color: #a49d94; }
 
     input:focus,
     textarea:focus,
@@ -282,92 +430,80 @@
     }
 
     textarea {
-      min-height: 135px;
+      min-height: 125px;
       resize: vertical;
     }
 
     .help {
-      margin: 9px 0 0;
+      margin: 8px 0 0;
       color: var(--muted);
-      font-size: 12px;
-      line-height: 1.6;
+      font-size: 11px;
+      line-height: 1.65;
     }
 
-    /* CHOICES */
+    .two-column {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 0 18px;
+    }
 
     .choice-grid {
       display: grid;
       grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 13px 25px;
+      gap: 10px;
     }
 
     .choice {
       display: flex;
       align-items: flex-start;
-      gap: 11px;
+      gap: 10px;
       margin: 0;
-      padding: 12px 13px;
+      padding: 13px;
       border: 1px solid var(--line);
-      background: rgba(255,255,255,.55);
+      background: #fffefa;
       color: var(--text);
-      font-size: 14px;
+      font-size: 12px;
       font-weight: 400;
       letter-spacing: 0;
       line-height: 1.5;
       cursor: pointer;
-      transition: border-color .2s ease, background .2s ease;
     }
 
     .choice:hover {
       border-color: var(--orange);
-      background: #fffefa;
     }
 
     .choice input {
       flex: 0 0 auto;
-      margin: 4px 0 0;
+      margin: 3px 0 0;
       accent-color: var(--orange);
     }
 
-    /* NOTES */
-
-    .editorial-note {
-      margin-top: 30px;
-      padding: 25px 27px;
+    .conditional-field {
+      display: none;
+      margin-top: 17px;
+      padding: 19px;
       background: var(--cream);
       border-left: 3px solid var(--orange);
     }
 
-    .editorial-note h3 {
-      margin: 0 0 12px;
-      font-family: var(--serif);
-      font-size: 23px;
-      font-weight: 400;
-    }
+    .conditional-field.visible { display: block; }
 
-    .editorial-note p {
-      margin: 0 0 13px;
-      font-size: 14px;
-    }
-
-    .editorial-note p:last-child { margin-bottom: 0; }
-
-    .data-note {
-      margin: 30px 0;
-      padding: 23px 25px;
+    .form-note {
+      margin: 27px 0;
+      padding: 20px 22px;
       background: var(--cream);
       border-left: 3px solid var(--orange);
-      font-size: 13px;
+      color: var(--text);
+      font-size: 12px;
       line-height: 1.7;
     }
 
-    .data-note p { margin: 0; }
-
-    .data-note strong {
+    .form-note strong {
       display: block;
-      margin-bottom: 6px;
+      margin-bottom: 5px;
       color: var(--black);
-      font-size: 11px;
+      font-size: 10px;
       letter-spacing: .1em;
       text-transform: uppercase;
     }
@@ -375,10 +511,10 @@
     .consent {
       display: flex;
       align-items: flex-start;
-      gap: 12px;
-      margin: 20px 0;
+      gap: 11px;
+      margin: 18px 0;
       color: var(--text);
-      font-size: 13px;
+      font-size: 12px;
       font-weight: 400;
       letter-spacing: 0;
       line-height: 1.65;
@@ -387,117 +523,311 @@
 
     .consent input {
       flex: 0 0 auto;
-      margin: 5px 0 0;
+      margin: 4px 0 0;
       accent-color: var(--orange);
     }
 
-    .intro {
-      margin-top: 0;
-      font-family: var(--serif);
-      font-size: 24px;
-      line-height: 1.45;
+    .submit-button {
+      min-width: 190px;
+      margin-top: 8px;
     }
 
-    /* SUBMIT */
-
-    .submit-row {
-      padding: 60px 0 90px;
-    }
-
-    .submit-inner {
-      max-width: 850px;
-      margin-left: auto;
-    }
-
-    .submit-row h2 {
-      margin: 0 0 12px;
-      font-family: var(--serif);
-      font-size: 32px;
-      font-weight: 400;
-    }
-
-    .submit-row p {
-      max-width: 650px;
-      margin: 0 0 25px;
-      color: var(--muted);
-      font-size: 14px;
-    }
-
-    .button {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      gap: 25px;
-      min-height: 52px;
-      padding: 14px 24px;
-      border: 1px solid var(--orange);
-      background: var(--orange);
-      color: var(--white);
-      font-family: var(--sans);
-      font-size: 11px;
-      font-weight: 700;
-      letter-spacing: .12em;
-      text-transform: uppercase;
-      cursor: pointer;
-      transition: background .2s ease, border-color .2s ease;
-    }
-
-    .button:hover {
-      border-color: var(--orange-dark);
-      background: var(--orange-dark);
-    }
-
-    .button:disabled {
+    .submit-button:disabled {
       opacity: .6;
       cursor: wait;
     }
 
     .form-status {
-      max-width: 700px;
-      margin-top: 18px;
+      margin-top: 17px;
+      font-size: 13px;
+    }
+
+    .form-status.success { color: #376b42; }
+    .form-status.error { color: #a13b2b; }
+
+    .honeypot {
+      position: absolute;
+      left: -5000px;
+      width: 1px;
+      height: 1px;
+      overflow: hidden;
+    }
+
+    /* CONSULTATION */
+
+    .consultation-section {
+      padding: 92px 0;
+    }
+
+    .image-feature {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      min-height: 390px;
+      background: var(--black);
+      color: var(--white);
+    }
+
+    .image-feature.reverse .feature-image { order: 2; }
+    .image-feature.reverse .feature-copy { order: 1; }
+
+    .feature-image {
+      min-height: 390px;
+      overflow: hidden;
+      background: var(--cream);
+    }
+
+    .feature-image img { object-position: center; }
+
+    .feature-copy {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 55px;
+    }
+
+    .feature-copy h2 {
+      margin: 14px 0 18px;
+      font-family: var(--serif);
+      font-size: clamp(34px, 4vw, 48px);
+      font-weight: 400;
+      line-height: 1.13;
+    }
+
+    .feature-copy p {
+      margin: 0 0 18px;
+      color: #d0cac3;
       font-size: 14px;
     }
 
-    .error-message {
-      display: none;
-      max-width: 700px;
-      margin-top: 18px;
-      padding: 14px 17px;
-      background: #f4e7df;
-      border-left: 3px solid var(--orange);
-      font-size: 14px;
+    .feature-copy .eyebrow { color: #e6a17c; }
+
+    .consultation-options {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 22px;
+      margin-top: 32px;
     }
+
+    .price-card {
+      padding: 30px;
+      background: var(--white);
+      border: 1px solid var(--line);
+    }
+
+    .price-card h3 {
+      margin: 0 0 10px;
+      font-family: var(--serif);
+      font-size: 25px;
+      font-weight: 400;
+    }
+
+    .price {
+      margin: 15px 0;
+      color: var(--orange-dark);
+      font-family: var(--serif);
+      font-size: 35px;
+      line-height: 1.2;
+    }
+
+    .price-card p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    .price-card ul {
+      margin: 18px 0 0;
+      padding-left: 18px;
+      color: var(--muted);
+      font-size: 12px;
+    }
+
+    .booking-wrap {
+      margin-top: 45px;
+      padding: 38px;
+      background: var(--cream);
+      border: 1px solid var(--line);
+    }
+
+    .booking-wrap h3 {
+      margin: 0 0 8px;
+      font-family: var(--serif);
+      font-size: 30px;
+      font-weight: 400;
+    }
+
+    .booking-wrap > p {
+      max-width: 700px;
+      margin: 0 0 30px;
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    .booking-fields {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 0 20px;
+    }
+
+    .booking-fields .full { grid-column: 1 / -1; }
+
+    .meeting-details {
+      margin: 25px 0;
+      padding: 20px;
+      background: var(--paper);
+      border-left: 3px solid var(--orange);
+      font-size: 12px;
+    }
+
+    .meeting-details p { margin: 0 0 8px; }
+    .meeting-details p:last-child { margin-bottom: 0; }
+
+    /* IN-PERSON */
+
+    .in-person-section {
+      padding: 0 0 92px;
+    }
+
+    .in-person-section .feature-copy {
+      background: var(--cream);
+      color: var(--text);
+    }
+
+    .in-person-section .feature-copy p { color: var(--muted); }
+    .in-person-section .feature-copy .eyebrow { color: var(--orange); }
+
+    /* COFFEE */
+
+    .coffee-section {
+      padding: 92px 0;
+      background: var(--cream);
+      border-top: 1px solid var(--line);
+      border-bottom: 1px solid var(--line);
+    }
+
+    .coffee-section .image-feature {
+      background: var(--white);
+      color: var(--text);
+    }
+
+    .coffee-section .feature-copy p { color: var(--muted); }
+    .coffee-section .feature-copy .eyebrow { color: var(--orange); }
+
+    .coffee-section .feature-copy {
+      padding: 48px;
+    }
+
+    .venue-list {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 11px;
+      margin: 22px 0 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .venue-list li {
+      padding: 13px;
+      background: var(--cream);
+      border: 1px solid var(--line);
+      font-size: 12px;
+    }
+
+    .contribution-note {
+      margin: 22px 0 0;
+      padding: 18px;
+      background: var(--paper);
+      border-left: 3px solid var(--orange);
+      font-size: 12px;
+    }
+
+    /* FAQ */
+
+    .faq-section {
+      padding: 92px 0;
+    }
+
+    .faq-layout {
+      display: grid;
+      grid-template-columns: minmax(250px, .8fr) minmax(0, 1.2fr);
+      gap: 65px;
+      align-items: start;
+    }
+
+    .faq-image {
+      height: 320px;
+      margin-top: 30px;
+      overflow: hidden;
+      background: var(--cream);
+    }
+
+    .faq-list {
+      border-top: 1px solid var(--line);
+    }
+
+    .faq-item {
+      border-bottom: 1px solid var(--line);
+    }
+
+    .faq-question {
+      display: flex;
+      width: 100%;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+      padding: 21px 0;
+      border: 0;
+      background: transparent;
+      color: var(--text);
+      text-align: left;
+      font-size: 14px;
+      font-weight: 600;
+      cursor: pointer;
+    }
+
+    .faq-question span:last-child {
+      color: var(--orange);
+      font-size: 22px;
+      font-weight: 400;
+    }
+
+    .faq-answer {
+      display: none;
+      max-width: 720px;
+      padding: 0 35px 22px 0;
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    .faq-item.open .faq-answer { display: block; }
+
+    .faq-answer p { margin: 0; }
 
     /* SUBSTACK */
 
     .substack-banner {
-      color: var(--white);
+      padding: 66px 0;
       background:
-        radial-gradient(ellipse at 90% 20%, rgba(185,91,43,.3), transparent 40%),
+        radial-gradient(ellipse at 90% 20%, rgba(185,91,43,.28), transparent 38%),
         var(--black);
+      color: var(--white);
     }
 
-    .substack-banner .container {
+    .substack-inner {
       display: flex;
       align-items: center;
       justify-content: space-between;
       gap: 40px;
-      padding: 55px 0;
     }
 
-    .substack-copy { max-width: 720px; }
-
-    .substack-eyebrow {
-      margin-bottom: 12px;
-      color: #e6a17c;
-    }
+    .substack-copy { max-width: 700px; }
 
     .substack-banner h2 {
-      margin: 0 0 12px;
+      margin: 12px 0;
       font-family: var(--serif);
-      font-size: 34px;
+      font-size: clamp(32px, 4vw, 44px);
       font-weight: 400;
-      line-height: 1.2;
+      line-height: 1.15;
     }
 
     .substack-banner p {
@@ -506,26 +836,64 @@
       font-size: 14px;
     }
 
-    .substack-button {
-      display: inline-flex;
-      flex: 0 0 auto;
-      align-items: center;
-      justify-content: center;
-      min-height: 48px;
-      padding: 12px 20px;
-      border: 1px solid rgba(255,255,255,.7);
-      color: var(--white);
-      text-decoration: none;
-      font-size: 11px;
-      font-weight: 700;
-      letter-spacing: .1em;
-      text-transform: uppercase;
-      transition: background .2s ease, color .2s ease;
+    /* NEWSLETTER POPUP */
+
+    .newsletter-popup {
+      position: fixed;
+      z-index: 100;
+      right: 25px;
+      bottom: 25px;
+      display: none;
+      width: min(390px, calc(100% - 30px));
+      padding: 28px;
+      background: var(--paper);
+      border: 1px solid var(--line);
+      box-shadow: 0 15px 55px rgba(0,0,0,.22);
     }
 
-    .substack-button:hover {
-      background: var(--white);
-      color: var(--black);
+    .newsletter-popup.visible { display: block; }
+
+    .popup-close {
+      position: absolute;
+      top: 10px;
+      right: 13px;
+      width: 32px;
+      height: 32px;
+      border: 0;
+      background: transparent;
+      color: var(--muted);
+      font-size: 23px;
+      cursor: pointer;
+    }
+
+    .newsletter-popup h3 {
+      margin: 12px 25px 10px 0;
+      font-family: var(--serif);
+      font-size: 27px;
+      font-weight: 400;
+      line-height: 1.2;
+    }
+
+    .newsletter-popup p {
+      margin: 0 0 19px;
+      color: var(--muted);
+      font-size: 12px;
+    }
+
+    .popup-actions {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 15px;
+    }
+
+    .popup-later {
+      padding: 10px 0;
+      border: 0;
+      background: transparent;
+      color: var(--muted);
+      font-size: 11px;
+      cursor: pointer;
     }
 
     /* FOOTER */
@@ -533,15 +901,16 @@
     .footer {
       padding: 28px 0;
       background: var(--black);
+      color: #aaa39b;
       border-top: 1px solid rgba(255,255,255,.12);
+      font-size: 12px;
     }
 
     .footer-inner {
       display: flex;
+      align-items: center;
       justify-content: space-between;
-      gap: 25px;
-      color: #aaa39b;
-      font-size: 12px;
+      gap: 20px;
     }
 
     .footer a {
@@ -551,73 +920,82 @@
 
     .footer a:hover { color: var(--white); }
 
-    /* RESPONSIVE */
-
-    @media (max-width: 800px) {
-      .container { width: min(100% - 36px, 1160px); }
-
-      .header-inner { min-height: 70px; }
-
-      .form-hero { padding: 75px 0 65px; }
-
-      .form-hero h1 { font-size: clamp(45px, 11vw, 68px); }
-
-      .form-hero .lead { font-size: 17px; }
-
-      .form-intro-inner {
-        display: block;
-      }
-
-      .form-intro span {
-        display: block;
-        margin-top: 12px;
-      }
-
-      .form-section { padding: 55px 0; }
-
+    @media (max-width: 850px) {
       .section-grid {
         grid-template-columns: 1fr;
         gap: 30px;
       }
 
       .section-heading { position: static; }
+      .section-heading h2,
+      .section-heading p { max-width: 650px; }
 
-      .section-heading h2 { max-width: 500px; }
+      .faq-layout { grid-template-columns: 1fr; gap: 35px; }
+      .faq-image { max-width: 550px; margin-top: 20px; }
+    }
 
-      .section-description { max-width: 500px; }
+    @media (max-width: 700px) {
+      .container { width: calc(100% - 34px); }
 
-      .choice-grid { grid-template-columns: 1fr; }
+      .hero { min-height: 520px; }
+      .hero-content { padding: 75px 0; }
+      .hero h1 { font-size: clamp(44px, 11vw, 65px); }
+      .hero p { font-size: 15px; }
 
-      .submit-inner { margin-left: 0; }
-
-      .substack-banner .container {
+      .intro-strip-inner {
         display: block;
-        padding: 45px 0;
       }
 
-      .substack-button { margin-top: 25px; }
+      .intro-strip span {
+        display: block;
+        margin-top: 12px;
+      }
 
-      .footer-inner { display: block; }
+      .route-grid,
+      .consultation-options,
+      .two-column,
+      .choice-grid,
+      .booking-fields {
+        grid-template-columns: 1fr;
+      }
+
+      .booking-fields .full { grid-column: auto; }
+
+      .image-feature {
+        grid-template-columns: 1fr;
+      }
+
+      .image-feature.reverse .feature-image,
+      .image-feature.reverse .feature-copy {
+        order: initial;
+      }
+
+      .feature-image { min-height: 270px; }
+      .feature-copy { padding: 35px 27px; }
+      .coffee-section .feature-copy { padding: 35px 27px; }
+
+      .form-panel,
+      .booking-wrap { padding: 25px 20px; }
+
+      .substack-inner {
+        display: block;
+      }
+
+      .substack-inner .button { margin-top: 25px; }
+
+      .footer-inner {
+        display: block;
+      }
 
       .footer-inner > * { margin-bottom: 9px; }
     }
 
-    @media (max-width: 480px) {
-      .container { width: calc(100% - 30px); }
-
-      .form-hero { padding: 62px 0 55px; }
-
-      .hero-note { padding: 18px; }
-
-      .section-heading h2 { font-size: 27px; }
-
-      .choice { padding: 11px; }
-
-      .editorial-note { padding: 21px; }
-
-      .substack-banner h2 { font-size: 29px; }
-
-      .button { width: 100%; }
+    @media (max-width: 430px) {
+      .hero-actions { display: grid; }
+      .hero-actions .button { width: 100%; }
+      .route-card { padding: 26px; }
+      .venue-list { grid-template-columns: 1fr; }
+      .newsletter-popup { right: 15px; bottom: 15px; }
     }
   </style>
 </head>
@@ -627,500 +1005,843 @@
 <header class="site-header">
   <div class="container header-inner">
     <a class="logo" href="index.html">ACE PEN STUDIO</a>
+    <a class="header-link" href="index.html">← Back to the studio</a>
   </div>
 </header>
 
 <main>
 
-  <!-- HERO -->
+  <!-- HERO / INQUIRY BANNER -->
+  <section class="hero">
+    <div class="hero-image">
+      <img src="Inquiry%20Banner.jpg" alt="Ace Pen Studio inquiry banner">
+    </div>
+    <div class="hero-overlay"></div>
 
-  <section class="form-hero">
     <div class="container hero-content">
+      <div class="hero-copy">
+        <div class="eyebrow">Inquiries · Consultations · Conversations</div>
 
-      <div class="eyebrow">First-time inquiry · Start a conversation</div>
+        <h1>Good things begin with a conversation.</h1>
 
-      <h1>Tell us what you're working on.</h1>
-
-      <p class="lead">
-        A book, a manuscript, a publishing opportunity or a professional
-        writing project. Give us a sense of what you're building and where
-        you would like it to go.
-      </p>
-
-      <div class="hero-note">
         <p>
-          <strong>A quick distinction before you begin.</strong><br>
-          You do not need to know exactly what you need from us. But we do
-          need enough context to understand the work. This form is an initial
-          inquiry, not a consultation or a commitment to engage our services.
-          If you're looking for general publishing information, start with
-          our <a href="faqs.html">FAQs</a>.
+          Whether you are developing an idea, navigating an organisational
+          challenge, building a creative project, exploring a publishing
+          opportunity or looking for the right people to bring something
+          to life, we'd like to hear about it.
         </p>
-      </div>
 
+        <div class="hero-actions">
+          <a class="button" href="#inquiry">Submit an inquiry <span>→</span></a>
+          <a class="button button-outline" href="#consultation">Book a consultation</a>
+        </div>
+      </div>
     </div>
   </section>
 
-  <div class="form-intro">
-    <div class="container form-intro-inner">
+  <div class="intro-strip">
+    <div class="container intro-strip-inner">
       <p>
-        Take your time. The more clearly you describe the project, the better
-        we can understand what kind of support or next step may be appropriate.
+        Ace Pen Studio works across consultancy, literature, creative
+        development, communications, publishing, projects, events and
+        collaborations. Start with the route that best describes what you need.
       </p>
-      <span>Allow 8–12 minutes</span>
+      <span>Where stories are articulated and visions executed</span>
     </div>
   </div>
 
-  <form id="inquiry-form" action="https://formspree.io/f/xaeykzop" method="POST">
+  <!-- TWO ROUTES -->
+  <section class="routes">
+    <div class="container">
+      <div class="section-intro">
+        <div class="section-label">How would you like to begin?</div>
+        <h2>Choose the conversation that makes sense.</h2>
+        <p>
+          An inquiry and a consultation serve different purposes. You can
+          tell us about a project in detail, or request time with the studio
+          to discuss a particular matter.
+        </p>
+      </div>
 
-    <input type="hidden" name="_subject" value="New First-Time Inquiry — Ace Pen Studio">
-
-    <!-- 01 ABOUT YOU -->
-
-    <section class="form-section">
-      <div class="container section-grid">
-
-        <div class="section-heading">
-          <div class="form-number">01 · About you</div>
-          <h2>First, a little about yourself.</h2>
-          <p class="section-description">
-            Tell us who we're speaking with and how best to reach you.
+      <div class="route-grid">
+        <article class="route-card">
+          <div class="route-number">01 / GENERAL INQUIRY</div>
+          <h3>Tell us what you're working on.</h3>
+          <p>
+            For project proposals, consultancy needs, creative ideas,
+            organisational support, publishing matters, events, partnerships
+            and other professional enquiries. We'll review your information
+            and respond with an appropriate next step.
           </p>
+          <a class="text-link" href="#inquiry">Submit an inquiry →</a>
+        </article>
+
+        <article class="route-card">
+          <div class="route-number">02 / BOOK A CONSULTATION</div>
+          <h3>Let's make time to talk.</h3>
+          <p>
+            For a focused conversation with the studio about a challenge,
+            opportunity, idea or project. Choose a virtual or in-person
+            consultation and request a suitable date and time.
+          </p>
+          <a class="text-link" href="#consultation">Explore consultations →</a>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- GENERAL INQUIRY FORM -->
+  <section class="inquiry-section" id="inquiry">
+    <div class="container section-grid">
+
+      <div class="section-heading">
+        <div class="section-label">01 · General inquiry</div>
+        <h2>Bring us the idea, the challenge or the opportunity.</h2>
+        <p>
+          You don't need to arrive with everything figured out. Give us
+          enough context to understand what you're exploring and where
+          you might need support.
+        </p>
+      </div>
+
+      <div class="form-panel">
+        <div class="form-heading">
+          <h3>Tell us a little about it.</h3>
+          <p>Allow approximately 8–12 minutes to complete this form.</p>
         </div>
 
-        <div>
+        <form class="ajax-form" action="https://formspree.io/f/xaeykzop" method="POST" data-form-type="General inquiry">
+          <input type="hidden" name="_subject" value="New General Inquiry — Ace Pen Studio">
+          <input type="hidden" name="inquiry_type" value="General inquiry">
 
-          <div class="field">
-            <label for="full_name">Full name <span class="required">*</span></label>
-            <input id="full_name" name="full_name" type="text" autocomplete="name" required>
+          <div class="honeypot">
+            <label>Leave this field empty <input type="text" name="_gotcha" tabindex="-1" autocomplete="off"></label>
           </div>
 
           <div class="field">
-            <label for="preferred_name">Name you'd like us to use <span class="required">(optional)</span></label>
-            <input id="preferred_name" name="preferred_name" type="text">
+            <div class="legend">What would you like to discuss with Ace Pen Studio? <span class="required">*</span></div>
+
+            <div class="choice-grid" id="service-categories">
+              <label class="choice">
+                <input type="checkbox" name="service_category" value="Management and organisational consultancy">
+                Management and organisational consultancy
+              </label>
+
+              <label class="choice">
+                <input type="checkbox" name="service_category" value="Creative project development">
+                Creative project development
+              </label>
+
+              <label class="choice">
+                <input type="checkbox" name="service_category" value="Literary and editorial consultancy">
+                Literary and editorial consultancy
+              </label>
+
+              <label class="choice">
+                <input type="checkbox" name="service_category" value="Writing and communications">
+                Writing and communications
+              </label>
+
+              <label class="choice">
+                <input type="checkbox" name="service_category" value="Publishing consultancy">
+                Publishing consultancy
+              </label>
+
+              <label class="choice">
+                <input type="checkbox" name="service_category" value="Events, conferences and convenings">
+                Events, conferences and convenings
+              </label>
+
+              <label class="choice">
+                <input type="checkbox" name="service_category" value="Partnerships and collaborations">
+                Partnerships and collaborations
+              </label>
+
+              <label class="choice">
+                <input type="checkbox" name="service_category" value="Other / Something else" id="other-category">
+                Other / Something else
+              </label>
+            </div>
+
+            <div class="conditional-field" id="other-explanation">
+              <label for="other_details">
+                Tell us what you have in mind. <span class="required">*</span>
+              </label>
+              <textarea id="other_details" name="other_details" placeholder="For example: podcasting, hosting, moderation, speaking engagements, facilitation, a collaboration or another service."></textarea>
+              <p class="help">
+                We welcome enquiries that don't fit neatly into a category.
+              </p>
+            </div>
           </div>
 
           <div class="field">
-            <label for="pen_name">Pen name / pseudonym <span class="required">(optional)</span></label>
-            <input id="pen_name" name="pen_name" type="text">
+            <label for="inquiry-description">
+              Tell us what brings you here. <span class="required">*</span>
+            </label>
+            <textarea id="inquiry-description" name="inquiry_description" required placeholder="Describe the idea, project, challenge, opportunity or support you are looking for. What is happening, and what would you like to make possible?"></textarea>
+          </div>
+
+          <div class="two-column">
+            <div class="field">
+              <label for="inquiry-name">Full name <span class="required">*</span></label>
+              <input id="inquiry-name" type="text" name="name" autocomplete="name" required>
+            </div>
+
+            <div class="field">
+              <label for="inquiry-preferred-name">Preferred name</label>
+              <input id="inquiry-preferred-name" type="text" name="preferred_name">
+            </div>
+
+            <div class="field">
+              <label for="inquiry-email">Email address <span class="required">*</span></label>
+              <input id="inquiry-email" type="email" name="email" autocomplete="email" required>
+            </div>
+
+            <div class="field">
+              <label for="inquiry-phone">Phone / WhatsApp</label>
+              <input id="inquiry-phone" type="tel" name="phone" autocomplete="tel">
+            </div>
+
+            <div class="field">
+              <label for="inquiry-location">Where are you based? <span class="required">*</span></label>
+              <input id="inquiry-location" type="text" name="location" required placeholder="City and country">
+            </div>
+
+            <div class="field">
+              <label for="inquiry-organisation">Organisation / institution</label>
+              <input id="inquiry-organisation" type="text" name="organisation">
+            </div>
+
+            <div class="field">
+              <label for="inquiry-role">Your role in the project</label>
+              <input id="inquiry-role" type="text" name="role" placeholder="e.g. Founder, author, project lead">
+            </div>
+
+            <div class="field">
+              <label for="discovery-source">How did you hear about us?</label>
+              <select id="discovery-source" name="discovery_source">
+                <option value="">Select an option</option>
+                <option>Instagram</option>
+                <option>Substack</option>
+                <option>Website / online search</option>
+                <option>Referral</option>
+                <option>Event / workshop</option>
+                <option>Professional network</option>
+                <option>Other</option>
+              </select>
+            </div>
           </div>
 
           <div class="field">
-            <label for="email">Email address <span class="required">*</span></label>
-            <input id="email" name="email" type="email" autocomplete="email" required>
+            <label for="project-title">Project / initiative title</label>
+            <input id="project-title" type="text" name="project_title" placeholder="A working title is fine">
           </div>
 
           <div class="field">
-            <label for="phone">Phone / WhatsApp number <span class="required">(optional)</span></label>
-            <input id="phone" name="phone" type="tel" autocomplete="tel">
-          </div>
-
-          <div class="field">
-            <label for="location">Where are you currently based? <span class="required">*</span></label>
-            <input id="location" name="location" type="text" autocomplete="country-name" required>
-          </div>
-
-          <div class="field">
-            <label for="organisation">Organisation / institution <span class="required">(optional)</span></label>
-            <input id="organisation" name="organisation" type="text" placeholder="If this inquiry is on behalf of an organisation">
-          </div>
-
-          <div class="field">
-            <label for="role">Your role or relationship to the project <span class="required">(optional)</span></label>
-            <input id="role" name="role" type="text" placeholder="e.g. Author, founder, communications lead, project coordinator">
-          </div>
-
-          <div class="field">
-            <label for="discovery_source">How did you hear about Ace Pen Studio?</label>
-            <select id="discovery_source" name="discovery_source">
-              <option value="">Select an option</option>
-              <option value="Instagram">Instagram</option>
-              <option value="Substack">Substack</option>
-              <option value="Website or online search">Website / online search</option>
-              <option value="Referral">Someone referred me</option>
-              <option value="Event or workshop">An event, workshop or literary gathering</option>
-              <option value="Professional network">Professional network</option>
-              <option value="Other">Other</option>
+            <label for="project-stage">Where are you with the project?</label>
+            <select id="project-stage" name="project_stage">
+              <option value="">Select the stage that best describes it</option>
+              <option>I'm exploring an idea</option>
+              <option>I'm researching or planning</option>
+              <option>I'm developing the concept</option>
+              <option>Work is already underway</option>
+              <option>I'm looking for implementation support</option>
+              <option>The project is established and needs improvement</option>
+              <option>I'm responding to an opportunity or challenge</option>
+              <option>Other / Not sure</option>
             </select>
           </div>
 
           <div class="field">
-            <label for="referral_details">If someone referred you, or you selected other, would you like to tell us more?</label>
-            <input id="referral_details" name="referral_details" type="text">
-          </div>
-
-        </div>
-      </div>
-    </section>
-
-    <!-- 02 PROJECT -->
-
-    <section class="form-section">
-      <div class="container section-grid">
-
-        <div class="section-heading">
-          <div class="form-number">02 · Your project</div>
-          <h2>What are you bringing to the table?</h2>
-          <p class="section-description">
-            Start with the work itself. It doesn't need to be fully formed.
-          </p>
-        </div>
-
-        <div>
-
-          <div class="field">
-            <div class="legend">What brings you to Ace Pen Studio? <span class="required">*</span></div>
-            <div class="choice-grid" data-required-group="project_reason">
-
-              <label class="choice"><input type="checkbox" name="project_reason" value="Specific book or writing project"> I have a specific book or writing project</label>
-              <label class="choice"><input type="checkbox" name="project_reason" value="Completed manuscript"> I have a completed manuscript</label>
-              <label class="choice"><input type="checkbox" name="project_reason" value="Publisher approached me"> I have been approached by a publisher</label>
-              <label class="choice"><input type="checkbox" name="project_reason" value="Publishing offer or opportunity"> I have received a publishing offer or opportunity</label>
-              <label class="choice"><input type="checkbox" name="project_reason" value="Ghostwriter or writing partner"> I need a ghostwriter or writing partner</label>
-              <label class="choice"><input type="checkbox" name="project_reason" value="Editorial or manuscript development"> I need editorial or manuscript development support</label>
-              <label class="choice"><input type="checkbox" name="project_reason" value="Literary representation"> I'm seeking literary representation</label>
-              <label class="choice"><input type="checkbox" name="project_reason" value="Other specific creative or professional writing project"> I have another specific creative or professional writing project</label>
-
-            </div>
+            <label for="audience-beneficiaries">Who is the intended audience or beneficiary?</label>
+            <textarea id="audience-beneficiaries" name="audience_beneficiaries" placeholder="Readers, clients, staff, young people, communities, institutions, partners or another group."></textarea>
           </div>
 
           <div class="field">
-            <label for="project_title">Does the project have a working title? <span class="required">(optional)</span></label>
-            <input id="project_title" name="project_title" type="text" placeholder="A provisional title is perfectly fine">
+            <label for="support-sought">What would you like Ace Pen Studio to contribute?</label>
+            <textarea id="support-sought" name="support_sought" placeholder="For example: strategic guidance, project coordination, concept development, writing, editorial support, event planning, facilitation or implementation."></textarea>
           </div>
 
           <div class="field">
-            <label for="project_summary">Tell us about the project <span class="required">*</span></label>
-            <textarea id="project_summary" name="project_summary" required placeholder="What is it? Where does it stand? What are you trying to do with it? If someone has approached you, tell us who, what they offered, and what you need help with."></textarea>
-            <p class="help">
-              This is the most important part of the form. You don't need to
-              pitch the whole book. Give us enough context to understand the work.
-            </p>
+            <label for="desired-outcome">What would a good outcome look like?</label>
+            <textarea id="desired-outcome" name="desired_outcome" placeholder="What would you like to have achieved?"></textarea>
           </div>
 
           <div class="field">
-            <label for="genre">What kind of writing is it? <span class="required">*</span></label>
-            <input id="genre" name="genre" type="text" required placeholder="e.g. memoir, literary fiction, business book, children's book, essays">
+            <label for="inquiry-timeline">Is there a timeline or deadline?</label>
+            <textarea id="inquiry-timeline" name="timeline" placeholder="Share any important dates, milestones or timing considerations. You can also say if the timeline is flexible."></textarea>
           </div>
 
           <div class="field">
-            <label for="audience">Who do you imagine reading or engaging with this work?</label>
-            <textarea id="audience" name="audience" placeholder="Think about the people you hope to reach: readers, professionals, young people, a particular community, institutions, or a wider public."></textarea>
+            <label for="additional-context">Anything else we should know?</label>
+            <textarea id="additional-context" name="additional_context" placeholder="Additional context, questions or considerations."></textarea>
           </div>
 
-        </div>
-      </div>
-    </section>
-
-    <!-- 03 PROJECT STAGE -->
-
-    <section class="form-section">
-      <div class="container section-grid">
-
-        <div class="section-heading">
-          <div class="form-number">03 · Where are you with it?</div>
-          <h2>Every project has a starting point.</h2>
-          <p class="section-description">
-            Help us understand what already exists and what has happened so far.
-          </p>
-        </div>
-
-        <div>
-
-          <div class="field">
-            <div class="legend">Project stage <span class="required">*</span></div>
-            <div class="choice-grid" data-required-group="project_stage">
-
-              <label class="choice"><input type="checkbox" name="project_stage" value="Idea"> I have an idea</label>
-              <label class="choice"><input type="checkbox" name="project_stage" value="Notes or outline"> I have notes or an outline</label>
-              <label class="choice"><input type="checkbox" name="project_stage" value="Some chapters"> I have written some chapters</label>
-              <label class="choice"><input type="checkbox" name="project_stage" value="First draft"> I have a first draft</label>
-              <label class="choice"><input type="checkbox" name="project_stage" value="Completed manuscript"> I have a completed manuscript</label>
-              <label class="choice"><input type="checkbox" name="project_stage" value="Revising"> I am revising the manuscript</label>
-              <label class="choice"><input type="checkbox" name="project_stage" value="Submitted to publishers"> I have already submitted it to publishers</label>
-              <label class="choice"><input type="checkbox" name="project_stage" value="Published"> I have already published it</label>
-
-            </div>
+          <div class="form-note">
+            <strong>What happens next?</strong>
+            We'll review your inquiry and respond about whether the work
+            falls within the studio's scope and what an appropriate next
+            step might be. This may be a paid consultation, a defined
+            service or a separate project engagement. An inquiry is not
+            itself a consultation, service agreement or commitment to begin work.
           </div>
 
-          <div class="field">
-            <label for="amount_written">Approximately how much have you written?</label>
-            <input id="amount_written" name="amount_written" type="text" placeholder="e.g. 5,000 words, three chapters, 80 pages, complete 60,000-word draft">
-          </div>
-
-          <div class="field">
-            <div class="legend">Have you previously worked with an editor, writing consultant, publisher, literary agent or other publishing professional?</div>
-            <div class="choice-grid">
-              <label class="choice"><input type="radio" name="previous_professional" value="Yes"> Yes</label>
-              <label class="choice"><input type="radio" name="previous_professional" value="No"> No</label>
-            </div>
-          </div>
-
-          <div class="field">
-            <label for="previous_experience">If yes, tell us briefly what happened.</label>
-            <textarea id="previous_experience" name="previous_experience"></textarea>
-          </div>
-
-        </div>
-      </div>
-    </section>
-
-    <!-- 04 GOALS AND SUPPORT -->
-
-    <section class="form-section">
-      <div class="container section-grid">
-
-        <div class="section-heading">
-          <div class="form-number">04 · Your goals</div>
-          <h2>What are you hoping to make possible?</h2>
-          <p class="section-description">
-            The work matters, but so does what you want it to achieve.
-          </p>
-        </div>
-
-        <div>
-
-          <div class="field">
-            <div class="legend">What would you like help with? <span class="required">*</span></div>
-            <div class="choice-grid" data-required-group="support_needed">
-
-              <label class="choice"><input type="checkbox" name="support_needed" value="Developing the project"> Developing the project</label>
-              <label class="choice"><input type="checkbox" name="support_needed" value="Writing or writing support"> Writing / writing support</label>
-              <label class="choice"><input type="checkbox" name="support_needed" value="Ghostwriting"> Ghostwriting</label>
-              <label class="choice"><input type="checkbox" name="support_needed" value="Manuscript development"> Manuscript development</label>
-              <label class="choice"><input type="checkbox" name="support_needed" value="Editing"> Editing</label>
-              <label class="choice"><input type="checkbox" name="support_needed" value="Literary representation"> Literary representation</label>
-              <label class="choice"><input type="checkbox" name="support_needed" value="Publishing opportunity or negotiation"> Understanding or negotiating a publishing opportunity</label>
-              <label class="choice"><input type="checkbox" name="support_needed" value="Author profile or positioning"> Author profile / positioning</label>
-              <label class="choice"><input type="checkbox" name="support_needed" value="Publishing strategy or consultancy"> Publishing strategy / consultancy</label>
-              <label class="choice"><input type="checkbox" name="support_needed" value="Not sure"> I'm not sure yet</label>
-
-            </div>
-            <p class="help">
-              You don't need to choose the right service. This simply helps us
-              understand what you're considering.
-            </p>
-          </div>
-
-          <div class="field">
-            <label for="success">What would success look like for you with this project? <span class="required">*</span></label>
-            <textarea id="success" name="success" required placeholder="What would you like to have achieved when this work is complete?"></textarea>
-          </div>
-
-          <div class="field">
-            <label for="timeline">Do you have a particular timeline or deadline in mind?</label>
-            <textarea id="timeline" name="timeline" placeholder="Is there a launch date, submission deadline, event, personal milestone or other date shaping the project? If there is no fixed deadline, you can say so."></textarea>
-          </div>
-
-        </div>
-      </div>
-    </section>
-
-    <!-- 05 PUBLISHING CONTEXT -->
-
-    <section class="form-section">
-      <div class="container section-grid">
-
-        <div class="section-heading">
-          <div class="form-number">05 · Publishing context</div>
-          <h2>Where might the work go?</h2>
-          <p class="section-description">
-            These questions are particularly useful if your project involves a book or publishing opportunity.
-          </p>
-        </div>
-
-        <div>
-
-          <div class="field">
-            <div class="legend">What route are you considering?</div>
-            <div class="choice-grid">
-
-              <label class="choice"><input type="checkbox" name="publishing_goal" value="Tanzanian publisher"> Tanzanian publisher</label>
-              <label class="choice"><input type="checkbox" name="publishing_goal" value="East African publisher"> Elsewhere in East Africa</label>
-              <label class="choice"><input type="checkbox" name="publishing_goal" value="International publishing"> International publishing</label>
-              <label class="choice"><input type="checkbox" name="publishing_goal" value="Self-publishing"> Self-publishing</label>
-              <label class="choice"><input type="checkbox" name="publishing_goal" value="Traditional and independent routes"> Exploring both traditional and independent routes</label>
-              <label class="choice"><input type="checkbox" name="publishing_goal" value="Not sure"> I'm not sure yet</label>
-
-            </div>
-          </div>
-
-          <div class="field">
-            <div class="legend">Have you already approached publishers or publishing professionals about this project?</div>
-            <div class="choice-grid">
-              <label class="choice"><input type="radio" name="approached_publishers" value="Yes"> Yes</label>
-              <label class="choice"><input type="radio" name="approached_publishers" value="No"> No</label>
-            </div>
-          </div>
-
-          <div class="field">
-            <label for="publisher_history">If yes, what happened?</label>
-            <textarea id="publisher_history" name="publisher_history"></textarea>
-          </div>
-
-          <div class="field">
-            <label for="platform">Do you currently have an audience or platform connected to your work?</label>
-            <textarea id="platform" name="platform" placeholder="A newsletter, social following, professional network, existing readers, public profile, community, etc."></textarea>
-          </div>
-
-          <div class="editorial-note">
-            <h3>A note about publishing</h3>
-            <p>
-              Publishing works differently in different markets. Since we
-              work primarily across Tanzania, East Africa and the wider
-              African publishing landscape, some of the things you may have
-              heard about publishing elsewhere may not apply here.
-            </p>
-            <p>
-              A publishing deal does not automatically mean an advance.
-              An agent does not automatically mean a deal or immediate income
-              either. Sometimes the best next step is representation; sometimes
-              it is writing, editing, manuscript development or publishing
-              advice first.
-            </p>
-            <p>
-              We'll look at the project and tell you what we think makes sense.
-              If we recommend paid work, we'll explain the scope and cost
-              before anything begins.
-            </p>
-          </div>
-
-        </div>
-      </div>
-    </section>
-
-    <!-- 06 NEXT STEPS -->
-
-    <section class="form-section">
-      <div class="container section-grid">
-
-        <div class="section-heading">
-          <div class="form-number">06 · Before you submit</div>
-          <h2>A few things to know.</h2>
-          <p class="section-description">
-            What happens after you send your inquiry.
-          </p>
-        </div>
-
-        <div>
-
-          <p class="intro">
-            You do not need to send your manuscript with this form.
-            We want the context first.
-          </p>
-
-          <p>
-            Once we have reviewed your inquiry, we'll consider whether the
-            project is a fit for the studio and what a useful next step might
-            look like. That may involve a paid consultation, a defined service
-            or a separate project engagement.
-          </p>
-
-          <p>
-            An inquiry does not automatically create an appointment or
-            consultation. Any paid work, fees, scope or representation
-            arrangement will be discussed and agreed separately before work
-            begins.
-          </p>
-
-          <div class="data-note">
-            <p>
-              <strong>About your information</strong>
-              We collect the information you provide so Ace Pen Studio can
-              understand your project, assess whether it falls within the
-              studio's work, respond to your inquiry and determine an
-              appropriate next step. We use this information for purposes
-              connected to your inquiry and our professional communication
-              with you. Please do not include confidential material or
-              sensitive personal information that is not necessary for us
-              to understand the project.
-            </p>
+          <div class="form-note">
+            <strong>About your information</strong>
+            We use the information you provide to understand your inquiry,
+            assess its fit with the studio, respond to you and determine
+            an appropriate next step. Please avoid sharing confidential
+            or sensitive personal information that is not necessary at
+            this initial stage.
           </div>
 
           <label class="consent">
             <input type="checkbox" name="consent_information" value="I agree" required>
             <span>
-              I understand that the information I provide may be used by
-              Ace Pen Studio to review and respond to my inquiry and determine
-              how the studio may be able to support me.
-              <strong class="required">*</strong>
+              I understand that Ace Pen Studio may use the information
+              provided to review and respond to my inquiry. <span class="required">*</span>
             </span>
           </label>
 
           <label class="consent">
-            <input type="checkbox" name="consent_no_agreement" value="I understand" required>
+            <input type="checkbox" name="consent_no_commitment" value="I understand" required>
             <span>
-              I understand that submitting this form does not mean Ace Pen
-              Studio has agreed to represent me, provide a service or begin
-              work. Any service, fee or representation arrangement will be
-              discussed and agreed separately before work begins.
-              <strong class="required">*</strong>
+              I understand that submitting this inquiry does not confirm
+              an appointment, engagement, service or representation
+              arrangement. Any scope and fees will be agreed separately.
+              <span class="required">*</span>
             </span>
           </label>
 
-          <div class="field">
-            <label for="additional_context">Is there anything else you think we should know?</label>
-            <textarea id="additional_context" name="additional_context" placeholder="Any context, considerations or questions that would help us understand your inquiry."></textarea>
-          </div>
+          <button class="button submit-button" type="submit">
+            Submit inquiry <span>→</span>
+          </button>
 
+          <div class="form-status" aria-live="polite"></div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONSULTATION -->
+  <section class="consultation-section" id="consultation">
+    <div class="container">
+
+      <div class="image-feature">
+        <div class="feature-image">
+          <img src="Consultation.jpg" alt="Consultation with Ace Pen Studio">
+        </div>
+
+        <div class="feature-copy">
+          <div class="eyebrow">02 · Direct consultation</div>
+          <h2>Sometimes, the best next step is a conversation.</h2>
+          <p>
+            Book time with Ace Pen Studio to discuss an idea, ask focused
+            questions, explore a challenge or consider the direction of a
+            project.
+          </p>
+          <p>
+            Consultation is a defined service. It is separate from submitting
+            a general inquiry or arranging an informal coffee meeting.
+          </p>
         </div>
       </div>
-    </section>
 
-    <!-- SUBMIT -->
+      <div class="consultation-options">
+        <article class="price-card">
+          <div class="small-label">Option one</div>
+          <h3>Virtual consultation</h3>
+          <div class="price">Complimentary</div>
+          <p>
+            The first 30 minutes of a virtual consultation are complimentary.
+            If you need more time, additional consultation time is charged
+            at TZS 20,000 per hour.
+          </p>
+          <ul>
+            <li>Online meeting</li>
+            <li>First 30 minutes complimentary</li>
+            <li>Additional time: TZS 20,000 per hour</li>
+          </ul>
+        </article>
 
-    <div class="container submit-row">
-      <div class="submit-inner">
-        <h2>Let's start with the work.</h2>
+        <article class="price-card">
+          <div class="small-label">Option two</div>
+          <h3>In-person consultation</h3>
+          <div class="price">TZS 50,000</div>
+          <p>
+            An approximately one-hour consultation in Dar es Salaam.
+            The fee includes venue reservation and booking confirmation.
+          </p>
+          <ul>
+            <li>TZS 25,000 venue reservation</li>
+            <li>TZS 25,000 booking confirmation</li>
+            <li>Approximately one hour</li>
+          </ul>
+        </article>
+      </div>
+
+      <div class="booking-wrap">
+        <h3>Request a consultation.</h3>
         <p>
-          Send us your inquiry. We'll review the information and get back to
-          you about whether there is a fit and what the appropriate next step
-          might be.
+          Tell us what you would like to discuss and which arrangement
+          works best. Your preferred date and time are a request, not
+          a confirmed appointment. The studio will contact you to
+          confirm availability and arrangements.
         </p>
 
-        <button class="button" id="submit-button" type="submit">
-          Submit Inquiry <span aria-hidden="true">→</span>
-        </button>
+        <form class="ajax-form" action="https://formspree.io/f/xaeykzop" method="POST" data-form-type="Consultation request">
+          <input type="hidden" name="_subject" value="Consultation Request — Ace Pen Studio">
+          <input type="hidden" name="inquiry_type" value="Consultation request">
 
-        <div id="form-error" class="error-message" role="alert"></div>
-        <div id="form-status" class="form-status" aria-live="polite"></div>
+          <div class="honeypot">
+            <label>Leave this field empty <input type="text" name="_gotcha" tabindex="-1" autocomplete="off"></label>
+          </div>
+
+          <div class="booking-fields">
+            <div class="field">
+              <label for="consult-name">Full name <span class="required">*</span></label>
+              <input id="consult-name" type="text" name="name" required autocomplete="name">
+            </div>
+
+            <div class="field">
+              <label for="consult-email">Email address <span class="required">*</span></label>
+              <input id="consult-email" type="email" name="email" required autocomplete="email">
+            </div>
+
+            <div class="field">
+              <label for="consult-phone">Phone / WhatsApp</label>
+              <input id="consult-phone" type="tel" name="phone" autocomplete="tel">
+            </div>
+
+            <div class="field">
+              <label for="consult-location">Where are you based?</label>
+              <input id="consult-location" type="text" name="location">
+            </div>
+
+            <div class="field full">
+              <label for="consult-format">Preferred consultation format <span class="required">*</span></label>
+              <select id="consult-format" name="consultation_format" required>
+                <option value="">Choose an option</option>
+                <option value="Virtual consultation">Virtual consultation</option>
+                <option value="In-person consultation">In-person consultation</option>
+              </select>
+            </div>
+
+            <div class="field">
+              <label for="consult-date">Preferred date <span class="required">*</span></label>
+              <input id="consult-date" type="date" name="preferred_date" required>
+            </div>
+
+            <div class="field">
+              <label for="consult-time">Preferred time <span class="required">*</span></label>
+              <input id="consult-time" type="time" name="preferred_time" required>
+            </div>
+
+            <div class="field full">
+              <label for="consult-topic">What would you like to discuss? <span class="required">*</span></label>
+              <textarea id="consult-topic" name="consultation_topic" required placeholder="Give us a brief description of the matter you would like to discuss."></textarea>
+            </div>
+
+            <div class="field full">
+              <label for="consult-questions">Are there particular questions or outcomes you have in mind?</label>
+              <textarea id="consult-questions" name="consultation_questions"></textarea>
+            </div>
+          </div>
+
+          <div class="meeting-details">
+            <p><strong>Virtual:</strong> First 30 minutes complimentary; additional time TZS 20,000 per hour.</p>
+            <p><strong>In person:</strong> TZS 50,000, including TZS 25,000 venue reservation and TZS 25,000 booking confirmation.</p>
+            <p>Your appointment is not confirmed until Ace Pen Studio responds and confirms the arrangements.</p>
+          </div>
+
+          <label class="consent">
+            <input type="checkbox" name="consultation_acknowledgement" value="I understand" required>
+            <span>
+              I understand that this is a consultation request and that
+              the date and time are subject to confirmation by Ace Pen Studio.
+              <span class="required">*</span>
+            </span>
+          </label>
+
+          <button class="button submit-button" type="submit">
+            Request consultation <span>→</span>
+          </button>
+
+          <div class="form-status" aria-live="polite"></div>
+        </form>
       </div>
     </div>
+  </section>
 
-  </form>
+  <!-- IN-PERSON MEETING -->
+  <section class="in-person-section">
+    <div class="container">
+      <div class="image-feature reverse">
+        <div class="feature-image">
+          <img src="In%20Person%20Meeting.jpg" alt="In-person meeting with Ace Pen Studio">
+        </div>
+
+        <div class="feature-copy">
+          <div class="eyebrow">A face-to-face conversation</div>
+          <h2>Meet, think and work through the possibilities.</h2>
+          <p>
+            Some conversations benefit from sitting across the table.
+            Our in-person consultations provide dedicated time to discuss
+            your matter, ask questions and consider a useful way forward.
+          </p>
+          <p>
+            The in-person consultation is approximately one hour and costs
+            TZS 50,000. This includes the venue reservation and booking
+            confirmation components outlined above.
+          </p>
+          <a class="button" href="#consultation">Request an in-person consultation →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- COFFEE -->
+  <section class="coffee-section" id="coffee">
+    <div class="container">
+
+      <div class="image-feature">
+        <div class="feature-image">
+          <img src="Buy%20Us%20Coffee.jpg" alt="Buy us a coffee and talk with Ace Pen Studio">
+        </div>
+
+        <div class="feature-copy">
+          <div class="eyebrow">A little less formal</div>
+          <h2>Buy us a coffee. Let's talk.</h2>
+          <p>
+            Books, literature, ideas, creative projects and potential
+            collaborations. Sometimes a good conversation is a lovely
+            place to begin.
+          </p>
+          <p>
+            This is an invitation to meet informally, get to know the
+            studio and explore whether there might be something worth
+            building together.
+          </p>
+
+          <ul class="venue-list">
+            <li>The Ridge Cafe</li>
+            <li>Harakati za Enzi — Mbezi</li>
+            <li>Harakati za Enzi — Victoria</li>
+            <li>Lumar Whale</li>
+          </ul>
+
+          <div class="contribution-note">
+            A coffee contribution is entirely voluntary. You may choose
+            to contribute an amount or simply meet us for the conversation.
+            This is not a paid consultation and does not include professional
+            advice, project assessment or project work.
+          </div>
+        </div>
+      </div>
+
+      <div class="booking-wrap">
+        <h3>Let's find a time and place.</h3>
+        <p>
+          Choose your preferred venue and suggest a date and time.
+          We'll get back to you to confirm whether the meeting can be arranged.
+        </p>
+
+        <form class="ajax-form" action="https://formspree.io/f/xaeykzop" method="POST" data-form-type="Coffee meeting request">
+          <input type="hidden" name="_subject" value="Coffee Meeting Request — Ace Pen Studio">
+          <input type="hidden" name="inquiry_type" value="Informal coffee meeting">
+
+          <div class="honeypot">
+            <label>Leave this field empty <input type="text" name="_gotcha" tabindex="-1" autocomplete="off"></label>
+          </div>
+
+          <div class="booking-fields">
+            <div class="field">
+              <label for="coffee-name">Full name <span class="required">*</span></label>
+              <input id="coffee-name" type="text" name="name" required autocomplete="name">
+            </div>
+
+            <div class="field">
+              <label for="coffee-email">Email address <span class="required">*</span></label>
+              <input id="coffee-email" type="email" name="email" required autocomplete="email">
+            </div>
+
+            <div class="field">
+              <label for="coffee-phone">Phone / WhatsApp</label>
+              <input id="coffee-phone" type="tel" name="phone" autocomplete="tel">
+            </div>
+
+            <div class="field">
+              <label for="coffee-venue">Preferred coffee spot <span class="required">*</span></label>
+              <select id="coffee-venue" name="preferred_venue" required>
+                <option value="">Choose a venue</option>
+                <option>The Ridge Cafe</option>
+                <option>Harakati za Enzi — Mbezi</option>
+                <option>Harakati za Enzi — Victoria</option>
+                <option>Lumar Whale</option>
+              </select>
+            </div>
+
+            <div class="field">
+              <label for="coffee-date">Preferred date <span class="required">*</span></label>
+              <input id="coffee-date" type="date" name="preferred_date" required>
+            </div>
+
+            <div class="field">
+              <label for="coffee-time">Preferred time <span class="required">*</span></label>
+              <input id="coffee-time" type="time" name="preferred_time" required>
+            </div>
+
+            <div class="field full">
+              <label for="coffee-topic">What would you like to talk about?</label>
+              <textarea id="coffee-topic" name="conversation_topic" placeholder="Books, literature, a creative idea, a possible collaboration, or simply getting to know the studio."></textarea>
+            </div>
+
+            <div class="field full">
+              <label for="coffee-contribution">Would you like to make a voluntary coffee contribution?</label>
+              <select id="coffee-contribution" name="voluntary_contribution">
+                <option value="No contribution">No contribution — just the conversation</option>
+                <option value="TZS 5,000">TZS 5,000</option>
+                <option value="TZS 10,000">TZS 10,000</option>
+                <option value="TZS 15,000">TZS 15,000</option>
+                <option value="TZS 20,000">TZS 20,000</option>
+                <option value="Other amount to discuss">Other amount</option>
+              </select>
+              <p class="help">
+                This is optional and is not a booking fee. No payment is
+                collected through this form.
+              </p>
+            </div>
+          </div>
+
+          <div class="meeting-details">
+            <p><strong>A note about this invitation:</strong> This is an informal meeting, not a paid consultation. It does not include professional advice, a formal project assessment, research, planning or deliverables.</p>
+            <p>Venue arrangements and meeting details are confirmed directly by Ace Pen Studio. Submitting this form does not reserve a table or confirm a meeting.</p>
+          </div>
+
+          <label class="consent">
+            <input type="checkbox" name="coffee_acknowledgement" value="I understand" required>
+            <span>
+              I understand that this is an informal meeting request and
+              that the meeting is subject to confirmation by Ace Pen Studio.
+              <span class="required">*</span>
+            </span>
+          </label>
+
+          <button class="button submit-button" type="submit">
+            Send coffee meeting request <span>→</span>
+          </button>
+
+          <div class="form-status" aria-live="polite"></div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="faq-section" id="faqs">
+    <div class="container faq-layout">
+
+      <div>
+        <div class="section-label">A few useful answers</div>
+        <h2 class="serif" style="font-size:clamp(36px,5vw,52px);font-weight:400;line-height:1.15;margin:13px 0;">
+          Before you get in touch.
+        </h2>
+        <p style="color:var(--muted);font-size:14px;">
+          A few things worth knowing about inquiries, consultations
+          and working with Ace Pen Studio.
+        </p>
+
+        <div class="faq-image">
+          <img src="FAQs.jpg" alt="Frequently asked questions at Ace Pen Studio">
+        </div>
+      </div>
+
+      <div class="faq-list">
+
+        <div class="faq-item">
+          <button class="faq-question" type="button" aria-expanded="false">
+            <span>What is the difference between an inquiry and a consultation?</span>
+            <span aria-hidden="true">+</span>
+          </button>
+          <div class="faq-answer">
+            <p>
+              An inquiry tells us about your project, challenge or opportunity
+              so we can understand what you need and determine an appropriate
+              next step. A consultation is a separately requested meeting
+              with the studio, with its own arrangements and pricing.
+            </p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" type="button" aria-expanded="false">
+            <span>Does submitting an inquiry mean I have booked a consultation?</span>
+            <span aria-hidden="true">+</span>
+          </button>
+          <div class="faq-answer">
+            <p>
+              No. An inquiry is not a consultation booking. If a consultation
+              is the appropriate next step, the studio will explain the
+              arrangements and you can request one separately.
+            </p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" type="button" aria-expanded="false">
+            <span>Do I need to have a fully developed project?</span>
+            <span aria-hidden="true">+</span>
+          </button>
+          <div class="faq-answer">
+            <p>
+              No. You can approach us with an early idea, a developing
+              concept, an established project or a specific challenge.
+              The important thing is to give us enough context to understand
+              what you are trying to achieve.
+            </p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" type="button" aria-expanded="false">
+            <span>Do I need to upload my manuscript or documents?</span>
+            <span aria-hidden="true">+</span>
+          </button>
+          <div class="faq-answer">
+            <p>
+              No. The initial inquiry is designed to understand the project
+              first. If we need a manuscript, proposal or other documents
+              at a later stage, we'll discuss that with you directly.
+            </p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" type="button" aria-expanded="false">
+            <span>How much does a consultation cost?</span>
+            <span aria-hidden="true">+</span>
+          </button>
+          <div class="faq-answer">
+            <p>
+              The first 30 minutes of a virtual consultation are complimentary.
+              Additional time is TZS 20,000 per hour. An in-person consultation
+              costs TZS 50,000, comprising TZS 25,000 for venue reservation
+              and TZS 25,000 for booking confirmation.
+            </p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" type="button" aria-expanded="false">
+            <span>Can I meet the studio for coffee instead?</span>
+            <span aria-hidden="true">+</span>
+          </button>
+          <div class="faq-answer">
+            <p>
+              Yes. Coffee with Ace Pen Studio is an informal opportunity
+              to talk about books, literature, ideas and potential
+              collaborations. It is not a substitute for a paid consultation
+              or a formal project assessment.
+            </p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" type="button" aria-expanded="false">
+            <span>Does Ace Pen Studio only work on books and writing?</span>
+            <span aria-hidden="true">+</span>
+          </button>
+          <div class="faq-answer">
+            <p>
+              No. Ace Pen Studio works across consultancy, creative project
+              development, organisational and management support, literature,
+              editorial work, communications, publishing, events, conferences
+              and collaborations. The inquiry form includes an open category
+              for work that does not fit the listed options.
+            </p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" type="button" aria-expanded="false">
+            <span>When will I hear back after submitting an inquiry?</span>
+            <span aria-hidden="true">+</span>
+          </button>
+          <div class="faq-answer">
+            <p>
+              The studio reviews incoming inquiries and responds directly
+              about fit and possible next steps. Submission does not
+              automatically confirm an appointment, service or engagement.
+            </p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" type="button" aria-expanded="false">
+            <span>Will I be charged for discussing my project?</span>
+            <span aria-hidden="true">+</span>
+          </button>
+          <div class="faq-answer">
+            <p>
+              Submitting an inquiry is not a paid consultation. If a
+              consultation or further professional work is recommended,
+              the studio will explain the scope and applicable fees
+              before that work begins.
+            </p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- SUBSTACK -->
+  <section class="substack-banner">
+    <div class="container substack-inner">
+      <div class="substack-copy">
+        <div class="eyebrow">Stay in the conversation</div>
+        <h2>For storytellers, readers and curious minds.</h2>
+        <p>
+          Books, writing, publishing, ideas, opportunities, occasional
+          rabbit holes and whatever else we're thinking about at the studio.
+          Read along. Respond. Tell us what you're thinking.
+        </p>
+      </div>
+
+      <a class="button button-outline" href="https://acepenstudio.substack.com/" target="_blank" rel="noopener noreferrer">
+        Read on Substack <span>→</span>
+      </a>
+    </div>
+  </section>
+
 </main>
 
-<!-- SUBSTACK -->
+<!-- NEWSLETTER POPUP: TEXT ONLY TO AVOID REUSING AN IMAGE -->
+<aside class="newsletter-popup" id="newsletter-popup" aria-label="Newsletter invitation">
+  <button class="popup-close" id="popup-close" type="button" aria-label="Close newsletter invitation">×</button>
 
-<section class="substack-banner">
-  <div class="container">
+  <div class="section-label">A note from the studio</div>
+  <h3>Stay a little longer in the conversation.</h3>
+  <p>
+    Join Ace Pen Studio on Substack for books, ideas, literature,
+    publishing conversations and occasional notes from the studio.
+  </p>
 
-    <div class="substack-copy">
-      <div class="substack-eyebrow">Stay in the conversation</div>
-      <h2>For Storytellers and Readers.</h2>
-      <p>
-        Books, writing, publishing, ideas, opportunities, occasional
-        rabbit holes and whatever else we're thinking about at the studio.
-        Read along. Respond. Tell us what you're thinking.
-      </p>
-    </div>
-
-    <a class="substack-button"
-       href="https://acepenstudio.substack.com/"
-       target="_blank"
-       rel="noopener noreferrer">
-      Read Ace Pen Studio on Substack →
+  <div class="popup-actions">
+    <a class="button" href="https://acepenstudio.substack.com/" target="_blank" rel="noopener noreferrer" id="popup-subscribe">
+      Join the newsletter →
     </a>
-
+    <button class="popup-later" id="popup-later" type="button">Maybe later</button>
   </div>
-</section>
+</aside>
 
 <!-- FOOTER -->
-
 <footer class="footer">
   <div class="container footer-inner">
     <div>© 2026 Ace Pen Studio. All rights reserved.</div>
     <div>
+      <a href="index.html">Home</a>
+      &nbsp;·&nbsp;
       <a href="https://acepenstudio.substack.com/" target="_blank" rel="noopener noreferrer">Substack</a>
       &nbsp;·&nbsp;
       <a href="https://www.instagram.com/acepenstories/" target="_blank" rel="noopener noreferrer">Instagram</a>
@@ -1129,95 +1850,182 @@
 </footer>
 
 <script>
-  const form = document.getElementById("inquiry-form");
-  const status = document.getElementById("form-status");
-  const errorBox = document.getElementById("form-error");
-  const submitButton = document.getElementById("submit-button");
+  // GENERAL FORM BEHAVIOUR
 
-  function validateCheckboxGroup(groupName) {
-    const checkboxes = document.querySelectorAll(
-      'input[name="' + groupName + '"]'
-    );
+  const forms = document.querySelectorAll(".ajax-form");
 
-    return Array.from(checkboxes).some(checkbox => checkbox.checked);
+  forms.forEach(function(form) {
+    form.addEventListener("submit", async function(event) {
+      event.preventDefault();
+
+      const status = form.querySelector(".form-status");
+      const button = form.querySelector(".submit-button");
+
+      status.textContent = "";
+      status.className = "form-status";
+
+      // The general inquiry requires at least one service category.
+      if (form.dataset.formType === "General inquiry") {
+        const selectedCategories = form.querySelectorAll(
+          'input[name="service_category"]:checked'
+        );
+
+        if (selectedCategories.length === 0) {
+          status.textContent = "Please select at least one area you would like to discuss.";
+          status.classList.add("error");
+          form.querySelector("#service-categories").scrollIntoView({
+            behavior: "smooth",
+            block: "center"
+          });
+          return;
+        }
+
+        const otherSelected = form.querySelector("#other-category").checked;
+        const otherDetails = form.querySelector("#other_details");
+
+        if (otherSelected && !otherDetails.value.trim()) {
+          otherDetails.setCustomValidity("Please tell us a little more about your enquiry.");
+          otherDetails.reportValidity();
+          otherDetails.focus();
+          return;
+        }
+
+        otherDetails.setCustomValidity("");
+      }
+
+      if (!form.reportValidity()) return;
+
+      button.disabled = true;
+      const originalButtonText = button.innerHTML;
+      button.textContent = "Sending…";
+      status.textContent = "Sending your request…";
+
+      try {
+        const response = await fetch(form.action, {
+          method: "POST",
+          body: new FormData(form),
+          headers: { "Accept": "application/json" }
+        });
+
+        if (response.ok) {
+          form.reset();
+          status.textContent =
+            "Thank you. Your request has been sent. Ace Pen Studio will review it and respond about the next step.";
+          status.classList.add("success");
+
+          // Reset conditional field visibility after a successful submission.
+          const otherBox = form.querySelector("#other-explanation");
+          if (otherBox) otherBox.classList.remove("visible");
+
+          status.scrollIntoView({
+            behavior: "smooth",
+            block: "center"
+          });
+        } else {
+          status.textContent =
+            "We couldn't send your request just now. Please try again.";
+          status.classList.add("error");
+        }
+      } catch (error) {
+        status.textContent =
+          "There was a connection problem. Please try again.";
+        status.classList.add("error");
+      } finally {
+        button.disabled = false;
+        button.innerHTML = originalButtonText;
+      }
+    });
+  });
+
+  // SHOW THE CONDITIONAL "OTHER" EXPLANATION FIELD
+
+  const otherCategory = document.getElementById("other-category");
+  const otherExplanation = document.getElementById("other-explanation");
+  const otherDetails = document.getElementById("other_details");
+
+  if (otherCategory && otherExplanation && otherDetails) {
+    otherCategory.addEventListener("change", function() {
+      const isSelected = otherCategory.checked;
+
+      otherExplanation.classList.toggle("visible", isSelected);
+      otherDetails.required = isSelected;
+
+      if (!isSelected) {
+        otherDetails.value = "";
+        otherDetails.setCustomValidity("");
+      }
+    });
   }
 
-  form.addEventListener("submit", async function(event) {
-    event.preventDefault();
+  // FAQ ACCORDION
 
-    errorBox.style.display = "none";
-    errorBox.textContent = "";
-    status.textContent = "";
+  document.querySelectorAll(".faq-question").forEach(function(question) {
+    question.addEventListener("click", function() {
+      const item = question.closest(".faq-item");
+      const isOpen = item.classList.contains("open");
 
-    const requiredGroups = [
-      {
-        name: "project_reason",
-        message: "Please tell us what brings you to Ace Pen Studio."
-      },
-      {
-        name: "project_stage",
-        message: "Please tell us where you are with the project."
-      },
-      {
-        name: "support_needed",
-        message: "Please tell us what you would like help with."
-      }
-    ];
-
-    for (const group of requiredGroups) {
-      if (!validateCheckboxGroup(group.name)) {
-        errorBox.textContent = group.message;
-        errorBox.style.display = "block";
-        errorBox.scrollIntoView({
-          behavior: "smooth",
-          block: "center"
-        });
-        return;
-      }
-    }
-
-    if (!form.reportValidity()) {
-      return;
-    }
-
-    submitButton.disabled = true;
-    submitButton.innerHTML = "Sending inquiry…";
-    status.textContent = "Sending your inquiry…";
-
-    try {
-      const response = await fetch(form.action, {
-        method: "POST",
-        body: new FormData(form),
-        headers: {
-          "Accept": "application/json"
-        }
+      document.querySelectorAll(".faq-item").forEach(function(otherItem) {
+        otherItem.classList.remove("open");
+        const otherButton = otherItem.querySelector(".faq-question");
+        otherButton.setAttribute("aria-expanded", "false");
+        otherButton.querySelector("span:last-child").textContent = "+";
       });
 
-      if (response.ok) {
-        form.reset();
-        status.textContent =
-          "Thank you. Your inquiry has been sent. We'll review it and be in touch about an appropriate next step.";
-        status.style.color = "#91431f";
-        status.scrollIntoView({
-          behavior: "smooth",
-          block: "center"
-        });
-      } else {
-        status.textContent =
-          "Something went wrong while sending the form. Please try again.";
-        status.style.color = "#91431f";
+      if (!isOpen) {
+        item.classList.add("open");
+        question.setAttribute("aria-expanded", "true");
+        question.querySelector("span:last-child").textContent = "−";
       }
-
-    } catch (error) {
-      status.textContent =
-        "Something went wrong while sending the form. Please try again.";
-      status.style.color = "#91431f";
-
-    } finally {
-      submitButton.disabled = false;
-      submitButton.innerHTML = 'Submit Inquiry <span aria-hidden="true">→</span>';
-    }
+    });
   });
+
+  // PREVENT PAST DATES IN DATE FIELDS
+
+  const today = new Date();
+  const localToday = new Date(
+    today.getTime() - today.getTimezoneOffset() * 60000
+  ).toISOString().split("T")[0];
+
+  document.querySelectorAll('input[type="date"]').forEach(function(dateInput) {
+    dateInput.min = localToday;
+  });
+
+  // NEWSLETTER POPUP
+  // Appears after 15 seconds, once per browser session.
+  // The popup has no image, preserving the no-image-reuse rule.
+
+  const popup = document.getElementById("newsletter-popup");
+  const closePopup = document.getElementById("popup-close");
+  const laterPopup = document.getElementById("popup-later");
+  const subscribePopup = document.getElementById("popup-subscribe");
+
+  function dismissNewsletterPopup() {
+    popup.classList.remove("visible");
+    try {
+      sessionStorage.setItem("acePenNewsletterDismissed", "yes");
+    } catch (error) {
+      // The page remains usable if session storage is unavailable.
+    }
+  }
+
+  let popupAlreadyDismissed = false;
+
+  try {
+    popupAlreadyDismissed =
+      sessionStorage.getItem("acePenNewsletterDismissed") === "yes";
+  } catch (error) {
+    popupAlreadyDismissed = false;
+  }
+
+  if (!popupAlreadyDismissed) {
+    window.setTimeout(function() {
+      popup.classList.add("visible");
+    }, 15000);
+  }
+
+  closePopup.addEventListener("click", dismissNewsletterPopup);
+  laterPopup.addEventListener("click", dismissNewsletterPopup);
+  subscribePopup.addEventListener("click", dismissNewsletterPopup);
 </script>
 
 </body>
